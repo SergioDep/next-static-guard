@@ -1,0 +1,17 @@
+name: Compatibility
+description: Report an unsupported framework or resolver pattern.
+title: "[Compatibility] "
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Tool, Node, Git, framework versions, and operating system
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal fictional reproduction
+      description: Include the relevant configuration and reported coverage limitation. Remove secrets and private sources.
+    validations:
+      required: true

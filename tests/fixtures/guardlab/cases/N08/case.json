@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "N08",
+  "ruleId": "NSG002",
+  "description": "A user-defined function named `useRouter`, without a Next symbol.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "clean",
+  "expectedFindings": [],
+  "expectedLimits": [],
+  "correctedCase": null
+}

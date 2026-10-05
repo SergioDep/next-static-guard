@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "sensitive": {
+    "exports": [
+      {
+        "file": "lib/profile.ts",
+        "export": "profile",
+        "field": [
+          "token"
+        ],
+        "category": "secret"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "U03",
+  "ruleId": null,
+  "description": "An external package without a summary or analyzed source.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "partial",
+  "expectedFindings": [],
+  "expectedLimits": [
+    {
+      "code": "unresolved-import",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 42,
+          "offset": 41
+        }
+      },
+      "affectedRules": [
+        "NSG001",
+        "NSG002",
+        "NSG003",
+        "NSG004",
+        "NSG005",
+        "NSG006"
+      ]
+    }
+  ],
+  "correctedCase": null
+}

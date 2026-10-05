@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "P23",
+  "ruleId": "NSG006",
+  "description": "A shared helper reads a private key in its client use.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc",
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "clean",
+  "expectedFindings": [],
+  "expectedLimits": [],
+  "correctedCase": null
+}

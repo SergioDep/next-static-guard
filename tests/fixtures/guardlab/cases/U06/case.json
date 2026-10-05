@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "U06",
+  "ruleId": null,
+  "description": "JSX with a props spread of unknown origin.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "partial",
+  "expectedFindings": [],
+  "expectedLimits": [
+    {
+      "code": "unknown-value",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 3,
+          "column": 49,
+          "offset": 112
+        },
+        "end": {
+          "line": 3,
+          "column": 66,
+          "offset": 129
+        }
+      },
+      "affectedRules": [
+        "NSG004",
+        "NSG005"
+      ]
+    }
+  ],
+  "correctedCase": null
+}

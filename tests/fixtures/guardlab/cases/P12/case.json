@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "P12",
+  "ruleId": "NSG003",
+  "description": "A `useMemo` callback reads `window` during render.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG003",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 3,
+          "column": 57,
+          "offset": 103
+        },
+        "end": {
+          "line": 3,
+          "column": 63,
+          "offset": 109
+        }
+      },
+      "symbol": "Page/<anonymous:0>",
+      "traceSymbols": [
+        "react#useMemo",
+        "global#window"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

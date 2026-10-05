@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "N20",
+  "ruleId": "NSG005",
+  "description": "A referenced Server Function returns a DTO without declared private fields.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr",
+      "server-function"
+    ]
+  },
+  "expectedStatus": "clean",
+  "expectedFindings": [],
+  "expectedLimits": [],
+  "correctedCase": null
+}

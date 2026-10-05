@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "U12",
+  "ruleId": null,
+  "description": "Data flow with recursion or more than two local call hops.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "partial",
+  "expectedFindings": [],
+  "expectedLimits": [
+    {
+      "code": "unknown-phase",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 4,
+          "column": 21,
+          "offset": 101
+        },
+        "end": {
+          "line": 4,
+          "column": 22,
+          "offset": 102
+        }
+      },
+      "affectedRules": [
+        "NSG001",
+        "NSG002",
+        "NSG003",
+        "NSG004",
+        "NSG005",
+        "NSG006"
+      ]
+    },
+    {
+      "code": "unknown-value",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 6,
+          "column": 55,
+          "offset": 187
+        },
+        "end": {
+          "line": 6,
+          "column": 58,
+          "offset": 190
+        }
+      },
+      "affectedRules": [
+        "NSG004",
+        "NSG005"
+      ]
+    }
+  ],
+  "correctedCase": null
+}

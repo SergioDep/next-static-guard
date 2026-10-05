@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "P24",
+  "ruleId": "NSG006",
+  "description": "A client-reachable local package reads a private key.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG006",
+      "severity": "medium",
+      "confidence": "high",
+      "location": {
+        "file": "packages/data/index.ts",
+        "start": {
+          "line": 1,
+          "column": 19,
+          "offset": 18
+        },
+        "end": {
+          "line": 1,
+          "column": 36,
+          "offset": 35
+        }
+      },
+      "symbol": "<module>",
+      "traceSymbols": [
+        "env#TOKEN"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

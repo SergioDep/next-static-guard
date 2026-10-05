@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "P17",
+  "ruleId": "NSG005",
+  "description": "A key declared secret reaches a client prop through a local alias. (src-app)",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG005",
+      "severity": "critical",
+      "confidence": "high",
+      "location": {
+        "file": "src/app/page.tsx",
+        "start": {
+          "line": 2,
+          "column": 85,
+          "offset": 115
+        },
+        "end": {
+          "line": 2,
+          "column": 90,
+          "offset": 120
+        }
+      },
+      "symbol": "Page",
+      "traceSymbols": [
+        "env#TOKEN",
+        "src/app/client.tsx#default.data"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

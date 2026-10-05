@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "P07",
+  "ruleId": "NSG002",
+  "description": "Server Component reaches a `client-only` module.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG002",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 36,
+          "offset": 35
+        }
+      },
+      "symbol": "<module>",
+      "traceSymbols": [
+        "../lib/data",
+        "client-only"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

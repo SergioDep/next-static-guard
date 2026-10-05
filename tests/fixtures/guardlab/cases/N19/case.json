@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "N19",
+  "ruleId": "NSG005",
+  "description": "Configuration publishes explicitly public, nonconfidential data.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": []
+  },
+  "expectedStatus": "clean",
+  "expectedFindings": [],
+  "expectedLimits": [],
+  "correctedCase": null
+}

@@ -1,0 +1,24 @@
+{
+  "artifact": "next-static-guard-0.1.0-dev.0.tgz",
+  "sha256": "e6981399d8a2535c43fb2ae3c83d19f55a834528130152eef721a7c8210e6c61",
+  "sizeBytes": 81579,
+  "unpackedSizeBytes": 423643,
+  "entryCount": 117,
+  "allowedContents": true,
+  "node": "v24.21.0",
+  "runtimeDependencies": {
+    "typescript": "6.0.3",
+    "ajv": "8.20.0",
+    "picomatch": "4.0.7",
+    "semver": "7.8.5"
+  },
+  "consumer": {
+    "exitStatus": 0,
+    "coverage": "complete",
+    "rules": [
+      "NSG006"
+    ],
+    "blocking": 0,
+    "developmentDependenciesInstalled": false
+  }
+}

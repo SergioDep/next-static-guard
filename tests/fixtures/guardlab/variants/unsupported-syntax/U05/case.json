@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "U05",
+  "ruleId": null,
+  "description": "A reached source has an unterminated string on the supported framework profile.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "partial",
+  "expectedFindings": [],
+  "expectedLimits": [
+    {
+      "code": "unsupported-syntax",
+      "location": {
+        "file": "lib/bad.ts",
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 1,
+          "offset": 32
+        }
+      },
+      "affectedRules": [
+        "NSG001",
+        "NSG002",
+        "NSG003",
+        "NSG004",
+        "NSG005",
+        "NSG006"
+      ]
+    }
+  ],
+  "correctedCase": null
+}

@@ -1,0 +1,24 @@
+name: False negative
+description: Report a supported boundary violation that Guard missed.
+title: "[FN] "
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Tool, Next, React, React DOM, and TypeScript versions
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal fictional reproduction
+      description: Remove confidential data and include configuration, expected rule, and source locations.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Independent evidence of the problem
+      description: Explain the compiler error, runtime failure, or verified data path and include Guard coverage limitations.
+    validations:
+      required: true

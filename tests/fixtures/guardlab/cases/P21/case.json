@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "P21",
+  "ruleId": "NSG006",
+  "description": "Client reads a static private `process.env` key.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG006",
+      "severity": "medium",
+      "confidence": "high",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 2,
+          "column": 45,
+          "offset": 58
+        },
+        "end": {
+          "line": 2,
+          "column": 62,
+          "offset": 75
+        }
+      },
+      "symbol": "Page",
+      "traceSymbols": [
+        "env#TOKEN"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

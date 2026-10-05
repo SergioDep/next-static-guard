@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "P24",
+  "ruleId": "NSG006",
+  "description": "A client-reachable local package reads a private key.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "clean",
+  "expectedFindings": [],
+  "expectedLimits": [],
+  "correctedCase": null
+}

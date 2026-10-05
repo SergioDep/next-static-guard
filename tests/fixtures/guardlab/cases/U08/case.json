@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "U08",
+  "ruleId": null,
+  "description": "A browser read in a library callback with unknown phase semantics.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr",
+      "unknown"
+    ]
+  },
+  "expectedStatus": "partial",
+  "expectedFindings": [],
+  "expectedLimits": [
+    {
+      "code": "unknown-phase",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 3,
+          "column": 43,
+          "offset": 108
+        },
+        "end": {
+          "line": 3,
+          "column": 67,
+          "offset": 132
+        }
+      },
+      "affectedRules": [
+        "NSG003"
+      ]
+    }
+  ],
+  "correctedCase": null
+}

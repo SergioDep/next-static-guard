@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "P01",
+  "ruleId": "NSG001",
+  "description": "Client directly imports a `server-only` module. (javascript)",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG001",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "app/page.jsx",
+        "start": {
+          "line": 2,
+          "column": 1,
+          "offset": 14
+        },
+        "end": {
+          "line": 2,
+          "column": 36,
+          "offset": 49
+        }
+      },
+      "symbol": "<module>",
+      "traceSymbols": [
+        "../lib/data",
+        "server-only"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

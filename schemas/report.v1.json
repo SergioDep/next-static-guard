@@ -1,0 +1,943 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "toolVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rulesetVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fingerprintVersion": {
+      "const": 1
+    },
+    "policyHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": [
+            "default",
+            "current",
+            "base",
+            "explicit"
+          ]
+        },
+        "currentPolicyHash": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "changedFields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "ignoredCurrentConfig": {
+          "type": "boolean"
+        },
+        "effectiveRules": {
+          "type": "object",
+          "properties": {
+            "NSG001": {
+              "type": "object",
+              "properties": {
+                "requested": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "effective": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "certified": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "requested",
+                "effective",
+                "certified"
+              ],
+              "additionalProperties": false
+            },
+            "NSG002": {
+              "type": "object",
+              "properties": {
+                "requested": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "effective": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "certified": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "requested",
+                "effective",
+                "certified"
+              ],
+              "additionalProperties": false
+            },
+            "NSG003": {
+              "type": "object",
+              "properties": {
+                "requested": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "effective": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "certified": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "requested",
+                "effective",
+                "certified"
+              ],
+              "additionalProperties": false
+            },
+            "NSG004": {
+              "type": "object",
+              "properties": {
+                "requested": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "effective": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "certified": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "requested",
+                "effective",
+                "certified"
+              ],
+              "additionalProperties": false
+            },
+            "NSG005": {
+              "type": "object",
+              "properties": {
+                "requested": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "effective": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "certified": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "requested",
+                "effective",
+                "certified"
+              ],
+              "additionalProperties": false
+            },
+            "NSG006": {
+              "type": "object",
+              "properties": {
+                "requested": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "effective": {
+                  "type": "string",
+                  "enum": [
+                    "off",
+                    "warn",
+                    "error"
+                  ]
+                },
+                "certified": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "requested",
+                "effective",
+                "certified"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "NSG001",
+            "NSG002",
+            "NSG003",
+            "NSG004",
+            "NSG005",
+            "NSG006"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "source",
+        "currentPolicyHash",
+        "changedFields",
+        "ignoredCurrentConfig",
+        "effectiveRules"
+      ],
+      "additionalProperties": false
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "root": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nextVersion": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reactVersion": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reactDomVersion": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "typescriptVersion": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "root",
+          "nextVersion",
+          "reactVersion",
+          "reactDomVersion",
+          "typescriptVersion"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "roots": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "unsupported": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "file": {
+                "type": "string",
+                "minLength": 1
+              },
+              "feature": {
+                "type": "string",
+                "enum": [
+                  "pages-router",
+                  "metadata",
+                  "proxy",
+                  "instrumentation",
+                  "edge",
+                  "mdx",
+                  "commonjs"
+                ]
+              }
+            },
+            "required": [
+              "file",
+              "feature"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "roots",
+        "exclusions",
+        "unsupported"
+      ],
+      "additionalProperties": false
+    },
+    "sensitivityConfigured": {
+      "type": "boolean"
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial"
+          ]
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "unsupported-version",
+                  "unresolved-import",
+                  "conditional-resolution",
+                  "dynamic-config",
+                  "unsupported-syntax",
+                  "unknown-value",
+                  "unknown-phase",
+                  "source-excluded",
+                  "source-budget",
+                  "uncertain-runtime",
+                  "comparison-incomplete",
+                  "fingerprint-collision"
+                ]
+              },
+              "location": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "file": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "start": {
+                        "type": "object",
+                        "properties": {
+                          "line": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "column": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "offset": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "line",
+                          "column",
+                          "offset"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "end": {
+                        "type": "object",
+                        "properties": {
+                          "line": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "column": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "offset": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "line",
+                          "column",
+                          "offset"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "file",
+                      "start",
+                      "end"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "affectedRules": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "NSG001",
+                    "NSG002",
+                    "NSG003",
+                    "NSG004",
+                    "NSG005",
+                    "NSG006"
+                  ]
+                },
+                "uniqueItems": true
+              },
+              "snapshot": {
+                "type": "string",
+                "enum": [
+                  "current",
+                  "base"
+                ]
+              },
+              "projectRoot": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "code",
+              "location",
+              "affectedRules",
+              "snapshot",
+              "projectRoot"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "status",
+        "limits"
+      ],
+      "additionalProperties": false
+    },
+    "comparison": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "none",
+            "git",
+            "baseline"
+          ]
+        },
+        "baseCommit": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial",
+            "not-applicable"
+          ]
+        }
+      },
+      "required": [
+        "mode",
+        "baseCommit",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": {
+            "type": "string",
+            "enum": [
+              "NSG001",
+              "NSG002",
+              "NSG003",
+              "NSG004",
+              "NSG005",
+              "NSG006"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "info"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium"
+            ]
+          },
+          "location": {
+            "type": "object",
+            "properties": {
+              "file": {
+                "type": "string",
+                "minLength": 1
+              },
+              "start": {
+                "type": "object",
+                "properties": {
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "column": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "line",
+                  "column",
+                  "offset"
+                ],
+                "additionalProperties": false
+              },
+              "end": {
+                "type": "object",
+                "properties": {
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "column": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "line",
+                  "column",
+                  "offset"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "file",
+              "start",
+              "end"
+            ],
+            "additionalProperties": false
+          },
+          "contexts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "rsc",
+                "client-ssr",
+                "client-browser",
+                "server-function",
+                "server-handler",
+                "unreachable",
+                "unknown"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "import",
+                    "reference",
+                    "api",
+                    "phase",
+                    "value",
+                    "source",
+                    "sink"
+                  ]
+                },
+                "location": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "file": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "start": {
+                          "type": "object",
+                          "properties": {
+                            "line": {
+                              "type": "integer",
+                              "minimum": 1
+                            },
+                            "column": {
+                              "type": "integer",
+                              "minimum": 1
+                            },
+                            "offset": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          },
+                          "required": [
+                            "line",
+                            "column",
+                            "offset"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "end": {
+                          "type": "object",
+                          "properties": {
+                            "line": {
+                              "type": "integer",
+                              "minimum": 1
+                            },
+                            "column": {
+                              "type": "integer",
+                              "minimum": 1
+                            },
+                            "offset": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          },
+                          "required": [
+                            "line",
+                            "column",
+                            "offset"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "file",
+                        "start",
+                        "end"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "symbol": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "kind",
+                "location",
+                "symbol"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "recommendation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fingerprint": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "new",
+              "existing",
+              "aggravated",
+              "unverified"
+            ]
+          },
+          "suppressed": {
+            "type": "boolean"
+          },
+          "suppressionStatus": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "false-positive",
+                  "accepted-risk"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "blocking": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ruleId",
+          "message",
+          "severity",
+          "confidence",
+          "location",
+          "contexts",
+          "evidence",
+          "recommendation",
+          "fingerprint",
+          "status",
+          "suppressed",
+          "suppressionStatus",
+          "blocking"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "new": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "existing": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "aggravated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unverified": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "suppressed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blocking": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resolved": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "total",
+        "new",
+        "existing",
+        "aggravated",
+        "unverified",
+        "suppressed",
+        "blocking",
+        "resolved"
+      ],
+      "additionalProperties": false
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "durationMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "sourceCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edgeCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceBytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "durationMs",
+        "sourceCount",
+        "edgeCount",
+        "sourceBytes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "toolVersion",
+    "rulesetVersion",
+    "fingerprintVersion",
+    "policyHash",
+    "policy",
+    "projects",
+    "scope",
+    "sensitivityConfigured",
+    "coverage",
+    "comparison",
+    "findings",
+    "summary",
+    "metrics"
+  ],
+  "additionalProperties": false
+}

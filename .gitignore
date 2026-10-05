@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+.next/
+*.tgz
+bench-results/
+framework-results/
+tests/fixtures/.framework-*/
+comparison-results/
+tests/fixtures/.comparison-*/

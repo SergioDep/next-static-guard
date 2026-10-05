@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "P20",
+  "ruleId": "NSG005",
+  "description": "An exported value declared secret is used by the client through a reexport.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG005",
+      "severity": "critical",
+      "confidence": "high",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 3,
+          "column": 45,
+          "offset": 99
+        },
+        "end": {
+          "line": 3,
+          "column": 52,
+          "offset": 106
+        }
+      },
+      "symbol": "Page",
+      "traceSymbols": [
+        "lib/profile.ts#profile[\"token\"]",
+        "client"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

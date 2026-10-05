@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "U05",
+  "ruleId": null,
+  "description": "Separate variants for an unsupported Next/React version and syntax unreadable by the pinned parser. An older project TypeScript alone is not unsupported.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "15.0.0",
+    "reactVersion": "18.3.1",
+    "reactDomVersion": "18.3.1",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "partial",
+  "expectedFindings": [],
+  "expectedLimits": [
+    {
+      "code": "unsupported-version",
+      "location": {
+        "file": "package.json",
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 1,
+          "offset": 270
+        }
+      },
+      "affectedRules": [
+        "NSG001",
+        "NSG002",
+        "NSG003",
+        "NSG004",
+        "NSG005",
+        "NSG006"
+      ]
+    }
+  ],
+  "correctedCase": null
+}

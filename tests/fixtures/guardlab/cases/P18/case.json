@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "P18",
+  "ruleId": "NSG005",
+  "description": "A client-referenced Server Function returns a declared secret field.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr",
+      "server-function"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG005",
+      "severity": "critical",
+      "confidence": "high",
+      "location": {
+        "file": "app/actions.ts",
+        "start": {
+          "line": 3,
+          "column": 39,
+          "offset": 94
+        },
+        "end": {
+          "line": 3,
+          "column": 60,
+          "offset": 115
+        }
+      },
+      "symbol": "action",
+      "traceSymbols": [
+        "lib/profile.ts#profile[\"token\"]",
+        "client"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

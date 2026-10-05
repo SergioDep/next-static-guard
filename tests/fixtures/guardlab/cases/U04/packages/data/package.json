@@ -1,0 +1,1 @@
+{"name": "@lab/data", "type": "module", "exports": {".": {"browser": "./browser.ts", "react-server": "./index.ts"}}}

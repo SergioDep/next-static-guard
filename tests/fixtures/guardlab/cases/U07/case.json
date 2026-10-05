@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "U07",
+  "ruleId": null,
+  "description": "Confidential data passes through an unknown transformation.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "partial",
+  "expectedFindings": [],
+  "expectedLimits": [
+    {
+      "code": "unknown-value",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 3,
+          "column": 55,
+          "offset": 138
+        },
+        "end": {
+          "line": 3,
+          "column": 83,
+          "offset": 166
+        }
+      },
+      "affectedRules": [
+        "NSG004",
+        "NSG005"
+      ]
+    }
+  ],
+  "correctedCase": null
+}

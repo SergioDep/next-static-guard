@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "toolVersion": "0.1.0-dev.0",
+  "rulesetVersion": "1.0.0",
+  "implementationHash": "f5c3ed4bf0cc60c8c2c20c2746d7d5c3a0e3ad5f5ec8409843aaf55a40342b59",
+  "corpus": {
+    "root": "tests/fixtures/guardlab",
+    "hash": "4b7837c77dd1774fb894c935ac7e07eb138a87f31b8469a14ac0edcf4ed343e0",
+    "hashProtocol": "Sort full relative POSIX file paths by Unicode code point; update SHA-256 with each UTF-8 path followed by its original bytes. Include manifests, base, variants, and corrections.",
+    "semanticCases": 60,
+    "manifestCases": 87,
+    "positiveCases": 37,
+    "cleanControls": 36,
+    "partialCases": 14,
+    "correctedVariants": 37
+  },
+  "checks": {
+    "source": {
+      "testCount": 188,
+      "passed": 188,
+      "typecheck": true,
+      "build": true
+    },
+    "framework": {
+      "testCount": 121,
+      "passed": 121,
+      "originalAndRetention": 84,
+      "correctionsWithHttp": 37
+    },
+    "corpusAfterContextManifestChanges": {
+      "testCount": 87,
+      "passed": 87
+    }
+  },
+  "ruleMeasures": {
+    "NSG001": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "TN": 6,
+      "precision": 1,
+      "recall": 1,
+      "wilson95": {
+        "precision": [
+          0.6096569663469354,
+          1
+        ],
+        "recall": [
+          0.6096569663469354,
+          1
+        ]
+      }
+    },
+    "NSG002": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "TN": 6,
+      "precision": 1,
+      "recall": 1,
+      "wilson95": {
+        "precision": [
+          0.6096569663469354,
+          1
+        ],
+        "recall": [
+          0.6096569663469354,
+          1
+        ]
+      }
+    },
+    "NSG003": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "TN": 6,
+      "precision": 1,
+      "recall": 1,
+      "wilson95": {
+        "precision": [
+          0.6096569663469354,
+          1
+        ],
+        "recall": [
+          0.6096569663469354,
+          1
+        ]
+      }
+    },
+    "NSG004": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "TN": 6,
+      "precision": 1,
+      "recall": 1,
+      "wilson95": {
+        "precision": [
+          0.6096569663469354,
+          1
+        ],
+        "recall": [
+          0.6096569663469354,
+          1
+        ]
+      }
+    },
+    "NSG005": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "TN": 6,
+      "precision": 1,
+      "recall": 1,
+      "wilson95": {
+        "precision": [
+          0.6096569663469354,
+          1
+        ],
+        "recall": [
+          0.6096569663469354,
+          1
+        ]
+      }
+    },
+    "NSG006": {
+      "TP": 7,
+      "FP": 0,
+      "FN": 0,
+      "TN": 6,
+      "precision": 1,
+      "recall": 1,
+      "wilson95": {
+        "precision": [
+          0.6456611570247934,
+          1
+        ],
+        "recall": [
+          0.6456611570247934,
+          1
+        ]
+      }
+    }
+  },
+  "independentReservedSample": {
+    "reviewedFindings": 0,
+    "knownPositives": 0,
+    "eligible": false
+  },
+  "platforms": {
+    "linux": "passed",
+    "macos": "not measured",
+    "windows": "not measured"
+  },
+  "certification": {
+    "NSG001": {
+      "eligible": false,
+      "effectiveLevel": "warn"
+    },
+    "NSG002": {
+      "eligible": false,
+      "effectiveLevel": "warn"
+    },
+    "NSG003": {
+      "eligible": false,
+      "effectiveLevel": "warn"
+    },
+    "NSG004": {
+      "eligible": false,
+      "effectiveLevel": "warn"
+    },
+    "NSG005": {
+      "eligible": false,
+      "effectiveLevel": "warn"
+    },
+    "NSG006": {
+      "eligible": false,
+      "effectiveLevel": "warn"
+    }
+  },
+  "checkLogHashes": {
+    "source": "6cb05a2b1c2537313f43effa9b121b99b12ae576e39054ae3ee1a2f183b3fe18",
+    "frameworkOriginalAndRetention": "3b108129c754671a7f8146324a97836da97eb952a242dbec9ca20db2a6b54fdb",
+    "frameworkCorrections": "3a41d7342cae5f859eeaeb3c58236ef41512f64ee56c459d8b008fddc1d74789",
+    "corpus": "3c9feabed6222c937dc821dc5580cd791d49f1c06354e880fc295d5a4dd25146",
+    "explicitTypeImportBothModes": "e7537a8e03b4d50e46deccdd2f35d4df3a481e9dad30e15a4b38189b45c936f1"
+  },
+  "performance": {
+    "eligible": true,
+    "passed": true,
+    "samplesPerScenario": 20
+  },
+  "delivery": {
+    "developmentMvp": "passed",
+    "beta": "ineligible",
+    "registryPublication": "outside scope"
+  },
+  "artifactHashes": {
+    "benchmark-results.json": "20c50c6e631ff6fb9091011cfa222b392855fa70af86001f868e58cecd63da7b",
+    "comparison-results.json": "3e15a570f7f1f1736d9fcbc2d19904f2483cbf47f8a26e6843261d1b7aef902a",
+    "package-validation.json": "9979a50bf04a0b5ec3484a296046c8091a966e0b3c64f27e8ffd50256e7ec0c2",
+    "next-static-guard-0.1.0-dev.0.tgz": "e6981399d8a2535c43fb2ae3c83d19f55a834528130152eef721a7c8210e6c61"
+  }
+}

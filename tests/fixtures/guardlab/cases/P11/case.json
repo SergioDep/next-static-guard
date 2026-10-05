@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "P11",
+  "ruleId": "NSG003",
+  "description": "Lazy state initializer reads `localStorage`.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG003",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 3,
+          "column": 60,
+          "offset": 107
+        },
+        "end": {
+          "line": 3,
+          "column": 72,
+          "offset": 119
+        }
+      },
+      "symbol": "Page/<anonymous:0>",
+      "traceSymbols": [
+        "react#useState",
+        "global#localStorage"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

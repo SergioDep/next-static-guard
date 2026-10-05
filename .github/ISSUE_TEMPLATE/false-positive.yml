@@ -1,0 +1,24 @@
+name: False positive
+description: Report a finding that does not represent a boundary violation.
+title: "[FP] "
+body:
+  - type: input
+    id: rule
+    attributes:
+      label: Rule ID and tool version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal fictional reproduction
+      description: Include framework versions, entry context, and a reproduction using fictional data. Remove credentials and confidential source.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Why the pattern is valid
+      description: Include the relevant framework behavior and sanitized finding evidence.
+    validations:
+      required: true

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "P19",
+  "ruleId": "NSG005",
+  "description": "A literal configuration `env` object publishes a key declared secret.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": []
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG005",
+      "severity": "critical",
+      "confidence": "high",
+      "location": {
+        "file": "next.config.mjs",
+        "start": {
+          "line": 1,
+          "column": 28,
+          "offset": 27
+        },
+        "end": {
+          "line": 1,
+          "column": 48,
+          "offset": 47
+        }
+      },
+      "symbol": "<module>",
+      "traceSymbols": [
+        "env#TOKEN",
+        "config#env.TOKEN"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

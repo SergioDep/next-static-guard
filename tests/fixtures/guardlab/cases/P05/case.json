@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "P05",
+  "ruleId": "NSG002",
+  "description": "Server Component calls `useState`.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG002",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 2,
+          "column": 34,
+          "offset": 67
+        },
+        "end": {
+          "line": 2,
+          "column": 45,
+          "offset": 78
+        }
+      },
+      "symbol": "Page",
+      "traceSymbols": [
+        "react#useState"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

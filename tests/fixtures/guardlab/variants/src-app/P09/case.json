@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "P09",
+  "ruleId": "NSG003",
+  "description": "Client reads `window` during module evaluation with SSR enabled. (src-app)",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "finding",
+  "expectedFindings": [
+    {
+      "ruleId": "NSG003",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "src/app/page.tsx",
+        "start": {
+          "line": 2,
+          "column": 12,
+          "offset": 25
+        },
+        "end": {
+          "line": 2,
+          "column": 18,
+          "offset": 31
+        }
+      },
+      "symbol": "<module>",
+      "traceSymbols": [
+        "global#window"
+      ]
+    }
+  ],
+  "expectedLimits": [],
+  "correctedCase": "corrected"
+}

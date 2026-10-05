@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "projectRoots": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "exclude": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+      },
+      "uniqueItems": true
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "NSG001": {
+          "type": "string",
+          "enum": [
+            "off",
+            "warn",
+            "error"
+          ]
+        },
+        "NSG002": {
+          "type": "string",
+          "enum": [
+            "off",
+            "warn",
+            "error"
+          ]
+        },
+        "NSG003": {
+          "type": "string",
+          "enum": [
+            "off",
+            "warn",
+            "error"
+          ]
+        },
+        "NSG004": {
+          "type": "string",
+          "enum": [
+            "off",
+            "warn",
+            "error"
+          ]
+        },
+        "NSG005": {
+          "type": "string",
+          "enum": [
+            "off",
+            "warn",
+            "error"
+          ]
+        },
+        "NSG006": {
+          "type": "string",
+          "enum": [
+            "off",
+            "warn",
+            "error"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "sensitive": {
+      "type": "object",
+      "properties": {
+        "env": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+              },
+              "category": {
+                "type": "string",
+                "enum": [
+                  "secret",
+                  "private"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "exports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "file": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+              },
+              "export": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+              },
+              "field": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                }
+              },
+              "category": {
+                "type": "string",
+                "enum": [
+                  "secret",
+                  "private"
+                ]
+              }
+            },
+            "required": [
+              "file",
+              "export",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fingerprint": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "ruleId": {
+            "type": "string",
+            "enum": [
+              "NSG001",
+              "NSG002",
+              "NSG003",
+              "NSG004",
+              "NSG005",
+              "NSG006"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "false-positive",
+              "accepted-risk"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "fingerprint",
+          "ruleId",
+          "status",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion"
+  ],
+  "additionalProperties": false
+}

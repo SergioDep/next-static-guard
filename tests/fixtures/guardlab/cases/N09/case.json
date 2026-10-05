@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "N09",
+  "ruleId": "NSG003",
+  "description": "Reading `window` within a client effect callback.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "client-ssr",
+      "client-browser"
+    ]
+  },
+  "expectedStatus": "clean",
+  "expectedFindings": [],
+  "expectedLimits": [],
+  "correctedCase": null
+}

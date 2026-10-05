@@ -1,0 +1,2203 @@
+{
+  "implementationHash": "f5c3ed4bf0cc60c8c2c20c2746d7d5c3a0e3ad5f5ec8409843aaf55a40342b59",
+  "completeMatrix": true,
+  "versions": {
+    "node": "v24.21.0",
+    "next": "16.3.8",
+    "typescript": "6.0.3",
+    "eslint": "9.39.5",
+    "nextConfig": "16.3.8",
+    "dependencyCruiser": "18.5.0"
+  },
+  "cases": [
+    {
+      "id": "javascript/N01",
+      "inputHash": "43498dc56322dbb2b55089e2408bec731d2b66617bcd1fef4854258ac4e33026",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 6531.863414999998,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 859.6656459999977,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1314.9883100000006,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/N05",
+      "inputHash": "ce722ec91951396f81e37d956b3e88ffde175f5641c55a34e09698e9c6163aa3",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3718.072629000002,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 189.37759000000005,
+        "diagnostics": [
+          {
+            "file": "lib/state.js",
+            "line": 2,
+            "column": 34,
+            "ruleId": "react-hooks/rules-of-hooks",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2956.7057800000002,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/N09",
+      "inputHash": "d8716696157126b7e18803cf15700f2d3af1c5c1ac6f436452a638035fa9e185",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 6845.476154999997,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 263.09943499999645,
+        "diagnostics": [
+          {
+            "file": "app/page.jsx",
+            "line": 3,
+            "column": 52,
+            "ruleId": "@typescript-eslint/no-unused-expressions",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2247.985074000004,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/N13",
+      "inputHash": "3961159fa4dc2b6e1812dfff68d8f6926c8237b58a11fb8ad154ac2debee05c0",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3522.372494000003,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 144.24590899999748,
+        "diagnostics": [
+          {
+            "file": "app/client.jsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1575.203558000001,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/N17",
+      "inputHash": "b29e74d7c96cacbd3b7e711962225697ee44b766a9ce3c65c86a66dc0591f0ef",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4631.349730000002,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 340.53159400000004,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2189.1418919999996,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/N21",
+      "inputHash": "7851737e8a4a1064464fec9274db469b3bafc23b788e98a598f09668aa40a45f",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 7309.031897000001,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 99.41706899999554,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1871.0975749999998,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/P01",
+      "inputHash": "ea012d29dbdf76c007a640fad2cbd76f310b428088da58d60b9d32fa256b02d0",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3420.107152000004,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 163.5770260000063,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1458.0064679999996,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG001",
+            "file": "app/page.jsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/P05",
+      "inputHash": "d37b1d717a9ac96c51956aab813e48cd9cd1dbe96be01855ae6b942daf418af7",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 5938.9915600000095,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 172.10524299999815,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 3050.77900200001,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG002",
+            "file": "app/page.jsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/P09",
+      "inputHash": "939650eb8e0a244b83413fa79551b6c1ed1c7e8a61bb7cf2982fd3746a296f35",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 6412.445277999999,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 115.03181900001073,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1254.5403249999945,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG003",
+            "file": "app/page.jsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/P13",
+      "inputHash": "6b6f8bf975cb5019f418049d6d9bd2f3279c37c8b0158a7a46b0dc0f83283fad",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3748.404926000003,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 59.8199009999953,
+        "diagnostics": [
+          {
+            "file": "app/client.jsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1778.280786000003,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG004",
+            "file": "app/page.jsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/P17",
+      "inputHash": "4188a4220b97e995e8134e2bc3fc055e6845798b10ec7f52bfcdd1d8bbe12ba5",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3862.4679929999984,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 85.76798499999859,
+        "diagnostics": [
+          {
+            "file": "app/client.jsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1218.182507999998,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG005",
+            "file": "app/page.jsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "javascript/P21",
+      "inputHash": "84e8b2beb94d789f87b05c21d1bcdb989eb357fbc7e9d88895cc0665e6bf7197",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4279.426811999991,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 47.830667000001995,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1406.0191170000035,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG006",
+            "file": "app/page.jsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "mjs/P22",
+      "inputHash": "4bcab87c4c487c3355b2afa86bb627f30f4f3cf695224b1ad59461d2bded2871",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3602.602429999999,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 322.4569940000074,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1382.8247310000006,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG006",
+            "file": "lib/read.mjs",
+            "line": 1,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N01",
+      "inputHash": "ce3966add100f30ec48f8dc8ece441fb04c2fef1465e4cf9dea136b78e81230d",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3402.6543329999986,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 220.94819800001278,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1942.8327660000068,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": {
+        "wallMs": 411.7016589999985,
+        "violations": [],
+        "moduleCount": 2
+      }
+    },
+    {
+      "id": "N02",
+      "inputHash": "987059bc2d52d658a7f188a17ce0e026b0bf7486bd6e61608ff27536a2e22c50",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4616.404960000014,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 95.5968040000007,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 952.9366530000116,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N03",
+      "inputHash": "ed42ae590f25551ea2f94a526db91c5b51340ad9b6dc925e07aafa8ffd2da291",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3364.1980870000116,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 244.9593520000053,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2139.666849999994,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": {
+        "wallMs": 169.8812809999945,
+        "violations": [],
+        "moduleCount": 5
+      }
+    },
+    {
+      "id": "N04",
+      "inputHash": "38770369b2387ef2bdf3c839473345e0c1cb5817c233b93aefb4532b0657b46d",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3944.8867219999956,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 254.22020500000508,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2169.032567000002,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N05",
+      "inputHash": "f82696ed1feaf2722da89bf159d9efbe0627ac9dec351b082e629d00290c72ed",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3195.1828830000013,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 198.03980300000694,
+        "diagnostics": [
+          {
+            "file": "lib/state.ts",
+            "line": 2,
+            "column": 32,
+            "ruleId": "react-hooks/rules-of-hooks",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1505.6335240000044,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N06",
+      "inputHash": "af5f88a7e507a4b73871d192f665bf5d178624633eb5e189dc4f9af2e9a9d088",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 5224.855480999991,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 89.57629300002009,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1653.4662310000276,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N07",
+      "inputHash": "65c383c99339c59beb6d3dc6100bd3e3fc1b190a01c7fc94f00898de6cdba47d",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 5231.894173999986,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 212.73293100000592,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2110.701506000012,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N08",
+      "inputHash": "b40756cc3aa866a07027f97cc8deb54f463774e7f881855d3895f3817eb5f762",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 6454.224591000006,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 140.28506200000993,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2366.1526120000053,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N09",
+      "inputHash": "7a52e823535af6a3f5b97e8645bc465fc9e4dd9834eb839e0afb6120cf343f10",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 7181.545548999973,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 449.84780899999896,
+        "diagnostics": [
+          {
+            "file": "app/page.tsx",
+            "line": 3,
+            "column": 49,
+            "ruleId": "@typescript-eslint/no-unused-expressions",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2630.7476089999836,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N10",
+      "inputHash": "0d161a3e5dab5a41d0e7530a4c56b40aac94f6a7624774de59c2e968b3af64e4",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 5577.078487999999,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 116.8024489999807,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1710.5359739999985,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N11",
+      "inputHash": "2f4d3b8b55359ef3e7616e4d4d43cc508d3af8fcd195c54e478da27760dbab72",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4962.087587999995,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 114.70978299999842,
+        "diagnostics": [
+          {
+            "file": "app/page.tsx",
+            "line": 2,
+            "column": 68,
+            "ruleId": "@typescript-eslint/no-unused-expressions",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1192.9291629999934,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N12",
+      "inputHash": "d6ef980f3b2e1f5bd33f8cf3a09897a1ec8c6dfaac7274f3ed535022c92dd917",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3386.708409999992,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 217.36146399998688,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1189.2457139999897,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N13",
+      "inputHash": "62cb9344d914655ff62593f0ed62cc26c1fe064fa2b72dbe05e78304e8c04857",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 5262.897975,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 138.31405400001677,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1251.9288859999797,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N14",
+      "inputHash": "17918e20239be4191d24b9bf95a8b8294a2a7625d7280885d1af6569ea8873e5",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4893.141024000011,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 87.2217590000073,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1329.9229639999976,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N15",
+      "inputHash": "c7098ec3f320b137adebfe5e42a04e0e95aed9a5048e57a90e999ab04602089e",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3581.423425999994,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 133.42889099998865,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1741.545253999997,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N16",
+      "inputHash": "ca8b585ef1bfe7317d4a39a1ab7a6b9bc52348af3b6ed6690f434101c4463f04",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 5070.13839399998,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 136.27352899999823,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1795.3951260000176,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N17",
+      "inputHash": "bb208c2a8bd98e9a281d0fde19724ebb83906fd3c0730475c5769771225d60b9",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3545.8310989999736,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 53.11010799999349,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 971.4142780000111,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N18",
+      "inputHash": "4b94f0467b358b70e1bbffc6500fffccbfd59c31f48f2cad99d0d1619f175058",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2965.3652140000195,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 71.61461200000485,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1662.6207599999907,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N19",
+      "inputHash": "a89448291917be96492949569d1f6dfe48d5e9007ea9dc1fa5a0c4de648edfb7",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4996.888636999996,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 279.15146399999503,
+        "diagnostics": [
+          {
+            "file": "next.config.mjs",
+            "line": 1,
+            "column": 1,
+            "ruleId": "import/no-anonymous-default-export",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1621.7114109999966,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N20",
+      "inputHash": "85707bdca307c4e851337040cc6f247be4a9e4770cc3d4084d8010a3f1a51055",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2685.3879629999865,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 70.2781660000037,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 922.980853999994,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N21",
+      "inputHash": "d214e823e11b6479acc5d70d14de45c6bfcfe15183770bafa15be0bbbc26143e",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3022.1603420000174,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 121.67993800001568,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2321.1173390000185,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N22",
+      "inputHash": "5b14cf517bbad0692e79ef5b79862a40e17bf618c35123309c515086b38bec51",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4748.554978999979,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 122.25508700002683,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1189.516397999978,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N23",
+      "inputHash": "bbbb79a729190aa2301e396f9067d47a9337be1d6e47b1a8feb3903ea3f5505d",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2437.7538789999962,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 75.3259979999857,
+        "diagnostics": [
+          {
+            "file": "next.config.mjs",
+            "line": 1,
+            "column": 1,
+            "ruleId": "import/no-anonymous-default-export",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 920.9975240000058,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "N24",
+      "inputHash": "7e1b1eba00b1886d0279b3d06e2c9e6474a7d4f1f59ca6bee5db2103235dc751",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3384.5198139999993,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 218.98536500000046,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2378.150959999999,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P01",
+      "inputHash": "d22ebeb0457a0f3b6b1e7e7b90031f449c2c2a955f11fda4bea4631f6d944c22",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4350.911514000007,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 85.55324700000347,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1312.1319189999776,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG001",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": {
+        "wallMs": 44.38443899998674,
+        "violations": [
+          {
+            "from": "app/page.tsx",
+            "to": "../../../node_modules/server-only/index.js",
+            "rule": "client-server-dependency"
+          }
+        ],
+        "moduleCount": 4
+      }
+    },
+    {
+      "id": "P02",
+      "inputHash": "435ef9705eb064008fec07ec8bbd6c715ffaf066f93e258e5c0ff8f80b333b25",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2442.341477000009,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 60.10106200000155,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1421.0460769999772,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG001",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 3,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": {
+        "wallMs": 64.6183139999921,
+        "violations": [
+          {
+            "from": "app/page.tsx",
+            "to": "../../../node_modules/server-only/index.js",
+            "rule": "client-server-dependency"
+          }
+        ],
+        "moduleCount": 5
+      }
+    },
+    {
+      "id": "P03",
+      "inputHash": "c728de5e7db9cf52ea29be7eeefd07f2023a28e95c0ecd36ba73423ebbd99878",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4683.1892170000065,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 99.35052899998846,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1896.2101079999702,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG001",
+            "file": "lib/read.ts",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P04",
+      "inputHash": "c89adf5acb410b0dce3bad31e250bd17dc8164f6b8a7c6326e2bcc01493733b8",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3771.4427720000385,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 73.60061900003348,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1065.9836980000255,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG001",
+            "file": "packages/data/index.ts",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": {
+        "wallMs": 29.863170000026003,
+        "violations": [
+          {
+            "from": "app/page.tsx",
+            "to": "fs",
+            "rule": "client-server-dependency"
+          }
+        ],
+        "moduleCount": 4
+      }
+    },
+    {
+      "id": "P05",
+      "inputHash": "8c994503c84a2fef36111b570b1c15701485f800cc525dcd4fd5326c1ec4ef91",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2253.124881000025,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 80.63667599996552,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1207.5063760000048,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG002",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P06",
+      "inputHash": "68deb099ac915a6427bfac412accf11ff22ccbd6c9d1c33045be9d96f0f8b777",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 5638.271461000026,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 122.85705599997891,
+        "diagnostics": [
+          {
+            "file": "lib/effect.ts",
+            "line": 2,
+            "column": 26,
+            "ruleId": "react-hooks/rules-of-hooks",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2419.3687759999884,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG002",
+            "file": "lib/effect.ts",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P07",
+      "inputHash": "778f4fbd4df5f4f0a2491180a16308489ce9e03db8614048dd3c4c85977258a0",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3236.3260729999747,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 88.56600099999923,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 998.1637800000026,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG002",
+            "file": "app/page.tsx",
+            "line": 1,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P08",
+      "inputHash": "e9c846346c3ed7f8393ae0114b7a1855229892946f60577f0dda572b70ec71ba",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2181.908847999992,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 90.64161200000672,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1498.0772050000378,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG002",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P09",
+      "inputHash": "32f40ac47521a8edc793b283524cdf6703fb565d100eb84f63fb03da0e44b01b",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 5605.7558610000415,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 208.57077499997104,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1648.5448929999839,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG003",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P10",
+      "inputHash": "68c181a05b7c7c887afaac71baa2c507ac4d273fb25002e28d4be2c661169c89",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2536.7447770000435,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 67.91120299999602,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1005.2024309999542,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG003",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P11",
+      "inputHash": "10ce178c12bcaa3c69dc7a4cbeae88a4f5beaf9cc3591e004e3aa66075efb041",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2082.403709999984,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 122.6962319999584,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1056.8636980000301,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG003",
+            "file": "app/page.tsx",
+            "line": 3,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P12",
+      "inputHash": "881de96d50f9661b69916dc7b959db5032e19a35e7f8e64957da4e1b39ea6ff8",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3669.384160000016,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 56.016185999964364,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 780.7067210000241,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG003",
+            "file": "app/page.tsx",
+            "line": 3,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P13",
+      "inputHash": "24ed91e13e724da2ec6a989488d9a496bedfb652859c1807c82e3ff8abc57585",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 1919.0808479999541,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 68.68316899996717,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 787.0206979999784,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG004",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P14",
+      "inputHash": "6919dc3b3b858e7839594a066c83da0a6dd3ececd52ae0dacbff8b42b13c50fc",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2733.922468999983,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 87.25380900001619,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1207.5047100000083,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG004",
+            "file": "app/page.tsx",
+            "line": 3,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P15",
+      "inputHash": "53a3e4e7daedb55f09c80aa749992b8dbe755ced595929c09373f99b6295f087",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3217.4844559999765,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 72.24157099996228,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 770.7973950000014,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG004",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P16",
+      "inputHash": "9515a48b5573e6ebdacce3fdcb14777694eeea0f848ee2731618a339faa338c3",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 1750.895681999973,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 48.17882900004042,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 651.9541750000208,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG004",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P17",
+      "inputHash": "f26a38204008108d2f88ca61eeb2a44d4083c791f22fc69e4683b38bf2a56bc6",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2479.729453000007,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 119.50588799995603,
+        "diagnostics": [
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1788.8329549999908,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG005",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P18",
+      "inputHash": "8208cfcd2ea5239f471954a63ae8771c86bcaaa4f0bc95f69d98900e095bffd3",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2246.152204999991,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 50.98459800001001,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 833.8249230000074,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG005",
+            "file": "app/actions.ts",
+            "line": 3,
+            "evidenceLength": 3,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P19",
+      "inputHash": "ca976b6e5f4db7a602cdf617fb9d2dc27f1bc98add474b0f82f36b9d1e279872",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 1646.8983010000084,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 50.48660200001905,
+        "diagnostics": [
+          {
+            "file": "next.config.mjs",
+            "line": 1,
+            "column": 1,
+            "ruleId": "import/no-anonymous-default-export",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 649.5671580000198,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG005",
+            "file": "next.config.mjs",
+            "line": 1,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P20",
+      "inputHash": "7b5288df78e048c689f8cb42d94a8725f51c8745f9cf42c50ae908245b25be43",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3116.1741690000053,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 95.49020900001051,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1650.3023229999817,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG005",
+            "file": "app/page.tsx",
+            "line": 3,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P21",
+      "inputHash": "cc8152d7c574fe3c58bbe5ebd126a14183ff297552e03cf876caff451e9830e6",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2119.4784849999705,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 57.02225600002566,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 793.0004700000281,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG006",
+            "file": "app/page.tsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P22",
+      "inputHash": "bb59e4dd9a95bf4408f67043ce134a7aa3f1914be7990cc5f9c023ca705cddd2",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 1616.4483710000059,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 48.02067699999316,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1085.5285109999822,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG006",
+            "file": "lib/read.ts",
+            "line": 1,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P23",
+      "inputHash": "d0466ead0c7a85f4e013f5176f66e443890961a9050ba44b7102c16f87cb4937",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3581.320168999955,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 130.15915099997073,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1025.4707870000275,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG006",
+            "file": "lib/read.ts",
+            "line": 1,
+            "evidenceLength": 3,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "P24",
+      "inputHash": "33a2ce03d6bb89a60e502d72f6fc43ca22938402b6188430a7b2165fefba99ef",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 1867.1150030000135,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 60.52126100001624,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 759.6644150000066,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG006",
+            "file": "packages/data/index.ts",
+            "line": 1,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/N01",
+      "inputHash": "3adf45b4d8c883bdf9b02ecff3bc8f4d015eeb0fdc26a387e719922a51cb184c",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 1581.3565529999905,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 100.07568300003186,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1101.8109260000056,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/N05",
+      "inputHash": "9199be8c97dcf261c398e0d6804d97505ac3b1554db816ce244053b03b61d24e",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3622.8332649999647,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 61.11077500000829,
+        "diagnostics": [
+          {
+            "file": "lib/state.ts",
+            "line": 2,
+            "column": 32,
+            "ruleId": "react-hooks/rules-of-hooks",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 893.3314870000468,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/N09",
+      "inputHash": "ec47dfa47febcff75818e8c60e3338edf7e56c8a6f74a3e42e62babfcbabc9ee",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2674.4895009999746,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 89.63482300000032,
+        "diagnostics": [
+          {
+            "file": "src/app/page.tsx",
+            "line": 3,
+            "column": 49,
+            "ruleId": "@typescript-eslint/no-unused-expressions",
+            "severity": 1
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 947.1714389999979,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/N13",
+      "inputHash": "56b77cea8d6ff0d58008a6089115c6a162d121aebabbc70376cdc96a457e290e",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2572.338413999998,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 115.74758999998448,
+        "diagnostics": [
+          {
+            "file": "src/app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "src/app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1106.1600779999862,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/N17",
+      "inputHash": "f9c7bca94c5b1162482a205c865a49516cee67f3d35988bd5326247650b03a60",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4495.389214000024,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 56.493668999988586,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 983.2313289999729,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/N21",
+      "inputHash": "b2aa399a1fc1e514e5c32574de36d49b0aadef618ff7112e397fb59cbbda895c",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2316.723621000012,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 72.08963300002506,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 871.9594680000446,
+        "coverage": "complete",
+        "findings": []
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/P01",
+      "inputHash": "d33c6c81cdfd000964220cea90d7f779a938790dd53eebc7ef139c14d936a552",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2826.242277000041,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 84.7633270000224,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1242.0222459999495,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG001",
+            "file": "src/app/page.tsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/P05",
+      "inputHash": "7a93b90cd0ca69a5b7c178bf25f57a3c0e4755582c58eb67d1eed7f8369a3a09",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 4210.709737000056,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 62.73875199997565,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 913.3250919999555,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG002",
+            "file": "src/app/page.tsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/P09",
+      "inputHash": "4bfd9d53dba558072d0d79e0b7c47aa027fec828f33dacd4f636da784d54678b",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2374.0945170000196,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 47.449574000027496,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 862.715343000018,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG003",
+            "file": "src/app/page.tsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/P13",
+      "inputHash": "24e9bec782ac74b7c7c1030e83ecceec0225494ab6ff71c450045a9ab19777da",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 3033.2835900000064,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 171.5990870000096,
+        "diagnostics": [
+          {
+            "file": "src/app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "src/app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 2053.011151999992,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG004",
+            "file": "src/app/page.tsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/P17",
+      "inputHash": "d441eec2e71d220761ff6f4f653fe5e0e8902398a162d980c81906b2f0ceb96d",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2862.787022000004,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 1,
+        "wallMs": 57.45257300004596,
+        "diagnostics": [
+          {
+            "file": "src/app/client.tsx",
+            "line": 2,
+            "column": 32,
+            "ruleId": "@typescript-eslint/no-unused-vars",
+            "severity": 1
+          },
+          {
+            "file": "src/app/client.tsx",
+            "line": 2,
+            "column": 39,
+            "ruleId": "@typescript-eslint/no-explicit-any",
+            "severity": 2
+          }
+        ]
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 1006.6371539999964,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG005",
+            "file": "src/app/page.tsx",
+            "line": 2,
+            "evidenceLength": 2,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    },
+    {
+      "id": "src-app/P21",
+      "inputHash": "438c467d2a8d5f88905decc4ffc751c0194f653ac1018206ec1902f95e5684b9",
+      "typecheck": {
+        "exitStatus": 0,
+        "wallMs": 2223.7232769999537,
+        "diagnostics": []
+      },
+      "eslint": {
+        "exitStatus": 0,
+        "wallMs": 60.45690900000045,
+        "diagnostics": []
+      },
+      "guard": {
+        "exitStatus": 0,
+        "wallMs": 942.1219789999886,
+        "coverage": "complete",
+        "findings": [
+          {
+            "ruleId": "NSG006",
+            "file": "src/app/page.tsx",
+            "line": 2,
+            "evidenceLength": 1,
+            "recommendation": true
+          }
+        ]
+      },
+      "dependencyCruiser": null
+    }
+  ]
+}

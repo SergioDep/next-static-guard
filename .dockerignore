@@ -1,0 +1,14 @@
+node_modules
+tests/fixtures/guardlab/cases
+.git
+.next
+bench-results
+*.tgz
+.aws
+.agents
+.codex
+.env*
+comparison-results
+framework-results
+tests/fixtures/.framework-*
+tests/fixtures/.comparison-*

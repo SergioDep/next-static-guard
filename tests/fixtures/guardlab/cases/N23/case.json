@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "N23",
+  "ruleId": "NSG006",
+  "description": "A client read of a public key recognized in `next.config.env`.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc"
+    ]
+  },
+  "expectedStatus": "clean",
+  "expectedFindings": [],
+  "expectedLimits": [],
+  "correctedCase": null
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "P14",
+  "ruleId": "NSG004",
+  "description": "Server sends a custom class instance inside an object.",
+  "projectVariant": ".",
+  "preconditions": {
+    "nextVersion": "16.3.8",
+    "reactVersion": "19.3.0",
+    "reactDomVersion": "19.3.0",
+    "typescriptVersion": "6.0.3",
+    "contexts": [
+      "rsc",
+      "client-ssr"
+    ]
+  },
+  "expectedStatus": "clean",
+  "expectedFindings": [],
+  "expectedLimits": [],
+  "correctedCase": null
+}
