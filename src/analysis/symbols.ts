@@ -89,7 +89,9 @@ export function resolveReference(graph:Graph,node:ts.Node,seen=new Set<string>()
   else if(ts.isPropertyAccessExpression(node)&&ts.isIdentifier(node.expression)){name=node.expression.text;member=node.name.text;}
   else if(ts.isElementAccessExpression(node)&&ts.isIdentifier(node.expression)&&ts.isStringLiteral(node.argumentExpression)){name=node.expression.text;member=node.argumentExpression.text;}
   if(name) {
-    const symbol=ts.isIdentifier(node)&&ts.isExportSpecifier(node.parent)&&!node.parent.parent.parent.moduleSpecifier
+    const symbol=ts.isIdentifier(node)&&ts.isShorthandPropertyAssignment(node.parent)
+      ?graph.checker.getShorthandAssignmentValueSymbol(node.parent)
+      :ts.isIdentifier(node)&&ts.isExportSpecifier(node.parent)&&!node.parent.parent.parent.moduleSpecifier
       ?graph.checker.getExportSpecifierLocalTargetSymbol(node.parent)
       :graph.checker.getSymbolAtLocation(ts.isPropertyAccessExpression(node)||ts.isElementAccessExpression(node)?node.expression:node);
     const declaration=symbol?.valueDeclaration??symbol?.declarations?.[0];

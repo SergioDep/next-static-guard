@@ -13,7 +13,7 @@ if(!['all','oracle','measure'].includes(phase))throw new Error('Expected all, or
 const digest=text=>createHash('sha256').update(text).digest('hex');
 const json=value=>JSON.stringify(value,null,2)+'\n';
 if(process.versions.node!==versions.node)throw new Error('Use the pinned Node release.');
-const manifest={schemaVersion:1,sample:'reserved-synthetic-v2',provenance:'Independently authored synthetic variations; no production-repository or human-review claim.',versions,probeValueHash:digest(token),cases:cases.map(({files,configEnv,...c})=>({...c,configEnvKeys:Object.keys(configEnv??{}).sort(),sources:Object.fromEntries(Object.entries(originalSources({...c,files,configEnv})).sort().map(([name,text])=>[name,digest(text)]))}))};
+const manifest={schemaVersion:1,sample:'reserved-synthetic-v3',provenance:'154 untuned v2 cases retained; two fresh v3 cases replace shorthand cases moved to development. Independently authored synthetic variations; no production-repository or human-review claim.',versions,probeValueHash:digest(token),cases:cases.map(({files,configEnv,...c})=>({...c,configEnvKeys:Object.keys(configEnv??{}).sort(),sources:Object.fromEntries(Object.entries(originalSources({...c,files,configEnv})).sort().map(([name,text])=>[name,digest(text)]))}))};
 const corpusHash=digest(JSON.stringify(manifest));
 await mkdir(output,{recursive:true});
 const manifestPath=join(output,'manifest.json');

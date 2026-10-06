@@ -1,4 +1,5 @@
-// Reserved v2: authored after v1 moved to development. No Guard output defines truth.
+// Reserved v3: 154 untuned v2 cases retained, two new cases replace v2 shorthand misses.
+// Expectations come from independent Next observations, never Guard output.
 export const token='FICTIONAL_RESERVED_QUALITY_TOKEN';
 export const versions={node:'24.21.0',next:'16.3.8',react:'19.3.0',reactDom:'19.3.0',typescript:'6.0.3'};
 export function originalSources(c){return {'package.json':JSON.stringify({name:'reserved-quality',private:true,type:'module',dependencies:{next:versions.next,react:versions.react,'react-dom':versions.reactDom,typescript:versions.typescript}}),'tsconfig.json':JSON.stringify({compilerOptions:{target:'ES2022',lib:['dom','dom.iterable','esnext'],allowJs:true,skipLibCheck:true,strict:true,noEmit:true,esModuleInterop:true,module:'esnext',moduleResolution:'bundler',resolveJsonModule:true,jsx:'react-jsx',verbatimModuleSyntax:!!c.verbatim,paths:{'@/*':['./*']}},include:['**/*.ts','**/*.tsx','.next/types/**/*.ts'],exclude:['node_modules']}),'app/layout.tsx':'export default function Layout({children}:any){return <html><body>{children}</body></html>;}',...c.files,...c.configEnv?{'next.config.mjs':`export default ${JSON.stringify({env:c.configEnv})};`}:{},...c.sensitive?{'next-static-guard.json':JSON.stringify({schemaVersion:1,sensitive:c.sensitive})}:{}};}
@@ -71,7 +72,7 @@ for(const [description,pre,value]of [
  ['map in DTO','','{credentials:new Map([["credential",process.env.TOKEN]])}'],
  ['helper parameter passthrough','function dto(value:any){return {credential:value};}','dto(process.env.TOKEN)'],
  ['helper returns nested DTO','function dto(){return {auth:{credential:process.env.TOKEN}};}','dto()'],
- ['helper alias parameter','function dto(value:any){const credential=value;return {credential};}','dto(process.env.TOKEN)'],
+ ['fragment with confidential DOM attribute','','<><label title={process.env.TOKEN}/><small>Catalog</small></>'],
  ['string conversion in object','','{credential:String(process.env.TOKEN)}'],
  ['string combination in array','','[process.env.TOKEN+":suffix"]'],
  ['promise containing DTO','','Promise.resolve({credential:process.env.TOKEN})'],
@@ -83,7 +84,7 @@ add('NSG005','nested private export field',{'app/page.tsx':page("import Box from
 add('NSG005','declared default export field',{'app/page.tsx':page("import Box from './box';import account from '../lib/account';",'<Box payload={{email:account.email}}/>'),'app/box.tsx':box,'lib/account.ts':`const account={email:'${token}',label:'Catalog'};export default account;`},{kind:'payload-present'},{sensitive:{env:[],exports:[{file:'lib/account.ts',export:'default',field:['email'],category:'private'}]}});
 add('NSG005','public config capability in nested client component',{'app/page.tsx':page("import Counter from './counter';",'<Counter/>'),'app/counter.tsx':page('','<main>{process.env.TOKEN}</main>',true)},{kind:'bundle-present'},{sensitive:secret,configEnv:{TOKEN:token}});
 add('NSG005','declared JSON export field',{'app/page.tsx':page("import Box from './box';import account from '../lib/account.json';",'<Box payload={account.auth.credential}/>'),'app/box.tsx':box,'lib/account.json':JSON.stringify({auth:{credential:token},label:'Catalog'})},{kind:'payload-present'},{sensitive:{env:[],exports:[{file:'lib/account.json',export:'default',field:['auth','credential'],category:'private'}]}});
-add('NSG005','action explicitly returns a nested confidential DTO',{'app/page.tsx':page("import {load} from './actions';",'<button onClick={()=>load()}>Load</button>',true),'app/actions.ts':"'use server';export async function load(){const credential=process.env.TOKEN;return {auth:{credential}};}"},{kind:'action-return'},{sensitive:secret});
+add('NSG005','default private DTO reaches spread client props',{'app/page.tsx':page("import Box from './box';import account from '../lib/private';",'<Box {...{data:account}}/>'),'app/box.tsx':box,'lib/private.ts':`export default {credential:'${token}',label:'Catalog'};`},{kind:'payload-present'},{sensitive:{env:[],exports:[{file:'lib/private.ts',export:'default',field:['credential'],category:'private'}]}});
 
 for(const read of ['process.env.TOKEN',"process.env['TOKEN']"])for(const mode of ['local-alias','destructured-result','object-field','render-helper','event-helper','effect-helper','default-mjs','namespace-mjs','two-helpers','nested-client']){
  let files;
@@ -139,3 +140,5 @@ for(const [description,files,options]of [
  ['NODE_ENV read in namespace helper',{'app/page.tsx':page("import * as env from '../lib/env';",'<main>{env.inspect()}</main>',true),'lib/env.ts':"export function inspect(){return process.env.NODE_ENV;}"},{}],
  ['pure mjs helper constant',{'app/page.tsx':page("import * as data from '../lib/data.mjs';",'<main>{data.count}</main>',true),'lib/data.mjs':"export const count=2;"},{}],
 ])add('NSG006',description,files,{kind:'accepted-build'},{clean:true,...options});
+
+for(const c of cases)if(['V2-NSG005-P09','V2-NSG005-P20'].includes(c.id))c.id=c.id.replace('V2-','V3-');

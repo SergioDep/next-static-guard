@@ -1,6 +1,6 @@
 {
-  "tarballSha256": "59c84a3982eb05b35451f1f0025e87e76ce27746a3b06bb726ead420bbd1a96b",
-  "bytes": 84587,
+  "tarballSha256": "c723fdc29ae4b8ac4b2d1883ab3e65d7b487b38d53a017db41de9d867c1bc9ce",
+  "bytes": 85340,
   "toolVersion": "0.1.0-dev.1",
   "rulesetVersion": "1.1.0",
   "node": "v24.21.0",

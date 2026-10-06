@@ -25,6 +25,7 @@ export class Values {
  constructor(readonly graph:Graph,readonly diagnostics:Diagnostics) {}
  eval(node:ts.Node,context:Context,bindings=new Map<ts.Node,Value>(),depth=0,seen=new Set<ts.Node>(),calls=0):Value {
   checkBudget();
+  if(bindings.has(node))return bindings.get(node)!;
   if(depth>64){this.diagnostics.limit('source-budget',node,['NSG004','NSG005']);return unknown();}
   if(calls>2 || seen.has(node))return unknown();
   seen=new Set([...seen,node]);
@@ -86,7 +87,7 @@ export class Values {
   }
   if(ts.isIdentifier(node)) {
    if(['undefined','NaN','Infinity'].includes(node.text)&&unshadowed(this.graph,node))return value();
-   const symbol=this.graph.checker.getSymbolAtLocation(node),declaration=symbol?.valueDeclaration??symbol?.declarations?.[0];
+   const symbol=ts.isShorthandPropertyAssignment(node.parent)?this.graph.checker.getShorthandAssignmentValueSymbol(node.parent):this.graph.checker.getSymbolAtLocation(node),declaration=symbol?.valueDeclaration??symbol?.declarations?.[0];
    if(declaration&&bindings.has(declaration))return bindings.get(declaration)!;
    if(declaration&&ts.isBindingElement(declaration)) {
     const pattern=declaration.parent,parent=pattern.parent;

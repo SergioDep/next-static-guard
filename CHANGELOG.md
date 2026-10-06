@@ -2,6 +2,8 @@
 
 ## 0.1.0-dev.1
 
+- Track actual Server Function references in nested client props; distinguish exported async functions from private helpers and ordinary function values.
+
 - Treat a client reference called or constructed from server execution as an unknown result, without inventing server evaluation of its client implementation or a prop disclosure.
 - Do not mistake Date and binary constructor coercion inputs for fields sent to the client; report custom coercions as unknown coverage.
 - Preserve sole-statement module checks by distinguishing AST identities, evaluate event factories during render, and retain declared namespace export sensitivity.
