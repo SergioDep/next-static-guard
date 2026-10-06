@@ -2,6 +2,8 @@
 
 ## 0.1.0-dev.1
 
+- Treat a Client Function called from server execution as an unknown result, without inventing server evaluation of its client implementation or a prop disclosure.
+
 - Fix Git comparisons through symlinked roots on macOS and Windows.
 - Preserve authored fixture line endings and use portable ESM test preloads.
 - Reject cross-drive and cross-share paths outside Windows scan roots.

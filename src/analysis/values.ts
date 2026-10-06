@@ -159,6 +159,7 @@ export class Values {
     if(['Map','Set','Array'].includes(name))return value('supported',`global#${name}`,new Map(args.map((a,i)=>[String(i),recur(a)])));
    }
    const ref=resolveReference(this.graph,node.expression);
+   if(!context.startsWith('client-')&&ref.source?.directive==='client')return unknown('client#constructor-result');
    if(ref.node&&ts.isClassDeclaration(ref.node))return value('rejected',`${ref.source?.file.path}#${ref.node.name?.text??'class'}`);
    return unknown();
   }
@@ -175,6 +176,8 @@ export class Values {
     if(api==='Promise.resolve')return args[0]?recur(args[0]):value();
    }
    const ref=resolveReference(this.graph,e);
+   // On the server this is a client reference, not an executable function body.
+   if(!context.startsWith('client-')&&ref.source?.directive==='client')return unknown('client#function-result');
    if(ref.node&&ts.isFunctionLike(ref.node)&&'body' in ref.node&&ref.node.body) {
     if(calls>=2)return unknown();
     const fn=ref.node,newBindings=new Map(bindings);

@@ -64,3 +64,11 @@ test('Next resolves a namespace reexport as a real Client Component boundary',as
  const result=await build({'app/page.tsx':"import {ui} from '../lib/ui';export default function Page(){return <ui.Client handler={()=>1}/>;}",'lib/ui.ts':"export * as ui from '../app/client';",'app/client.tsx':"'use client';export function Client(props:any){return <p/>;}"});
  expect(result.code).not.toBe(0);expect(result.output).toMatch(/function|Function/);
 });
+
+test.each([
+ {expression:'make()',declaration:'export function make(){return {token:process.env.TOKEN,handler:()=>1};}'},
+ {expression:'new make()',declaration:'export class make {value=1;}'},
+])('Next rejects executing a client implementation on the server: $expression',async item=>{
+ const result=await build({'app/page.tsx':`import Client from './client';import {make} from './client-value';export default function Page(){return <Client data={${item.expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",'app/client-value.ts':`'use client';${item.declaration}`});
+ expect(result.code).not.toBe(0);expect(result.output).toMatch(/Attempted to call.*make|cannot.*client function|call.*server.*client/i);
+});

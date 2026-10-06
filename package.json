@@ -33,6 +33,9 @@
     "bench": "node tests/bench/run.mjs",
     "check": "npm run typecheck && npm test && npm run build",
     "test:comparison": "node tests/comparison/run.mjs",
+    "test:quality": "node tests/quality/run.mjs",
+    "release:check": "node scripts/check-release.mjs",
+    "verify:package": "node scripts/verify-package.mjs",
     "prepack": "npm run build"
   },
   "dependencies": {

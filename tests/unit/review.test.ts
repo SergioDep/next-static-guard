@@ -1,6 +1,15 @@
 import { test, expect } from 'vitest';
 import { scan } from './helpers.js';
 
+test.each([
+ {expression:'make()',declaration:'export function make(){return {token:process.env.TOKEN,handler:()=>1};}'},
+ {expression:'new make()',declaration:'export class make {value=1;}'},
+])('server execution cannot evaluate a client implementation: $expression',async item=>{
+ const report=await scan({'app/page.tsx':`import Client from './client';import {make} from './client-value';export default function Page(){return <Client data={${item.expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",'app/client-value.ts':`'use client';${item.declaration}`},{schemaVersion:1,sensitive:{env:[{name:'TOKEN',category:'secret'}]}});
+ expect(report.findings.some(f=>f.ruleId==='NSG004'||f.ruleId==='NSG005')).toBe(false);
+ expect(report.coverage.limits.some(l=>l.code==='unknown-value'&&l.affectedRules.includes('NSG005'))).toBe(true);
+});
+
 const client="'use client';export default function Client({children,...props}:any){return <div>{children}</div>;}";
 const secretPolicy={schemaVersion:1,sensitive:{env:[{name:'TOKEN',category:'secret'}]}};
 
