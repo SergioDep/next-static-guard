@@ -2,12 +2,11 @@ import { checkBudget } from '../project/budget.js';
 import ts from 'typescript';
 import type { Category, Context } from '../types.js';
 import type { Graph } from '../graph/build.js';
-import { inlineServer } from '../graph/directives.js';
-import { resolveReference, unshadowed } from './symbols.js';
+import { resolveReference, unshadowed, serverReference } from './symbols.js';
 import type { Reference } from './symbols.js';
 import { Diagnostics } from '../rules/shared.js';
 export interface Origin { id:string; category:Category }
-export interface Value { serialization:'supported'|'rejected'|'unknown'; origin:string; sensitive:Origin[]; fields:Map<string,Value>|null; unknown:boolean }
+export interface Value { serialization:'supported'|'rejected'|'unknown'; origin:string; sensitive:Origin[]; fields:Map<string,Value>|null; unknown:boolean; serverReference?:ts.Node }
 const value=(serialization:Value['serialization']='supported',origin='value',fields:Map<string,Value>|null=null,sensitive:Origin[]=[],unknown=false):Value=>({serialization,origin,fields,sensitive,unknown});
 export function unknown(origin='unknown'):Value{return value('unknown',origin,null,[],true);}
 export function envKey(graph:Graph,node:ts.Node):{key:string|null;dynamic:boolean}|null {
@@ -42,7 +41,8 @@ export class Values {
   if(ts.isAwaitExpression(node))return recur(node.expression);
   if(ts.isFunctionLike(node)) {
    const source=this.graph.resolver.source(node.getSourceFile().fileName);
-   return value(source?.directive==='server'||source?.directive==='client'||inlineServer(node)?'supported':'rejected',`${node.getSourceFile().fileName}#${node.name?.getText()??'<function>'}`);
+   const remote=serverReference(this.graph,node);
+   return {...value(remote||source?.directive==='client'?'supported':'rejected',`${node.getSourceFile().fileName}#${node.name?.getText()??'<function>'}`),...remote?{serverReference:node}:{}};
   }
   if(ts.isJsxElement(node)||ts.isJsxSelfClosingElement(node)||ts.isJsxFragment(node)) {
    const fields=new Map<string,Value>();let uncertain=false;

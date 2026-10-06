@@ -9,7 +9,7 @@ async function payload(dir:string):Promise<string> {
  let result='';for(const entry of await readdir(dir,{withFileTypes:true})) {
   const path=join(dir,entry.name);
   if(entry.isDirectory())result+=await payload(path);
-  else if(/\.(?:html|rsc)$/.test(path))result+=await readFile(path,'utf8');
+  else if(/\.(?:html|rsc|body)$/.test(path))result+=await readFile(path,'utf8');
  }return result;
 }
 async function build(files:Record<string,string>,verbatim=false):Promise<{code:number;output:string;payload:string}> {
@@ -80,4 +80,33 @@ test.each([
 ])('Next transfers builtin results without their coercion inputs: %s',async expression=>{
  const result=await build({'app/page.tsx':`import Client from './client';export default function Page(){return <Client data={${expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}"});
  expect(result.code,result.output).toBe(0);
+});
+
+test('Next transfers a nested module Server Function reference whose real return contains confidential data',async()=>{
+ const result=await build({
+  'app/page.tsx':"import Client from './client';import {load} from './actions';export default function Page(){return <Client data={{action:load}}/>;}",
+  'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",
+  'app/actions.ts':"'use server';export async function load(){return {token:process.env.TOKEN};}",
+  'app/probe/route.ts':"import {load} from '../actions';export const dynamic='force-static';export async function GET(){return Response.json(await load());}",
+ });
+ expect(result.code,result.output).toBe(0);expect(result.payload).toMatch(/"action":"\$h[0-9a-f]+"/);expect(result.payload).toContain(sentinel);
+});
+
+test('Next publishes the public Server Function result without its private helper return',async()=>{
+ const result=await build({
+  'app/page.tsx':"import Client from './client';export default function Page(){return <Client/>;}",
+  'app/client.tsx':"'use client';import {load} from './actions';export default function Client(){return <button onClick={()=>load()}>Load</button>;}",
+  'app/actions.ts':"'use server';async function credential(){return process.env.TOKEN;}export async function load(){await credential();return {ok:true};}",
+  'app/probe/route.ts':"import {load} from '../actions';export const dynamic='force-static';export async function GET(){return Response.json(await load());}",
+ });
+ expect(result.code,result.output).toBe(0);expect(result.payload).toContain('"ok":true');expect(result.payload).not.toContain(sentinel);
+});
+
+test('Next rejects an unregistered private function returned by a module Server Function as a client prop',async()=>{
+ const result=await build({
+  'app/page.tsx':"import Client from './client';import {create} from './actions';export default async function Page(){return <Client handler={await create()}/>;}",
+  'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",
+  'app/actions.ts':"'use server';function handler(){return 1;}export async function create(){return handler;}",
+ });
+ expect(result.code).not.toBe(0);expect(result.output).toMatch(/Functions cannot be passed|functions cannot be passed/i);
 });

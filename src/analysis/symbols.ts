@@ -2,6 +2,7 @@ import ts from 'typescript';
 import type { Graph } from '../graph/build.js';
 import type { SourceNode } from '../types.js';
 import { runtimeExports } from '../graph/exports.js';
+import { inlineServer, isAsyncFunction } from '../graph/directives.js';
 export interface Reference { node:ts.Node|null; source:SourceNode|null; api:string|null; exported:string|null; browserOnly?:boolean; uncertain?:boolean; namespace?:{file:string|null;package:string|null}; annotations?:{file:string;name:string}[] }
 function tagExport(reference:Reference,file:string,name:string):Reference {
  return {...reference,annotations:[...(reference.annotations??[]),{file,name}]};
@@ -121,4 +122,10 @@ export function resolveReference(graph:Graph,node:ts.Node,seen=new Set<string>()
 export function unshadowed(graph:Graph,node:ts.Identifier):boolean {
   const symbol=graph.checker.getSymbolAtLocation(node);
   return !symbol?.declarations?.some(d=>graph.resolver.snapshot.files.has(d.getSourceFile().fileName));
+}
+export function serverReference(graph:Graph,node:ts.Node):boolean {
+ if(!isAsyncFunction(node))return false;
+ if(inlineServer(node))return true;
+ const file=node.getSourceFile().fileName,source=graph.resolver.source(file);
+ return source?.directive==='server'&&[...runtimeExports(graph.resolver,file).names].some(name=>resolveExport(graph,file,name).node===node);
 }

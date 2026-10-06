@@ -5,15 +5,23 @@ import type { Execution } from './phases.js';
 import { isClient } from './phases.js';
 import { envKey, allOrigins, hasUnknown, rejected, Values } from './values.js';
 import type { Value } from './values.js';
-import { resolveReference, unshadowed } from './symbols.js';
+import { resolveReference, resolveExport, unshadowed, serverReference } from './symbols.js';
 import { location } from '../project/location.js';
 import { Diagnostics } from '../rules/shared.js';
 import { checkSerialization } from '../rules/NSG004.js';
 import { checkConfidentialValue } from '../rules/NSG005.js';
 import { checkPrivateEnv } from '../rules/NSG006.js';
 import { inlineServer } from '../graph/directives.js';
+import { runtimeExports } from '../graph/exports.js';
 export function dataHooks(graph:Graph,diagnostics:Diagnostics):{visit:(node:ts.Node,state:Execution)=>void;returnValue:(node:ts.Expression,state:Execution)=>void} {
  const values=new Values(graph,diagnostics);
+ const referenced=new WeakMap<ts.Node,Evidence[]>();
+ for(const use of graph.uses)if(use.node.directive==='server'&&use.trace.some(e=>e.location&&graph.uses.some(parent=>parent.node.file.path===e.location?.file&&isClient(parent.context)))) {
+  for(const name of use.exports.has('*')?runtimeExports(graph.resolver,use.node.file.path).names:use.exports) {
+   const ref=resolveExport(graph,use.node.file.path,name);if(ref.node&&serverReference(graph,ref.node))referenced.set(ref.node,use.trace);
+  }
+ }
+ const markReferences=(v:Value,evidence:Evidence[]):void=>{if(v.serverReference)referenced.set(v.serverReference,evidence);if(v.fields)for(const child of v.fields.values())markReferences(child,evidence);};
  const sink=(v:Value,site:ts.Node,state:Execution,destination:string,serialization:boolean):void=>{
   const trace:Evidence[]=[...state.trace,{kind:'sink',location:location(site),symbol:destination}];
   if(serialization)checkSerialization(diagnostics,v,site,state,destination);
@@ -26,9 +34,8 @@ export function dataHooks(graph:Graph,diagnostics:Diagnostics):{visit:(node:ts.N
  }
  const returnValue=(node:ts.Expression,state:Execution):void=>{
   if(state.context!=='server-function')return;
-  const file=node.getSourceFile().fileName;
-  const clientReferenced=graph.uses.some(use=>use.node.file.path===file&&use.context==='server-function'&&use.trace.some(e=>e.location&&graph.uses.some(parent=>parent.node.file.path===e.location?.file&&isClient(parent.context))));
-  if(clientReferenced)sink(values.eval(node,state.context,state.bindings),node,state,'client',false);
+  const fn=ts.findAncestor(node,ts.isFunctionLike),reference=fn?referenced.get(fn):undefined;
+  if(reference)sink(values.eval(node,state.context,state.bindings),node,{...state,trace:reference},'client',false);
  };
  const visit=(node:ts.Node,state:Execution):void=>{
   const environment=envKey(graph,node);
@@ -64,6 +71,7 @@ export function dataHooks(graph:Graph,diagnostics:Diagnostics):{visit:(node:ts.N
     }
    }
    for(const [name,prop] of props) {
+    markReferences(prop.value,[...state.trace,{kind:'reference',location:location(prop.site),symbol:`${destination}.${name}`}]);
     sink(prop.value,prop.site,state,`${destination}.${name}`,true);
     const reference=resolveReference(graph,prop.site);
     if(reference.node&&inlineServer(reference.node)&&ts.isFunctionLike(reference.node)&&'body' in reference.node&&reference.node.body) {

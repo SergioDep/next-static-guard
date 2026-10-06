@@ -1,6 +1,21 @@
 import { test, expect } from 'vitest';
 import { scan } from './helpers.js';
 
+test('a module Server Function passed as a nested prop is client referenced',async()=>{
+ const report=await scan({'app/page.tsx':"import Box from './box';import {load} from './actions';export default function Page(){return <Box payload={{action:load}}/>;}",'app/box.tsx':"'use client';export default function Box(props:any){return <main/>;}",'app/actions.ts':"'use server';export async function load(){return {token:process.env.TOKEN};}"},{schemaVersion:1,sensitive:{env:[{name:'TOKEN',category:'secret'}]}});
+ expect(report.findings.map(f=>f.ruleId)).toEqual(['NSG005']);expect(report.coverage.status).toBe('complete');
+});
+
+test('a private helper return inside a Server Function is not a client return',async()=>{
+ const report=await scan({'app/page.tsx':"'use client';import {load} from './actions';export default function Page(){return <button onClick={()=>load()}>Load</button>;}",'app/actions.ts':"'use server';function credential(){return process.env.TOKEN;}export async function load(){const token=credential();if(!token)throw new Error('not configured');return {ok:true};}"},{schemaVersion:1,sensitive:{env:[{name:'TOKEN',category:'secret'}]}});
+ expect(report.findings).toEqual([]);expect(report.coverage.status).toBe('complete');
+});
+
+test('an unregistered private function in a server module is an ordinary prop value',async()=>{
+ const report=await scan({'app/page.tsx':"import Box from './box';import {create} from './actions';export default async function Page(){const handler=await create();return <Box handler={handler}/>;}",'app/box.tsx':"'use client';export default function Box(props:any){return <main/>;}",'app/actions.ts':"'use server';function handler(){return 2;}export async function create(){return handler;}"});
+ expect(report.findings.map(f=>f.ruleId)).toEqual(['NSG004']);
+});
+
 test('declared confidential namespace exports retain their publication origin',async()=>{
  const report=await scan({'app/page.tsx':"'use client';import * as account from '../lib/account';export default function Page(){return <main>{account.credential}</main>;}",'lib/account.ts':"export const credential='FICTIONAL_NAMESPACE_VALUE';"},{schemaVersion:1,sensitive:{exports:[{file:'lib/account.ts',export:'credential',field:[],category:'secret'}]}});
  expect(report.findings.map(f=>f.ruleId)).toEqual(['NSG005']);expect(report.coverage.status).toBe('complete');expect(JSON.stringify(report)).not.toContain('FICTIONAL_NAMESPACE_VALUE');
