@@ -1,8 +1,8 @@
 {
-  "tarballSha256": "de223d821a1aa059a719d0eaa241ba66d0ce4125556d911c14183383509f7eec",
-  "implementationHash": "cdf9d0530d046c4103a9126f54a8332b1ed8f7d4a2129b813bf590b64ab36515",
-  "bytes": 85437,
-  "toolVersion": "0.1.0-dev.1",
+  "tarballSha256": "cb6ecd278ba8942a839d1cc876d3d186ce8af8451b71ecb39899a4f12a385365",
+  "implementationHash": "751e8c9eb8e6b3ca0f50be6e2afe73487fb180328d799adcc795e39539115252",
+  "bytes": 85441,
+  "toolVersion": "0.1.0-beta.1",
   "rulesetVersion": "1.1.0",
   "node": "v24.21.0",
   "passed": true,
@@ -19,42 +19,42 @@
       "rule": "NSG001",
       "exitStatus": 0,
       "coverage": "complete",
-      "toolVersion": "0.1.0-dev.1",
+      "toolVersion": "0.1.0-beta.1",
       "rulesetVersion": "1.1.0"
     },
     {
       "rule": "NSG002",
       "exitStatus": 0,
       "coverage": "complete",
-      "toolVersion": "0.1.0-dev.1",
+      "toolVersion": "0.1.0-beta.1",
       "rulesetVersion": "1.1.0"
     },
     {
       "rule": "NSG003",
       "exitStatus": 0,
       "coverage": "complete",
-      "toolVersion": "0.1.0-dev.1",
+      "toolVersion": "0.1.0-beta.1",
       "rulesetVersion": "1.1.0"
     },
     {
       "rule": "NSG004",
       "exitStatus": 0,
       "coverage": "complete",
-      "toolVersion": "0.1.0-dev.1",
+      "toolVersion": "0.1.0-beta.1",
       "rulesetVersion": "1.1.0"
     },
     {
       "rule": "NSG005",
       "exitStatus": 0,
       "coverage": "complete",
-      "toolVersion": "0.1.0-dev.1",
+      "toolVersion": "0.1.0-beta.1",
       "rulesetVersion": "1.1.0"
     },
     {
       "rule": "NSG006",
       "exitStatus": 0,
       "coverage": "complete",
-      "toolVersion": "0.1.0-dev.1",
+      "toolVersion": "0.1.0-beta.1",
       "rulesetVersion": "1.1.0"
     }
   ]

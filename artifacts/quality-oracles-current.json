@@ -8,7 +8,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9717.766203999985
+      "wallMs": 11603.825133000035
     },
     {
       "id": "V2-NSG001-N02",
@@ -17,7 +17,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9329.798161000013
+      "wallMs": 11540.72022700007
     },
     {
       "id": "V2-NSG001-N03",
@@ -26,7 +26,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9369.670993000036
+      "wallMs": 11562.620652999962
     },
     {
       "id": "V2-NSG001-N04",
@@ -35,7 +35,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9162.86458500009
+      "wallMs": 11999.992745999945
     },
     {
       "id": "V2-NSG001-N05",
@@ -44,7 +44,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9002.261125000077
+      "wallMs": 11632.958522
     },
     {
       "id": "V2-NSG001-N06",
@@ -53,7 +53,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9323.033197999932
+      "wallMs": 12054.45207400003
     },
     {
       "id": "V2-NSG001-P01",
@@ -62,7 +62,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8322.329494
+      "wallMs": 8846.801323
     },
     {
       "id": "V2-NSG001-P02",
@@ -71,7 +71,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7946.691573
+      "wallMs": 8666.871659
     },
     {
       "id": "V2-NSG001-P03",
@@ -80,7 +80,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7835.354618
+      "wallMs": 8382.517397
     },
     {
       "id": "V2-NSG001-P04",
@@ -89,7 +89,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7900.482725000002
+      "wallMs": 8538.296364999998
     },
     {
       "id": "V2-NSG001-P05",
@@ -98,7 +98,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7670.307769999998
+      "wallMs": 8467.225252
     },
     {
       "id": "V2-NSG001-P06",
@@ -107,7 +107,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7566.191223
+      "wallMs": 8612.854278000003
     },
     {
       "id": "V2-NSG001-P07",
@@ -116,7 +116,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7527.259262
+      "wallMs": 8478.230298999999
     },
     {
       "id": "V2-NSG001-P08",
@@ -125,7 +125,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7664.9939699999995
+      "wallMs": 8476.281759999998
     },
     {
       "id": "V2-NSG001-P09",
@@ -134,7 +134,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 6575.375966
+      "wallMs": 7197.586105000002
     },
     {
       "id": "V2-NSG001-P10",
@@ -143,7 +143,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 3058.498925
+      "wallMs": 3389.456349
     },
     {
       "id": "V2-NSG001-P11",
@@ -152,7 +152,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 6880.873210999998
+      "wallMs": 7904.337938999997
     },
     {
       "id": "V2-NSG001-P12",
@@ -161,7 +161,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 3658.369123000004
+      "wallMs": 4105.452094
     },
     {
       "id": "V2-NSG001-P13",
@@ -170,7 +170,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 2742.4359200000035
+      "wallMs": 3028.368748000001
     },
     {
       "id": "V2-NSG001-P14",
@@ -179,7 +179,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 2760.775106000001
+      "wallMs": 2959.940491000001
     },
     {
       "id": "V2-NSG001-P15",
@@ -188,7 +188,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 2696.685010000001
+      "wallMs": 3024.933119000001
     },
     {
       "id": "V2-NSG001-P16",
@@ -197,7 +197,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 2704.5441710000014
+      "wallMs": 3001.662252000002
     },
     {
       "id": "V2-NSG001-P17",
@@ -206,7 +206,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7619.843710000001
+      "wallMs": 8563.433848
     },
     {
       "id": "V2-NSG001-P18",
@@ -215,7 +215,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7635.573367999998
+      "wallMs": 8622.074903
     },
     {
       "id": "V2-NSG001-P19",
@@ -224,7 +224,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8078.196645999997
+      "wallMs": 8598.442544999998
     },
     {
       "id": "V2-NSG001-P20",
@@ -233,7 +233,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7744.174758999994
+      "wallMs": 8597.452802
     },
     {
       "id": "V2-NSG002-N01",
@@ -242,7 +242,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8915.80152400001
+      "wallMs": 11365.189870000002
     },
     {
       "id": "V2-NSG002-N02",
@@ -251,7 +251,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9347.141386999981
+      "wallMs": 12099.163285000017
     },
     {
       "id": "V2-NSG002-N03",
@@ -260,7 +260,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8995.354958999902
+      "wallMs": 11675.764819000033
     },
     {
       "id": "V2-NSG002-N04",
@@ -269,7 +269,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9074.881050999975
+      "wallMs": 11714.13231200003
     },
     {
       "id": "V2-NSG002-N05",
@@ -278,7 +278,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8726.138974000001
+      "wallMs": 11746.014405000024
     },
     {
       "id": "V2-NSG002-N06",
@@ -287,7 +287,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9163.00079900003
+      "wallMs": 11695.305061999941
     },
     {
       "id": "V2-NSG002-P01",
@@ -296,7 +296,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7300.776721999995
+      "wallMs": 8667.738102999996
     },
     {
       "id": "V2-NSG002-P02",
@@ -305,7 +305,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7726.028032999995
+      "wallMs": 8551.11807299999
     },
     {
       "id": "V2-NSG002-P03",
@@ -314,7 +314,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10204.376296999995
+      "wallMs": 11661.222927999988
     },
     {
       "id": "V2-NSG002-P04",
@@ -323,7 +323,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7696.472310000012
+      "wallMs": 8537.569099
     },
     {
       "id": "V2-NSG002-P05",
@@ -332,7 +332,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 6716.689160000009
+      "wallMs": 7349.194896000001
     },
     {
       "id": "V2-NSG002-P06",
@@ -341,7 +341,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7388.37961399999
+      "wallMs": 8346.50834700001
     },
     {
       "id": "V2-NSG002-P07",
@@ -350,7 +350,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10449.104768999998
+      "wallMs": 12388.92211
     },
     {
       "id": "V2-NSG002-P08",
@@ -359,7 +359,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7485.187835999997
+      "wallMs": 8345.920386999991
     },
     {
       "id": "V2-NSG002-P09",
@@ -368,7 +368,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7807.784109
+      "wallMs": 8334.726899000001
     },
     {
       "id": "V2-NSG002-P10",
@@ -377,7 +377,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7569.892892999997
+      "wallMs": 8492.96269
     },
     {
       "id": "V2-NSG002-P11",
@@ -386,7 +386,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9990.890602
+      "wallMs": 11686.079767000003
     },
     {
       "id": "V2-NSG002-P12",
@@ -395,7 +395,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7705.934958999991
+      "wallMs": 8718.977117000002
     },
     {
       "id": "V2-NSG002-P13",
@@ -404,7 +404,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 6300.560203999994
+      "wallMs": 7276.811130000002
     },
     {
       "id": "V2-NSG002-P14",
@@ -413,7 +413,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7404.514019000009
+      "wallMs": 9070.902113999997
     },
     {
       "id": "V2-NSG002-P15",
@@ -422,7 +422,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7281.563504999998
+      "wallMs": 7943.209717999998
     },
     {
       "id": "V2-NSG002-P16",
@@ -431,7 +431,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7520.890857999999
+      "wallMs": 8080.693178999994
     },
     {
       "id": "V2-NSG002-P17",
@@ -440,7 +440,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10627.852562
+      "wallMs": 12759.435012000002
     },
     {
       "id": "V2-NSG002-P18",
@@ -449,7 +449,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7246.50108300001
+      "wallMs": 8050.2412509999995
     },
     {
       "id": "V2-NSG002-P19",
@@ -458,7 +458,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7490.781525999977
+      "wallMs": 8410.319988999981
     },
     {
       "id": "V2-NSG002-P20",
@@ -467,7 +467,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 7450.159847999981
+      "wallMs": 8549.492622999998
     },
     {
       "id": "V2-NSG003-N01",
@@ -476,7 +476,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8916.624231000082
+      "wallMs": 11894.218017000007
     },
     {
       "id": "V2-NSG003-N02",
@@ -485,7 +485,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9172.031080999994
+      "wallMs": 11420.654443999985
     },
     {
       "id": "V2-NSG003-N03",
@@ -494,7 +494,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9149.888518000022
+      "wallMs": 12067.324574000086
     },
     {
       "id": "V2-NSG003-N04",
@@ -503,7 +503,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9119.986263000057
+      "wallMs": 11606.040225000004
     },
     {
       "id": "V2-NSG003-N05",
@@ -512,7 +512,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9934.73781900003
+      "wallMs": 11496.25679200003
     },
     {
       "id": "V2-NSG003-N06",
@@ -521,7 +521,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10029.907789000077
+      "wallMs": 11824.757854999974
     },
     {
       "id": "V2-NSG003-P01",
@@ -530,7 +530,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10227.538039000006
+      "wallMs": 11845.627529999998
     },
     {
       "id": "V2-NSG003-P02",
@@ -539,7 +539,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10347.250388999993
+      "wallMs": 11701.994780000008
     },
     {
       "id": "V2-NSG003-P03",
@@ -548,7 +548,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10441.178136000002
+      "wallMs": 11729.384876999975
     },
     {
       "id": "V2-NSG003-P04",
@@ -557,7 +557,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10337.465601999982
+      "wallMs": 11927.686191999994
     },
     {
       "id": "V2-NSG003-P05",
@@ -566,7 +566,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10252.322622000007
+      "wallMs": 11347.22882399999
     },
     {
       "id": "V2-NSG003-P06",
@@ -575,7 +575,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10632.783049999998
+      "wallMs": 11929.649666000012
     },
     {
       "id": "V2-NSG003-P07",
@@ -584,7 +584,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10367.501491000003
+      "wallMs": 11329.459401
     },
     {
       "id": "V2-NSG003-P08",
@@ -593,7 +593,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10304.674606999994
+      "wallMs": 12146.069254000002
     },
     {
       "id": "V2-NSG003-P09",
@@ -602,7 +602,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10285.480005999998
+      "wallMs": 11747.15823500001
     },
     {
       "id": "V2-NSG003-P10",
@@ -611,7 +611,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10260.01348200001
+      "wallMs": 11900.28176100002
     },
     {
       "id": "V2-NSG003-P11",
@@ -620,7 +620,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9915.50579700002
+      "wallMs": 11673.034318999999
     },
     {
       "id": "V2-NSG003-P12",
@@ -629,7 +629,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10450.574968
+      "wallMs": 11409.510962999979
     },
     {
       "id": "V2-NSG003-P13",
@@ -638,7 +638,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10261.090980000008
+      "wallMs": 11577.963883000019
     },
     {
       "id": "V2-NSG003-P14",
@@ -647,7 +647,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10359.579839000013
+      "wallMs": 11560.66883499999
     },
     {
       "id": "V2-NSG003-P15",
@@ -656,7 +656,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10179.265024000022
+      "wallMs": 11736.557142000005
     },
     {
       "id": "V2-NSG003-P16",
@@ -665,7 +665,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10112.985165999999
+      "wallMs": 11753.307281999994
     },
     {
       "id": "V2-NSG003-P17",
@@ -674,7 +674,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10017.674972000008
+      "wallMs": 11833.030723999982
     },
     {
       "id": "V2-NSG003-P18",
@@ -683,7 +683,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10513.014334000007
+      "wallMs": 12196.200035999966
     },
     {
       "id": "V2-NSG003-P19",
@@ -692,7 +692,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10174.279232
+      "wallMs": 11800.998672000016
     },
     {
       "id": "V2-NSG003-P20",
@@ -701,7 +701,7 @@
       "observation": "rejected-build",
       "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10276.667684999993
+      "wallMs": 11810.838783000014
     },
     {
       "id": "V2-NSG004-N01",
@@ -710,7 +710,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9908.713071000064
+      "wallMs": 12407.256758000003
     },
     {
       "id": "V2-NSG004-N02",
@@ -719,7 +719,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10001.181371000013
+      "wallMs": 11595.343271000078
     },
     {
       "id": "V2-NSG004-N03",
@@ -728,7 +728,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9881.357093000086
+      "wallMs": 11491.66360999993
     },
     {
       "id": "V2-NSG004-N04",
@@ -737,7 +737,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9905.420446999953
+      "wallMs": 12062.661877000006
     },
     {
       "id": "V2-NSG004-N05",
@@ -746,7 +746,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9844.390875000041
+      "wallMs": 12100.675010000006
     },
     {
       "id": "V2-NSG004-N06",
@@ -755,7 +755,7 @@
       "observation": "accepted-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9769.893231000053
+      "wallMs": 11429.757574000047
     },
     {
       "id": "V2-NSG004-P01",
@@ -764,7 +764,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9803.077724000002
+      "wallMs": 11793.724447999964
     },
     {
       "id": "V2-NSG004-P02",
@@ -773,7 +773,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10453.950110999984
+      "wallMs": 11334.51563899999
     },
     {
       "id": "V2-NSG004-P03",
@@ -782,7 +782,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10210.29832500001
+      "wallMs": 11478.990737000015
     },
     {
       "id": "V2-NSG004-P04",
@@ -791,7 +791,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9975.287972999999
+      "wallMs": 11578.645676999993
     },
     {
       "id": "V2-NSG004-P05",
@@ -800,7 +800,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10321.452524000022
+      "wallMs": 11525.983699999982
     },
     {
       "id": "V2-NSG004-P06",
@@ -809,7 +809,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10322.045738000015
+      "wallMs": 11803.471137000015
     },
     {
       "id": "V2-NSG004-P07",
@@ -818,7 +818,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10371.758417000005
+      "wallMs": 11767.353113999998
     },
     {
       "id": "V2-NSG004-P08",
@@ -827,7 +827,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10520.996302999964
+      "wallMs": 11450.763462000003
     },
     {
       "id": "V2-NSG004-P09",
@@ -836,7 +836,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10271.477542000008
+      "wallMs": 11449.386374000052
     },
     {
       "id": "V2-NSG004-P10",
@@ -845,7 +845,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9972.064003999985
+      "wallMs": 11910.56577799999
     },
     {
       "id": "V2-NSG004-P11",
@@ -854,7 +854,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9833.061120999977
+      "wallMs": 11388.48646699998
     },
     {
       "id": "V2-NSG004-P12",
@@ -863,7 +863,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10173.76656399999
+      "wallMs": 11581.96348200005
     },
     {
       "id": "V2-NSG004-P13",
@@ -872,7 +872,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10135.01571399998
+      "wallMs": 11650.920201
     },
     {
       "id": "V2-NSG004-P14",
@@ -881,7 +881,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10136.040012000012
+      "wallMs": 11508.36048199999
     },
     {
       "id": "V2-NSG004-P15",
@@ -890,7 +890,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10347.523050000018
+      "wallMs": 11941.203847999976
     },
     {
       "id": "V2-NSG004-P16",
@@ -899,7 +899,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10145.651710000006
+      "wallMs": 11703.87776100001
     },
     {
       "id": "V2-NSG004-P17",
@@ -908,7 +908,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10036.28890600003
+      "wallMs": 11505.268252000038
     },
     {
       "id": "V2-NSG004-P18",
@@ -917,7 +917,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10187.21218099998
+      "wallMs": 11935.033242999983
     },
     {
       "id": "V2-NSG004-P19",
@@ -926,7 +926,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10416.663607000024
+      "wallMs": 11395.422953000001
     },
     {
       "id": "V2-NSG004-P20",
@@ -935,7 +935,7 @@
       "observation": "rejected-build",
       "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10123.726031000027
+      "wallMs": 11938.87949999998
     },
     {
       "id": "V2-NSG005-N01",
@@ -944,7 +944,7 @@
       "observation": "payload-absent",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9859.148718999932
+      "wallMs": 11971.879845000105
     },
     {
       "id": "V2-NSG005-N02",
@@ -953,7 +953,7 @@
       "observation": "payload-absent",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9898.863581000012
+      "wallMs": 11549.441648000036
     },
     {
       "id": "V2-NSG005-N03",
@@ -962,7 +962,7 @@
       "observation": "payload-absent",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9586.704807000002
+      "wallMs": 11589.944633999956
     },
     {
       "id": "V2-NSG005-N04",
@@ -971,7 +971,7 @@
       "observation": "payload-absent",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10049.503254000098
+      "wallMs": 12286.814564
     },
     {
       "id": "V2-NSG005-N05",
@@ -980,7 +980,7 @@
       "observation": "payload-absent",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10056.483162999968
+      "wallMs": 11560.602524999995
     },
     {
       "id": "V2-NSG005-N06",
@@ -989,7 +989,7 @@
       "observation": "payload-absent",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9674.470800999901
+      "wallMs": 11587.189026999986
     },
     {
       "id": "V2-NSG005-P01",
@@ -998,7 +998,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9792.580475999974
+      "wallMs": 11403.541041999997
     },
     {
       "id": "V2-NSG005-P02",
@@ -1007,7 +1007,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10131.311380999978
+      "wallMs": 11109.24237500003
     },
     {
       "id": "V2-NSG005-P03",
@@ -1016,7 +1016,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10041.256901999994
+      "wallMs": 11285.755929999985
     },
     {
       "id": "V2-NSG005-P04",
@@ -1025,7 +1025,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10003.873063999985
+      "wallMs": 11670.25006000005
     },
     {
       "id": "V2-NSG005-P05",
@@ -1034,7 +1034,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10057.967226999986
+      "wallMs": 10972.304367999954
     },
     {
       "id": "V2-NSG005-P06",
@@ -1043,7 +1043,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10049.261505000002
+      "wallMs": 11773.771823999996
     },
     {
       "id": "V2-NSG005-P07",
@@ -1052,7 +1052,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10257.917912999983
+      "wallMs": 11498.866783999954
     },
     {
       "id": "V2-NSG005-P08",
@@ -1061,7 +1061,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10022.993906999996
+      "wallMs": 11467.43638899998
     },
     {
       "id": "V2-NSG005-P10",
@@ -1070,7 +1070,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9921.762893999985
+      "wallMs": 11487.284069000045
     },
     {
       "id": "V2-NSG005-P11",
@@ -1079,7 +1079,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10512.70960599999
+      "wallMs": 11502.522197999991
     },
     {
       "id": "V2-NSG005-P12",
@@ -1088,7 +1088,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10251.499969999946
+      "wallMs": 11901.815864000004
     },
     {
       "id": "V2-NSG005-P13",
@@ -1097,7 +1097,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9904.456279000035
+      "wallMs": 11454.175165000022
     },
     {
       "id": "V2-NSG005-P14",
@@ -1106,7 +1106,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10363.97410500003
+      "wallMs": 12061.483929000038
     },
     {
       "id": "V2-NSG005-P15",
@@ -1115,7 +1115,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9948.35551600001
+      "wallMs": 11240.504152000009
     },
     {
       "id": "V2-NSG005-P16",
@@ -1124,7 +1124,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10132.483176000009
+      "wallMs": 12046.961173999996
     },
     {
       "id": "V2-NSG005-P17",
@@ -1133,7 +1133,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10043.697945999971
+      "wallMs": 12033.131277000008
     },
     {
       "id": "V2-NSG005-P18",
@@ -1142,7 +1142,7 @@
       "observation": "bundle-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9714.934831999999
+      "wallMs": 11766.881301999965
     },
     {
       "id": "V2-NSG005-P19",
@@ -1151,7 +1151,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9740.798895000014
+      "wallMs": 11527.926745000004
     },
     {
       "id": "V2-NSG006-N01",
@@ -1160,7 +1160,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9752.633508999948
+      "wallMs": 12072.860070000053
     },
     {
       "id": "V2-NSG006-N02",
@@ -1169,7 +1169,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9951.414944000077
+      "wallMs": 11924.804306999897
     },
     {
       "id": "V2-NSG006-N03",
@@ -1178,7 +1178,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10130.667522000032
+      "wallMs": 11583.094639000017
     },
     {
       "id": "V2-NSG006-N04",
@@ -1187,7 +1187,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9946.755482999957
+      "wallMs": 11297.226846000063
     },
     {
       "id": "V2-NSG006-N05",
@@ -1196,7 +1196,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9807.260745999985
+      "wallMs": 12631.920003999956
     },
     {
       "id": "V2-NSG006-N06",
@@ -1205,7 +1205,7 @@
       "observation": "accepted-build",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9370.927706999937
+      "wallMs": 8573.00483900006
     },
     {
       "id": "V2-NSG006-P01",
@@ -1214,7 +1214,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9112.746790000005
+      "wallMs": 11731.498849999974
     },
     {
       "id": "V2-NSG006-P02",
@@ -1223,7 +1223,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9315.95609599998
+      "wallMs": 12242.889175999968
     },
     {
       "id": "V2-NSG006-P03",
@@ -1232,7 +1232,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9016.192943000002
+      "wallMs": 11275.973052000045
     },
     {
       "id": "V2-NSG006-P04",
@@ -1241,7 +1241,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9324.54108200001
+      "wallMs": 11792.57296999998
     },
     {
       "id": "V2-NSG006-P05",
@@ -1250,7 +1250,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9138.643494999968
+      "wallMs": 11777.334588999976
     },
     {
       "id": "V2-NSG006-P06",
@@ -1259,7 +1259,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8978.342095999978
+      "wallMs": 12051.379659999977
     },
     {
       "id": "V2-NSG006-P07",
@@ -1268,7 +1268,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9164.912119999994
+      "wallMs": 11771.700985000003
     },
     {
       "id": "V2-NSG006-P08",
@@ -1277,7 +1277,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9146.50426299998
+      "wallMs": 11567.347490999964
     },
     {
       "id": "V2-NSG006-P09",
@@ -1286,7 +1286,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9278.61060700001
+      "wallMs": 12105.602509999997
     },
     {
       "id": "V2-NSG006-P10",
@@ -1295,7 +1295,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8779.342088999983
+      "wallMs": 11863.941397999995
     },
     {
       "id": "V2-NSG006-P11",
@@ -1304,7 +1304,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9004.474617999978
+      "wallMs": 11707.855224000057
     },
     {
       "id": "V2-NSG006-P12",
@@ -1313,7 +1313,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8623.006560000009
+      "wallMs": 11666.878865999985
     },
     {
       "id": "V2-NSG006-P13",
@@ -1322,7 +1322,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 8939.122141
+      "wallMs": 11609.126728000003
     },
     {
       "id": "V2-NSG006-P14",
@@ -1331,7 +1331,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9283.200942999974
+      "wallMs": 11632.036457999959
     },
     {
       "id": "V2-NSG006-P15",
@@ -1340,7 +1340,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9700.647180999978
+      "wallMs": 12151.119545999914
     },
     {
       "id": "V2-NSG006-P16",
@@ -1349,7 +1349,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9596.362624000001
+      "wallMs": 12765.805687000044
     },
     {
       "id": "V2-NSG006-P17",
@@ -1358,7 +1358,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9530.284116999945
+      "wallMs": 11621.542220999952
     },
     {
       "id": "V2-NSG006-P18",
@@ -1367,7 +1367,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9530.911581999972
+      "wallMs": 11875.034795999993
     },
     {
       "id": "V2-NSG006-P19",
@@ -1376,7 +1376,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9574.401472999947
+      "wallMs": 11452.938026999938
     },
     {
       "id": "V2-NSG006-P20",
@@ -1385,7 +1385,7 @@
       "observation": "bundle-absent-private",
       "reference": "https://nextjs.org/docs/app/guides/environment-variables",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9385.51946500002
+      "wallMs": 11855.309193999972
     },
     {
       "id": "V3-NSG005-P09",
@@ -1394,7 +1394,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 10119.594366000034
+      "wallMs": 11625.343429
     },
     {
       "id": "V3-NSG005-P20",
@@ -1403,7 +1403,7 @@
       "observation": "payload-present",
       "reference": "https://nextjs.org/docs/app/guides/data-security",
       "reviewer": "automated independent Next build/runtime observation",
-      "wallMs": 9406.465133999998
+      "wallMs": 11513.238457
     }
   ]
 }

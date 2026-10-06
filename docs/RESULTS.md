@@ -1,10 +1,8 @@
 # Next Static Guard Validation Results
 
-The source is being promoted to `0.1.0-beta.1`. The evidence below belongs to the accepted development candidate; beta delivery requires fresh engine and package identities.
+The current warning-only candidate is `0.1.0-beta.1`, ruleset `1.1.0`. Its compiled engine identity is `751e8c9eb8e6b3ca0f50be6e2afe73487fb180328d799adcc795e39539115252`. The quality sample, tool comparison, and constrained benchmark identify this same engine. The tested source commit is `f919f748cc8fa7c2b7fa89fe01fdd866b2398de3`; [all six CI jobs passed](https://github.com/eng-aesr/next-static-guard/actions/runs/37440985683).
 
-The accepted development candidate is `0.1.0-dev.1`, ruleset `1.1.0`. Its compiled engine identity is `cdf9d0530d046c4103a9126f54a8332b1ed8f7d4a2129b813bf590b64ab36515`. The quality sample, tool comparison, and constrained benchmark identify this same engine. The tested source commit is `1917fa9bf8965cc5a0b8577453cf89db406ccf41`; [all six CI jobs passed](https://github.com/eng-aesr/next-static-guard/actions/runs/37438819253).
-
-The candidate is prepared in the workspace and fork. Applying the changes to `SergioDep/next-static-guard` main remains pending because the connected GitHub account has read permission there. [Release evidence index](../artifacts/release-candidate.json) records artifact readiness separately from that publication status.
+The candidate is prepared in the workspace and fork. Applying the changes to `SergioDep/next-static-guard` main remains pending because the connected GitHub account has read permission there. [Release evidence index](../artifacts/release-candidate.json) records artifact readiness separately from that publication status. The [acceptance record](../artifacts/release-acceptance-current.json) passes every artifact gate, while a [stale-evidence check](../artifacts/release-gate-stale-evidence-check.json) demonstrates rejection of the previous compilation.
 
 ## Executed checks
 
@@ -25,7 +23,7 @@ The native cross-drive Windows check is intentionally skipped on Linux/macOS. Th
 
 ## Reserved quality evidence
 
-Sample identity: `ada75fdbde741aa429d2cede563ac6e2a21bbceeb1c4991e5571d890165ab8b8`. The v1 sample was moved to development after three misses informed fixes. In v2, two shorthand-property cases exposed partial value tracking; those cases were moved to development. The current v3 sample retains 154 v2 cases that were not used to tune rules and adds two fresh cases. Its source and expectation hashes were frozen before execution. Expected outcomes come from independent Next compilation, rendered payload/bundle observations, and real function-return probes using fictional data. Guard output does not define fixture truth.
+Sample identity: `ada75fdbde741aa429d2cede563ac6e2a21bbceeb1c4991e5571d890165ab8b8`. The v1 sample was moved to development after three misses informed fixes. In v2, two shorthand-property cases exposed partial value tracking; those cases were moved to development. The current v3 sample retains 154 v2 cases that were not used to tune rules and adds two fresh cases. Its source and expectation hashes were frozen before execution. Expected outcomes come from independent Next compilation and rendered payload/bundle observations using fictional data. Real Server Function return probes are additional framework controls. Guard output does not define fixture truth.
 
 | Rule | TP | FP | FN | Known positives | Precision | Recall |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -46,15 +44,15 @@ Linux container with observed 2 CPU and 4 GiB constraints, pinned Node 24.21.0, 
 
 | Scenario | Wall p95 | Maximum peak RSS | Gate |
 | --- | --- | --- | --- |
-| local, 1,000 input sources per snapshot | 1.821 s | 240.4 MiB | Passed |
-| local, 5,000 input sources per snapshot | 6.138 s | 412.7 MiB | Passed |
-| git, 5,000 input sources per snapshot | 9.855 s | 562.8 MiB | Passed |
+| local, 1,000 input sources per snapshot | 1.905 s | 241.1 MiB | Passed |
+| local, 5,000 input sources per snapshot | 6.318 s | 411.5 MiB | Passed |
+| git, 5,000 input sources per snapshot | 10.034 s | 563.0 MiB | Passed |
 
 Budgets are <10 s for local 1,000 inputs, <30 s for local 5,000 inputs, <60 s for Git comparison, and <1 GiB peak RSS for each. [All samples and observed limits](../artifacts/benchmark-results-current.json). These synthetic workloads do not prove performance for every repository.
 
 ## Package and reproduction
 
-Tarball: `next-static-guard-0.1.0-dev.1.tgz`, 85,437 bytes. SHA-256: `de223d821a1aa059a719d0eaa241ba66d0ce4125556d911c14183383509f7eec`. [Exact installation verification](../artifacts/package-validation-current.json). Package contents are limited to package metadata, compiled CLI, schemas, README, and LICENSE. Install from the local tarball as described in [Installation](INSTALLATION.md); registry publication is outside this MVP.
+Tarball: `next-static-guard-0.1.0-beta.1.tgz`, 85,441 bytes. SHA-256: `cb6ecd278ba8942a839d1cc876d3d186ce8af8451b71ecb39899a4f12a385365`. [Exact installation verification](../artifacts/package-validation-current.json). Package contents are limited to package metadata, compiled CLI, schemas, README, and LICENSE. Install from the local tarball as described in [Installation](INSTALLATION.md); registry publication is outside this MVP.
 
 Use the pinned Node/npm and supported Git version:
 
@@ -68,7 +66,7 @@ docker build -f tests/bench/Dockerfile -t next-static-guard-bench .
 mkdir -p bench-results
 docker run --rm --cpus 2 --memory 4g --user "$(id -u):$(id -g)" -v "$PWD/bench-results:/work/bench-results" next-static-guard-bench
 npm pack --pack-destination artifacts
-npm run verify:package -- artifacts/next-static-guard-0.1.0-dev.1.tgz
+npm run verify:package -- artifacts/next-static-guard-0.1.0-beta.1.tgz
 npm run release:check
 ```
 
