@@ -3,6 +3,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { readFile, writeFile, symlink } from 'node:fs/promises';
 import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { fixture } from '../unit/helpers.js';
 const exec=promisify(execFile),cli=join(process.cwd(),'dist/cli/main.js');
 async function run(args:string[]) {try{const result=await exec(process.execPath,[cli,...args]);return {...result,code:0};}catch(error){const e=error as {stdout:string;stderr:string;code:number};return {stdout:e.stdout,stderr:e.stderr,code:e.code};}}
@@ -60,7 +61,7 @@ test.each(['timeout','SIGINT','SIGTERM'] as const)('%s preserves the previous re
   const signal=JSON.stringify(outcome);
   await writeFile(preload,`import fs from 'node:fs';import {syncBuiltinESMExports} from 'node:module';const timer=globalThis.setTimeout,stat=fs.promises.stat;fs.promises.stat=async(...args)=>{await new Promise(resolve=>timer(resolve,50));return stat(...args);};syncBuiltinESMExports();globalThis.setTimeout=(callback,delay,...args)=>timer(delay===120000?${outcome==='timeout'?'callback':`()=>process.platform==='win32'?process.emit(${signal}):process.kill(process.pid,${signal})`}:callback,delay===120000?1:delay,...args);\n`);
   let code=0,stdout='',stderr='';
-  try {const result=await exec(process.execPath,['--import',preload,cli,'scan',project.root,'--format','json','--output',output]);stdout=result.stdout;stderr=result.stderr;}
+  try {const result=await exec(process.execPath,['--import',pathToFileURL(preload).href,cli,'scan',project.root,'--format','json','--output',output]);stdout=result.stdout;stderr=result.stderr;}
   catch(error){const result=error as {code:number;stdout:string;stderr:string};code=result.code;stdout=result.stdout;stderr=result.stderr;}
   expect(code).toBe(outcome==='timeout'?2:outcome==='SIGINT'?130:143);expect(stdout).toBe('');expect(await readFile(output,'utf8')).toBe(previous);
   if(outcome==='timeout')expect(stderr).toContain('execution budget');

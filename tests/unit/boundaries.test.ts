@@ -84,6 +84,16 @@ test('an imported value reexported through a local export remains a runtime depe
  const report=await scan({'app/page.tsx':"'use client';import {data} from '../lib/barrel';export default function Page(){return <p>{data}</p>;}",'lib/barrel.ts':"import {data} from './server';export {data};",'lib/server.ts':"import 'server-only';export const data='server';"});
  expect(report.findings.map(f=>f.ruleId)).toEqual(['NSG001']);expect(report.coverage.status).toBe('complete');
 });
+
+test('CRLF sources retain their original offsets and stable finding identity',async()=>{
+ const text="'use client';\nexport default function Page(){return <p>{window.location.href}</p>;}\n";
+ const lf=await scan({'app/page.tsx':text}),crlf=await scan({'app/page.tsx':text.replaceAll('\n','\r\n')});
+ expect(crlf.coverage.status).toBe('complete');expect(crlf.findings).toHaveLength(1);
+ const a=lf.findings[0]!,b=crlf.findings[0]!;
+ expect(b.fingerprint).toBe(a.fingerprint);
+ expect(b.location.start).toEqual({...a.location.start,offset:a.location.start.offset+1});
+ expect(b.location.end).toEqual({...a.location.end,offset:a.location.end.offset+1});
+});
 test('local imported API reexports preserve the actual hook symbol',async()=>{
  const report=await scan({'app/page.tsx':"import {router} from '../lib/barrel';export default function Page(){router();return <p/>;}",'lib/barrel.ts':"import {useRouter as router} from 'next/navigation';export {router};"});
  expect(report.findings.map(f=>f.ruleId)).toEqual(['NSG002']);

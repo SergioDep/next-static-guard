@@ -40,7 +40,7 @@ async function run(args:string[]):Promise<number> {
  if(positionals[0]!=='scan'||positionals.length>2)throw new GuardError('Expected scan and at most one root.');
  if(values.base&&values.baseline)throw new GuardError('Base and baseline are mutually exclusive.');
  const format=values.format??'terminal';if(!['terminal','json','markdown'].includes(format))throw new GuardError('Invalid report format.');
- const root=resolve(positionals[1]??'.'), configPath=resolve(values.config??resolve(root,'next-static-guard.json'));
+ const root=await realpath(resolve(positionals[1]??'.')), configPath=resolve(values.config??resolve(root,'next-static-guard.json'));
  let input:unknown,source:'default'|'current'|'base'|'explicit'='default';
  let baseSnapshot:Awaited<ReturnType<GitReader['snapshot']>>|null=null,baseCommit:string|null=null;
  let ignoredCurrent=false,currentHash:string|null=null,changes:string[]=[];
