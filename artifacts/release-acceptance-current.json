@@ -3,7 +3,7 @@
   "rulesetVersion": "1.1.0",
   "implementationHash": "751e8c9eb8e6b3ca0f50be6e2afe73487fb180328d799adcc795e39539115252",
   "artifactReady": true,
-  "targetMainApplied": false,
+  "targetMainApplied": true,
   "checks": [
     {
       "name": "package and compiled versions agree",

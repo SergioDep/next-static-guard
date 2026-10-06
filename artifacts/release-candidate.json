@@ -12,5 +12,8 @@
   "tarballSha256": "cb6ecd278ba8942a839d1cc876d3d186ce8af8451b71ecb39899a4f12a385365",
   "installation": "artifacts/package-validation-current.json",
   "runtimeAudit": "artifacts/runtime-audit-current.json",
-  "targetMainApplied": false
+  "targetMainApplied": true,
+  "targetMainCommit": "453dbc523279d275458ba78c9946ec53a6d7c7dd",
+  "targetPullRequest": "https://github.com/SergioDep/next-static-guard/pull/2",
+  "targetMainWorkflow": "https://github.com/SergioDep/next-static-guard/actions/workflows/ci.yml?query=branch%3Amain+event%3Apush"
 }
