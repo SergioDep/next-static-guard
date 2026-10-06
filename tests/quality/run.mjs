@@ -5,16 +5,15 @@ import { join, dirname } from 'node:path';
 import { createHash } from 'node:crypto';
 import { createServer } from 'node:net';
 import { performance } from 'node:perf_hooks';
-import { cases, token } from './cases.mjs';
+import { cases, token, versions, originalSources } from './cases.mjs';
 
 const exec=promisify(execFile),repo=await realpath(process.cwd()),output=join(repo,'quality-results');
 const phase=process.argv[2]??'all';
 if(!['all','oracle','measure'].includes(phase))throw new Error('Expected all, oracle, or measure.');
 const digest=text=>createHash('sha256').update(text).digest('hex');
 const json=value=>JSON.stringify(value,null,2)+'\n';
-const versions={node:'24.21.0',next:'16.3.8',react:'19.3.0',reactDom:'19.3.0',typescript:'6.0.3'};
 if(process.versions.node!==versions.node)throw new Error('Use the pinned Node release.');
-const manifest={schemaVersion:1,sample:'reserved-synthetic-v1',provenance:'Independently authored synthetic variations; no production-repository or human-review claim.',versions,cases:cases.map(({files,...c})=>({...c,sources:Object.fromEntries(Object.entries(files).sort().map(([name,text])=>[name,digest(text)]))}))};
+const manifest={schemaVersion:1,sample:'reserved-synthetic-v2',provenance:'Independently authored synthetic variations; no production-repository or human-review claim.',versions,probeValueHash:digest(token),cases:cases.map(({files,configEnv,...c})=>({...c,configEnvKeys:Object.keys(configEnv??{}).sort(),sources:Object.fromEntries(Object.entries(originalSources({...c,files,configEnv})).sort().map(([name,text])=>[name,digest(text)]))}))};
 const corpusHash=digest(JSON.stringify(manifest));
 await mkdir(output,{recursive:true});
 const manifestPath=join(output,'manifest.json');
@@ -22,16 +21,14 @@ const oldManifest=await readFile(manifestPath,'utf8').catch(()=>null);
 if(oldManifest&&oldManifest!==json({...manifest,corpusHash}))throw new Error('Reserved sources changed: use a new sample/output directory.');
 // Freeze every expectation and source hash before invoking either tool.
 await writeFile(manifestPath,json({...manifest,corpusHash}));
-const config=c=>JSON.stringify({compilerOptions:{target:'ES2022',lib:['dom','dom.iterable','esnext'],allowJs:true,skipLibCheck:true,strict:true,noEmit:true,esModuleInterop:true,module:'esnext',moduleResolution:'bundler',resolveJsonModule:true,jsx:'react-jsx',verbatimModuleSyntax:!!c.verbatim,paths:{'@/*':['./*']}},include:['**/*.ts','**/*.tsx','.next/types/**/*.ts'],exclude:['node_modules']});
 async function project(c,framework=false) {
  const root=await realpath(await mkdtemp(join(repo,'tests/fixtures/.framework-quality-')));
- const files={'package.json':JSON.stringify({name:'reserved-quality',private:true,type:'module',dependencies:{next:versions.next,react:versions.react,'react-dom':versions.reactDom,typescript:versions.typescript}}),'tsconfig.json':config(c),'app/layout.tsx':'export default function Layout({children}:any){return <html><body>{children}</body></html>;}',...c.files};
+ const files=originalSources(c);
  if(framework&&c.oracle.kind==='client-event-error') {
   const probe="window.addEventListener('error',e=>document.body.dataset.qualityError=e.message);window.addEventListener('unhandledrejection',e=>document.body.dataset.qualityError=String(e.reason));setTimeout(()=>{document.body.dataset.qualityClicked='yes';document.querySelector('button')?.click()},2500);";
   files['app/layout.tsx']=`export default function Layout({children}:any){return <html><body>{children}<script dangerouslySetInnerHTML={{__html:${JSON.stringify(probe)}}}/></body></html>;}`;
  }
  if(c.configEnv||framework)files['next.config.mjs']=`export default ${JSON.stringify({...c.configEnv?{env:c.configEnv}:{},...framework?{turbopack:{root:repo},experimental:{cpus:2}}:{}})};`;
- if(c.sensitive)files['next-static-guard.json']=JSON.stringify({schemaVersion:1,sensitive:c.sensitive});
  if(framework&&c.oracle.kind==='action-return')files['app/probe/route.ts']="import {load} from '../actions';export async function GET(){return Response.json(await load());}";
  for(const [file,text] of Object.entries(files)){await mkdir(dirname(join(root,file)),{recursive:true});await writeFile(join(root,file),text);}
  return root;
@@ -113,7 +110,7 @@ else {
   }finally{await rm(root,{recursive:true,force:true});}
  }
  const rate=(n,d)=>d?n/d:null;
- const wilson=(n,d)=>{if(!d)return null;const z=1.96,p=n/d,a=1+z*z/d,b=(p+z*z/(2*d))/a,c=z*Math.sqrt(p*(1-p)/d+z*z/(4*d*d))/a;return [b-c,b+c];};
+ const wilson=(n,d)=>{if(!d)return null;const z=1.96,p=n/d,a=1+z*z/d,b=(p+z*z/(2*d))/a,c=z*Math.sqrt(p*(1-p)/d+z*z/(4*d*d))/a;return [Math.max(0,b-c),Math.min(1,b+c)];};
  const totals=(list,rule=null)=>{const tp=list.reduce((s,r)=>s+r.tp,0),fp=rule?rows.reduce((s,r)=>s+r.fpByRule[rule],0):list.reduce((s,r)=>s+r.fp,0),fn=list.reduce((s,r)=>s+r.fn,0);return {tp,fp,fn,precision:rate(tp,tp+fp),recall:rate(tp,tp+fn),precisionWilson95:wilson(tp,tp+fp),recallWilson95:wilson(tp,tp+fn),knownPositives:tp+fn,reviewedFindings:tp+fp,coverageFailures:list.filter(r=>r.coverage!=='complete').length};};
  const perRule=Object.fromEntries(Array.from({length:6},(_,i)=>`NSG00${i+1}`).map(rule=>[rule,totals(rows.filter(c=>c.rule===rule),rule)])),overall=totals(rows);
  const qualityGate=Object.values(perRule).every(r=>r.knownPositives>=20)&&overall.reviewedFindings>=50&&overall.precision>=.95&&overall.recall>=.9&&overall.coverageFailures===0;

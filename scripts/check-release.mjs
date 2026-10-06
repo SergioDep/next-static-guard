@@ -3,7 +3,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import { TOOL_VERSION, RULESET_VERSION } from '../dist/analysis/analyze.js';
-import { cases } from '../tests/quality/cases.mjs';
+import { cases, originalSources, token } from '../tests/quality/cases.mjs';
 
 const repo=process.cwd(),path=resolve(process.argv[2]??'artifacts/release-candidate.json');
 const read=async p=>JSON.parse(await readFile(p,'utf8'));
@@ -19,8 +19,9 @@ check('package and compiled versions agree',pkg.version===TOOL_VERSION&&index.to
 const quality=await read(resolve(repo,index.quality)),manifest=await read(resolve(repo,index.manifest)),oracles=await read(resolve(repo,index.oracles));
 const {corpusHash,...frozen}=manifest;
 check('reserved source and oracle identities match',corpusHash===digest(JSON.stringify(frozen))&&quality.corpusHash===corpusHash&&oracles.corpusHash===corpusHash&&manifest.cases.length===cases.length&&manifest.cases.every(c=>{
- const source=cases.find(s=>s.id===c.id);return source&&Object.keys(c.sources).length===Object.keys(source.files).length&&Object.entries(c.sources).every(([file,hash])=>digest(source.files[file])===hash);
+ const source=cases.find(s=>s.id===c.id);if(!source)return false;const {files,configEnv,...metadata}=source,expected={...metadata,configEnvKeys:Object.keys(configEnv??{}).sort(),sources:Object.fromEntries(Object.entries(originalSources(source)).sort().map(([name,text])=>[name,digest(text)]))};return JSON.stringify(c)===JSON.stringify(expected);
 }));
+check('fictional oracle probe identity matches',manifest.probeValueHash===digest(token));
 check('every independent framework oracle is verified',oracles.cases.length===cases.length&&new Set(oracles.cases.map(c=>c.id)).size===cases.length&&oracles.cases.every(c=>c.verified));
 check('quality belongs to the current compiled engine',quality.implementationHash===implementationHash);
 const sum=key=>quality.cases.reduce((n,c)=>n+c[key],0),tp=sum('tp'),fp=sum('fp'),fn=sum('fn');

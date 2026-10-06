@@ -1,6 +1,6 @@
 # Contributing
 
-Use the runtime versions in `.nvmrc` and `docs/INSTALLATION.md`. Install with `npm ci` and run `npm run check`. Git comparison tests require Git 2.47.0 or later. `npm run test:framework` runs independent Next.js builds and HTTP checks; `npm run test:comparison` measures the authored corpus against the other lab tools. Constrained benchmarks use `tests/bench/Dockerfile`.
+Use the runtime versions in `.nvmrc` and `docs/INSTALLATION.md`. Install with `npm ci` and run `npm run check`. Git comparison tests require Git 2.47.0 or later. `npm run test:framework` runs independent Next.js builds and HTTP checks; `npm run test:comparison` measures the authored corpus against the other lab tools. `npm run test:quality` observes the reserved synthetic sample independently before measuring Guard. Constrained benchmarks use `tests/bench/Dockerfile`.
 
 For an analysis change, add a positive regression, a valid control, and an independent framework check where the behavior can be executed. Author expected truth from source and framework behavior before measuring Guard. Keep fictional secrets out of public reports and logs. Preserve source bytes, line endings, and exact diagnostic locations.
 

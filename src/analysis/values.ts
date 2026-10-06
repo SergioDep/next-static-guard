@@ -155,7 +155,12 @@ export class Values {
   if(ts.isNewExpression(node)) {
    const name=ts.isIdentifier(node.expression)?node.expression.text:null,args=node.arguments??[];
    if(name&&ts.isIdentifier(node.expression)&&unshadowed(this.graph,node.expression)) {
-    if(['Date','ArrayBuffer','Uint8Array','Uint16Array','Uint32Array','Int8Array','Int16Array','Int32Array','Float32Array','Float64Array','BigInt64Array','BigUint64Array','DataView'].includes(name))return value('supported',`global#${name}`,new Map(args.map((a,i)=>[String(i),recur(a)])));
+    if(['Date','ArrayBuffer','Uint8Array','Uint16Array','Uint32Array','Int8Array','Int16Array','Int32Array','Float32Array','Float64Array','BigInt64Array','BigUint64Array','DataView'].includes(name)) {
+     const inputs=args.map(recur);
+     // These constructors coerce/copy inputs; those objects are not serialized fields.
+     if(inputs.some(input=>hasUnknown(input)||rejected(input)))return value('supported',`global#${name}`,null,[],true);
+     return value('supported',`global#${name}`,null,inputs.flatMap(allOrigins));
+    }
     if(['Map','Set','Array'].includes(name))return value('supported',`global#${name}`,new Map(args.map((a,i)=>[String(i),recur(a)])));
    }
    const ref=resolveReference(this.graph,node.expression);

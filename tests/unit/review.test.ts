@@ -1,13 +1,28 @@
 import { test, expect } from 'vitest';
 import { scan } from './helpers.js';
 
+test('declared confidential namespace exports retain their publication origin',async()=>{
+ const report=await scan({'app/page.tsx':"'use client';import * as account from '../lib/account';export default function Page(){return <main>{account.credential}</main>;}",'lib/account.ts':"export const credential='FICTIONAL_NAMESPACE_VALUE';"},{schemaVersion:1,sensitive:{exports:[{file:'lib/account.ts',export:'credential',field:[],category:'secret'}]}});
+ expect(report.findings.map(f=>f.ruleId)).toEqual(['NSG005']);expect(report.coverage.status).toBe('complete');expect(JSON.stringify(report)).not.toContain('FICTIONAL_NAMESPACE_VALUE');
+});
+
 test.each([
- {expression:'make()',declaration:'export function make(){return {token:process.env.TOKEN,handler:()=>1};}'},
- {expression:'new make()',declaration:'export class make {value=1;}'},
+ {expression:'make()',declaration:'export function make(){return {token:process.env.TOKEN,handler:()=>1,width:window.innerWidth};}'},
+ {expression:'new make()',declaration:'export class make {value=window.innerWidth;}'},
 ])('server execution cannot evaluate a client implementation: $expression',async item=>{
  const report=await scan({'app/page.tsx':`import Client from './client';import {make} from './client-value';export default function Page(){return <Client data={${item.expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",'app/client-value.ts':`'use client';${item.declaration}`},{schemaVersion:1,sensitive:{env:[{name:'TOKEN',category:'secret'}]}});
- expect(report.findings.some(f=>f.ruleId==='NSG004'||f.ruleId==='NSG005')).toBe(false);
+ expect(report.findings.some(f=>['NSG003','NSG004','NSG005'].includes(f.ruleId))).toBe(false);
  expect(report.coverage.limits.some(l=>l.code==='unknown-value'&&l.affectedRules.includes('NSG005'))).toBe(true);
+});
+
+test.each([
+ 'new Date({toString(){return "2026-01-01";}} as any)',
+ 'new Uint8Array([()=>1] as any)',
+ 'new DataView(new ArrayBuffer(8),(()=>1) as any)',
+])('builtin constructors do not transfer their coercion inputs as nested props: %s',async expression=>{
+ const report=await scan({'app/page.tsx':`import Client from './client';export default function Page(){return <Client data={${expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}"});
+ expect(report.findings.some(f=>f.ruleId==='NSG004'||f.ruleId==='NSG005')).toBe(false);
+ expect(report.coverage.limits.some(l=>l.code==='unknown-value')).toBe(true);
 });
 
 const client="'use client';export default function Client({children,...props}:any){return <div>{children}</div>;}";

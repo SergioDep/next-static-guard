@@ -72,3 +72,12 @@ test.each([
  const result=await build({'app/page.tsx':`import Client from './client';import {make} from './client-value';export default function Page(){return <Client data={${item.expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",'app/client-value.ts':`'use client';${item.declaration}`});
  expect(result.code).not.toBe(0);expect(result.output).toMatch(/Attempted to call.*make|cannot.*client function|call.*server.*client/i);
 });
+
+test.each([
+ 'new Date({toString(){return "2026-01-01";}} as any)',
+ 'new Uint8Array([()=>1] as any)',
+ 'new DataView(new ArrayBuffer(8),(()=>1) as any)',
+])('Next transfers builtin results without their coercion inputs: %s',async expression=>{
+ const result=await build({'app/page.tsx':`import Client from './client';export default function Page(){return <Client data={${expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}"});
+ expect(result.code,result.output).toBe(0);
+});

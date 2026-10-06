@@ -87,4 +87,16 @@ jobs:
 
 The v0.1 PR job uses the default warning policy and omits `--strict-coverage`. It fails for operational errors and reports findings and partial coverage for review. A repository can explicitly enable `--strict-coverage` to require complete supported coverage; that fails with exit 2 when analysis is partial. Rule certification controls eligibility for exit 1; configuration cannot certify a rule.
 
-The repository's development workflow defines separate Linux/macOS/Windows, framework, and constrained benchmark jobs. Their required checks are specified in [Implementation](PLAN.md#5-validation-evidence-and-delivery).
+The repository's development workflow defines separate Linux/macOS/Windows, framework, independent quality, and constrained benchmark jobs. Their required checks are specified in [Implementation](PLAN.md#5-validation-evidence-and-delivery). Machine-readable reports are uploaded as run artifacts.
+
+## Verify a release candidate
+
+After collecting current evidence, create and verify the exact tarball:
+
+```sh
+npm pack --pack-destination artifacts
+npm run verify:package -- artifacts/next-static-guard-0.1.0-dev.1.tgz
+npm run release:check -- artifacts/release-candidate.json
+```
+
+Package verification installs that file in an isolated consumer and exercises all six rules with complete coverage. The release check rejects mismatched versions or engine/corpus hashes, missing sample sizes, failed quality/platform jobs, incomplete comparisons, insufficient performance measurements, failed installation, and high/critical runtime advisories. The candidate index points to the measured reports and tarball checksum. Artifact acceptance and applying the changes to the upstream `main` branch are recorded separately; a passing fork run does not apply a pull request.
