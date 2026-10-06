@@ -1,5 +1,7 @@
 # Next Static Guard Validation Results
 
+The measurements below describe baseline commit `515ff4417ca80b8c9537a87c809720c91bfef5ac` and ruleset `1.0.0`. They are historical evidence, not certification of the current `0.1.0-dev.1` / ruleset `1.1.0` implementation. Current release evidence must identify the new engine and corpus hashes and repeat the applicable checks.
+
 The development MVP is delivered as `0.1.0-dev.0`, ruleset `1.0.0`. All six rules are uncertified warnings. Beta release and blocking certification are ineligible because the independent reserved quality sample and macOS/Windows execution evidence are absent.
 
 ## Artifact and identity

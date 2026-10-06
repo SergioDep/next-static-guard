@@ -76,7 +76,7 @@ export function dataHooks(graph:Graph,diagnostics:Diagnostics):{visit:(node:ts.N
   if(isClient(state.context)&&ts.isIdentifier(node)) {
    const ref=resolveReference(graph,node);
    if(ref.exported&&ref.source&&ref.node&&!ts.isFunctionLike(ref.node)) {
-    const relevant=diagnostics.policy.sensitive.exports.some(e=>e.file===ref.source?.file.path&&e.export===ref.exported);
+    const relevant=diagnostics.policy.sensitive.exports.some(e=>e.file===ref.source?.file.path&&e.export===ref.exported||ref.annotations?.some(annotation=>annotation.file===e.file&&annotation.name===e.export));
     if(relevant)sink(values.eval(node,state.context,state.bindings),node,state,'client',false);
    }
   }

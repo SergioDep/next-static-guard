@@ -1,6 +1,6 @@
 {
   "name": "next-static-guard",
-  "version": "0.1.0-dev.0",
+  "version": "0.1.0-dev.1",
   "description": "Static analysis of server\u2013client boundaries in Next.js",
   "type": "module",
   "license": "MIT",
@@ -32,7 +32,8 @@
     "test:framework": "vitest run --project framework",
     "bench": "node tests/bench/run.mjs",
     "check": "npm run typecheck && npm test && npm run build",
-    "test:comparison": "node tests/comparison/run.mjs"
+    "test:comparison": "node tests/comparison/run.mjs",
+    "prepack": "npm run build"
   },
   "dependencies": {
     "typescript": "6.0.3",
@@ -51,5 +52,20 @@
     "eslint": "9.39.5",
     "eslint-config-next": "16.3.8",
     "dependency-cruiser": "18.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioDep/next-static-guard.git"
+  },
+  "homepage": "https://github.com/SergioDep/next-static-guard#readme",
+  "bugs": {
+    "url": "https://github.com/SergioDep/next-static-guard/issues"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "static-analysis",
+    "server-components",
+    "cli"
+  ]
 }

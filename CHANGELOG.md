@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-dev.1
+
+- Fix Git comparisons through symlinked roots on macOS and Windows.
+- Preserve authored fixture line endings and use portable ESM test preloads.
+- Reject cross-drive and cross-share paths outside Windows scan roots.
+- Detect retained filesystem namespace imports, reexports, and literal dynamic imports.
+- Track confidential data in React element props, children, and rendered Server Component results.
+- Preserve declared sensitivity through default exports and reexport aliases.
+- Resolve namespace reexports and explicit exports before star reexports.
+- Add independent Next framework regressions and package repository metadata.
+
+Ruleset 1.1.0 changes analysis semantics; baselines from ruleset 1.0.0 must be regenerated after review. Rules remain uncertified warnings.
+
 ## 0.1.0-dev.0
 
 - Local App Router analysis for Next 16.3.8 and React/React DOM 19.3.0.

@@ -9,7 +9,7 @@ const exec=promisify(execFile),cli=join(process.cwd(),'dist/cli/main.js');
 async function run(args:string[]) {try{const result=await exec(process.execPath,[cli,...args]);return {...result,code:0};}catch(error){const e=error as {stdout:string;stderr:string;code:number};return {stdout:e.stdout,stderr:e.stderr,code:e.code};}}
 test('strict arguments and exit codes',async()=>{
  for(const args of [['scan','--format','json','--format','json'],['--help','--output','out'],['scan','--unknown'],['scan','a','b'],['scan','--base','main','--baseline','base.json']])expect((await run(args)).code).toBe(2);
- expect((await run([])).code).toBe(0);expect((await run(['--version'])).stdout.trim()).toBe('0.1.0-dev.0');
+ expect((await run([])).code).toBe(0);expect((await run(['--version'])).stdout.trim()).toBe('0.1.0-dev.1');
 });
 test('report, atomic replacement, baseline, strict coverage, and symlink refusal',async()=>{
  const project=await fixture({'app/page.tsx':"'use client';\nexport default function Page(){return <p>{process.env.TOKEN}</p>;}"});

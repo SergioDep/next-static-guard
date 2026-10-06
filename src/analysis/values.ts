@@ -4,6 +4,7 @@ import type { Category, Context } from '../types.js';
 import type { Graph } from '../graph/build.js';
 import { inlineServer } from '../graph/directives.js';
 import { resolveReference, unshadowed } from './symbols.js';
+import type { Reference } from './symbols.js';
 import { Diagnostics } from '../rules/shared.js';
 export interface Origin { id:string; category:Category }
 export interface Value { serialization:'supported'|'rejected'|'unknown'; origin:string; sensitive:Origin[]; fields:Map<string,Value>|null; unknown:boolean }
@@ -43,7 +44,46 @@ export class Values {
    const source=this.graph.resolver.source(node.getSourceFile().fileName);
    return value(source?.directive==='server'||source?.directive==='client'||inlineServer(node)?'supported':'rejected',`${node.getSourceFile().fileName}#${node.name?.getText()??'<function>'}`);
   }
-  if(ts.isJsxElement(node)||ts.isJsxSelfClosingElement(node)||ts.isJsxFragment(node))return value('supported','react#element');
+  if(ts.isJsxElement(node)||ts.isJsxSelfClosingElement(node)||ts.isJsxFragment(node)) {
+   const fields=new Map<string,Value>();let uncertain=false;
+   const opening=ts.isJsxFragment(node)?null:ts.isJsxElement(node)?node.openingElement:node;
+   if(opening)for(const property of opening.attributes.properties) {
+    if(ts.isJsxSpreadAttribute(property)) {
+     const spread=recur(property.expression);uncertain ||= hasUnknown(spread);
+     if(spread.fields)for(const [name,child] of spread.fields)fields.set(name,child);
+     else uncertain=true;
+    } else if(property.initializer) {
+     const expression=ts.isJsxExpression(property.initializer)?property.initializer.expression:property.initializer;
+     if(expression)fields.set(property.name.getText(),recur(expression));
+    }
+   }
+   if(!ts.isJsxSelfClosingElement(node)) {
+    const children=new Map<string,Value>();
+    for(const [index,child] of node.children.entries()) {
+     const expression=ts.isJsxExpression(child)?child.expression:child;
+     if(expression&&!ts.isJsxText(expression))children.set(String(index),recur(expression));
+    }
+    // JSX children replace an explicit children attribute, just as React does.
+    if(node.children.some(child=>!ts.isJsxText(child)||child.text.trim()))fields.set('children',value('supported','react#children',children));
+   }
+   if(opening&&!(ts.isIdentifier(opening.tagName)&&/^[a-z]/.test(opening.tagName.text))) {
+    const reference=resolveReference(this.graph,opening.tagName),fn=reference.node;
+    if(reference.source?.directive!=='client') {
+     // A Server Component's inputs stay on the server; its rendered result crosses.
+     if(!fn||!ts.isFunctionLike(fn)||!('body' in fn)||!fn.body||calls>=2||uncertain)return unknown('react#element');
+     const componentBindings=new Map(bindings);
+     if(fn.parameters[0])componentBindings.set(fn.parameters[0],value('supported','react#props',fields));
+     const returns:ts.Expression[]=[];
+     if(ts.isBlock(fn.body)) {
+      const visit=(part:ts.Node):void=>{if(part!==fn.body&&ts.isFunctionLike(part))return;if(ts.isReturnStatement(part)&&part.expression)returns.push(part.expression);ts.forEachChild(part,visit);};visit(fn.body);
+     } else returns.push(fn.body);
+     if(returns.length!==1)return unknown('react#element');
+     const rendered=this.eval(returns[0]!,'rsc',componentBindings,depth+1,new Set(seen),calls+1);
+     return value('supported','react#element',new Map([['rendered',rendered]]));
+    }
+   }
+   return value('supported','react#element',fields,[],uncertain);
+  }
   if(ts.isIdentifier(node)) {
    if(['undefined','NaN','Infinity'].includes(node.text)&&unshadowed(this.graph,node))return value();
    const symbol=this.graph.checker.getSymbolAtLocation(node),declaration=symbol?.valueDeclaration??symbol?.declarations?.[0];
@@ -73,14 +113,14 @@ export class Values {
     }
     const file=reference.source?.file.path;
     const exportName=reference.exported??(declaration&&ts.isVariableDeclaration(declaration)&&ts.isIdentifier(declaration.name)?declaration.name.text:null);
-    return this.decorate(v,file??node.getSourceFile().fileName,exportName);
+    return reference.annotations?.length?this.decorateReference(v,reference):this.decorate(v,file??node.getSourceFile().fileName,exportName);
    }
    if(declaration&&ts.isParameter(declaration))return unknown(`${node.getSourceFile().fileName}#${node.text}`);
    return unknown();
   }
   if(ts.isPropertyAccessExpression(node)||ts.isElementAccessExpression(node)) {
    const ref=resolveReference(this.graph,node);
-   if(ref.node&&ref.node!==node&&ref.exported)return this.decorate(recur(ref.node),ref.source?.file.path??node.getSourceFile().fileName,ref.exported);
+   if(ref.node&&ref.node!==node&&ref.exported)return ref.annotations?.length?this.decorateReference(recur(ref.node),ref):this.decorate(recur(ref.node),ref.source?.file.path??node.getSourceFile().fileName,ref.exported);
    const base=recur(node.expression),key=ts.isPropertyAccessExpression(node)?node.name.text:node.argumentExpression&&ts.isStringLiteralLike(node.argumentExpression)?node.argumentExpression.text:null;
    if(key!==null&&base.fields)return base.fields.get(key)??value();
    return unknown(base.origin);
@@ -157,6 +197,14 @@ export class Values {
    const a=recur(node.left),b=recur(node.right);return hasUnknown(a)||hasUnknown(b)?unknown():value('supported',a.origin,null,[...allOrigins(a),...allOrigins(b)]);
   }
   return unknown();
+ }
+ private decorateReference(v:Value,reference:Reference):Value {
+  const seen=new Set<string>();
+  for(const annotation of reference.annotations??[]) {
+   const id=JSON.stringify([annotation.file,annotation.name]);if(seen.has(id))continue;seen.add(id);
+   v=this.decorate(v,annotation.file,annotation.name);
+  }
+  return v;
  }
  private decorate(v:Value,file:string,exportName:string|null):Value {
   if(!exportName)return v;

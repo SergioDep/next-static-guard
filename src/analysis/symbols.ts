@@ -2,7 +2,10 @@ import ts from 'typescript';
 import type { Graph } from '../graph/build.js';
 import type { SourceNode } from '../types.js';
 import { runtimeExports } from '../graph/exports.js';
-export interface Reference { node:ts.Node|null; source:SourceNode|null; api:string|null; exported:string|null; browserOnly?:boolean; uncertain?:boolean }
+export interface Reference { node:ts.Node|null; source:SourceNode|null; api:string|null; exported:string|null; browserOnly?:boolean; uncertain?:boolean; namespace?:{file:string|null;package:string|null}; annotations?:{file:string;name:string}[] }
+function tagExport(reference:Reference,file:string,name:string):Reference {
+ return {...reference,annotations:[...(reference.annotations??[]),{file,name}]};
+}
 function objectMember(graph:Graph,value:Reference,member:string,seen:Set<string>):Reference {
   let property:ts.Node|undefined;
   if(value.node&&ts.isObjectLiteralExpression(value.node))for(const item of value.node.properties) {
@@ -14,15 +17,22 @@ function objectMember(graph:Graph,value:Reference,member:string,seen:Set<string>
 export function resolveExport(graph:Graph,file:string,name:string,seen=new Set<string>()):Reference {
   const key=`${file}#${name}`;if(seen.has(key))return {node:null,source:null,api:null,exported:null};seen.add(key);
   const source=graph.resolver.source(file);if(!source)return {node:null,source:null,api:null,exported:null};
-  if(file.endsWith('.json')&&name==='default'&&source.ast.statements[0]&&ts.isExpressionStatement(source.ast.statements[0]))return {node:source.ast.statements[0].expression,source,api:null,exported:name};
-  for(const s of source.ast.statements) {
+  if(file.endsWith('.json')&&name==='default'&&source.ast.statements[0]&&ts.isExpressionStatement(source.ast.statements[0]))return tagExport({node:source.ast.statements[0].expression,source,api:null,exported:name},file,name);
+  const stars=source.ast.statements.filter(s=>ts.isExportDeclaration(s)&&!s.exportClause);
+  for(const s of [...source.ast.statements.filter(s=>!stars.includes(s)),...stars]) {
     const exported=ts.canHaveModifiers(s)&&ts.getModifiers(s)?.some(m=>m.kind===ts.SyntaxKind.ExportKeyword);
     if(ts.isFunctionDeclaration(s)||ts.isClassDeclaration(s)) {
-      if(exported&&((name==='default'&&s.modifiers?.some(m=>m.kind===ts.SyntaxKind.DefaultKeyword))||s.name?.text===name))return {node:s,source,api:null,exported:name};
+      if(exported&&((name==='default'&&s.modifiers?.some(m=>m.kind===ts.SyntaxKind.DefaultKeyword))||s.name?.text===name))return tagExport({node:s,source,api:null,exported:name},file,name);
     }
-    if(ts.isVariableStatement(s)&&exported)for(const d of s.declarationList.declarations)if(ts.isIdentifier(d.name)&&d.name.text===name)return {node:d.initializer??d,source,api:null,exported:name};
-    if(ts.isExportAssignment(s)&&name==='default')return resolveReference(graph,s.expression,new Set(seen));
+    if(ts.isVariableStatement(s)&&exported)for(const d of s.declarationList.declarations)if(ts.isIdentifier(d.name)&&d.name.text===name)return tagExport({node:d.initializer??d,source,api:null,exported:name},file,name);
+    if(ts.isExportAssignment(s)&&name==='default')return tagExport({...resolveReference(graph,s.expression,new Set(seen)),exported:name},file,name);
     if(ts.isExportDeclaration(s)&&!s.isTypeOnly) {
+      if(s.exportClause&&ts.isNamespaceExport(s.exportClause)) {
+        if(s.exportClause.name.text!==name)continue;
+        if(!s.moduleSpecifier||!ts.isStringLiteral(s.moduleSpecifier))return {node:null,source,api:null,exported:name,uncertain:true};
+        const resolution=graph.resolver.resolve(file,s.moduleSpecifier.text);
+        return {node:null,source,api:null,exported:name,namespace:{file:resolution.file,package:resolution.package},...(resolution.limit?{uncertain:true}:{})};
+      }
       const names=s.exportClause&&ts.isNamedExports(s.exportClause)?s.exportClause.elements.filter(e=>!e.isTypeOnly&&e.name.text===name):null;
       if(names && !names.length)continue;
       const imported=names?.[0]?.propertyName?.text??names?.[0]?.name.text??name;
@@ -31,9 +41,9 @@ export function resolveExport(graph:Graph,file:string,name:string,seen=new Set<s
         if(r.package)return {node:null,source,api:`${r.package}#${imported}`,exported:name};
         if(r.file) {
           if(!s.exportClause && (name==='default'||!runtimeExports(graph.resolver,r.file).names.has(name)))continue;
-          return resolveExport(graph,r.file,imported,new Set(seen));
+          return tagExport(resolveExport(graph,r.file,imported,new Set(seen)),file,name);
         }
-      } else if(names?.[0])return resolveReference(graph,names[0].propertyName??names[0].name,new Set(seen));
+      } else if(names?.[0])return tagExport(resolveReference(graph,names[0].propertyName??names[0].name,new Set(seen)),file,name);
     }
   }
   return {node:null,source,api:null,exported:name};
@@ -85,10 +95,15 @@ export function resolveReference(graph:Graph,node:ts.Node,seen=new Set<string>()
     const binding=graph.bindings.get(node.getSourceFile().fileName)?.get(name);
     const imported=declaration&&(ts.isImportSpecifier(declaration)||ts.isImportClause(declaration)||ts.isNamespaceImport(declaration));
     if(binding && (!declaration||imported)) {
-      if(member&&binding.imported!=='*'&&binding.imported!=='default')return {node,source,api:null,exported:null};
+      if(binding.resolution.package&&member&&binding.imported!=='*'&&binding.imported!=='default')return {node,source,api:null,exported:null};
       const exported=member??binding.imported;
       if(binding.resolution.package)return {node:null,source,api:`${binding.resolution.package}#${exported}`,exported};
-      if(binding.resolution.file&&member&&binding.imported==='default')return objectMember(graph,resolveExport(graph,binding.resolution.file,'default',new Set(seen)),member,seen);
+      if(binding.resolution.file&&member&&binding.imported!=='*') {
+        const target=resolveExport(graph,binding.resolution.file,binding.imported,new Set(seen));
+        if(target.namespace?.package)return {node:null,source:target.source,api:`${target.namespace.package}#${member}`,exported:member};
+        if(target.namespace?.file)return resolveExport(graph,target.namespace.file,member,new Set(seen));
+        return objectMember(graph,target,member,seen);
+      }
       if(binding.resolution.file)return resolveExport(graph,binding.resolution.file,exported,seen);
     }
     if(declaration) {

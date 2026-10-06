@@ -2,7 +2,7 @@ import { checkBudget } from './budget.js';
 import { GuardError } from '../cli/errors.js';
 import { lstat, readdir, readFile, realpath, open } from 'node:fs/promises';
 import { constants } from 'node:fs';
-import { dirname, relative, resolve, sep, posix } from 'node:path';
+import { dirname, relative, resolve, sep, posix, isAbsolute } from 'node:path';
 import picomatch from 'picomatch';
 import semver from 'semver';
 import ts from 'typescript';
@@ -13,7 +13,7 @@ import { sha256 } from '../report/fingerprint.js';
 import { RULE_IDS } from '../types.js';
 import type { Limit, Policy, ProjectSnapshot, ProjectVersions, SnapshotFile } from '../types.js';
 export const INTERNAL_EXCLUSIONS = ['.git', '.next', 'node_modules', 'dist', 'build', 'coverage'];
-export function inside(root: string, file: string): boolean { const r = relative(root, file); return r === '' || (!r.startsWith(`..${sep}`) && r !== '..' && !resolve(r).startsWith(`${sep}${sep}`) && !r.startsWith(sep)); }
+export function inside(root: string, file: string): boolean { const r = relative(root, file); return r === '' || (!r.startsWith(`..${sep}`) && r !== '..' && !isAbsolute(r)); }
 export function relativePath(root: string, file: string): string { return relative(root, file).split(sep).join('/') || '.'; }
 export function excluded(file: string, policy: Policy): boolean { return file.split('/').some(s => INTERNAL_EXCLUSIONS.includes(s) || s.startsWith('.env') || ['.aws', '.codex', '.agents', '.ssh'].includes(s)) || policy.exclude.some(g => picomatch(g, {dot: true, nocase: false})(file)); }
 export function parseJSON(text: string | undefined): Record<string, unknown> | null { try { const v: unknown = JSON.parse(text ?? ''); return v !== null && typeof v === 'object' && !Array.isArray(v) ? v as Record<string, unknown> : null; } catch { return null; } }

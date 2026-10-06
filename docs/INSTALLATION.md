@@ -24,11 +24,11 @@ npm pack
 Install that tarball in an application:
 
 ```sh
-npm install --save-dev /path/to/next-static-guard-0.1.0-dev.0.tgz
+npm install --save-dev /path/to/next-static-guard-0.1.0-dev.1.tgz
 npx next-static-guard scan
 ```
 
-The development package uses ruleset 1.0.0. All rules are uncertified and run as warnings; setting `error` cannot certify a rule. Exit 0 can include findings or partial coverage. Review the report's coverage and use `--strict-coverage` when complete coverage is required.
+The development package uses ruleset 1.1.0. All rules are uncertified and run as warnings; setting `error` cannot certify a rule. Exit 0 can include findings or partial coverage. Review the report's coverage and use `--strict-coverage` when complete coverage is required.
 
 ## Configuration
 
