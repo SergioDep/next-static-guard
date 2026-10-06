@@ -32,6 +32,7 @@ function guard(graph:Graph,node:ts.Expression):boolean|null {
 }
 export function execute(graph:Graph,diagnostics:Diagnostics,hooks:ExecutionHooks):void {
  const bindingIds=new WeakMap<object,number>();let nextBindingId=0;
+ const nodeIds=new WeakMap<ts.Node,number>();let nextNodeId=0;
  const seen=new Set<string>(),values=new Values(graph,diagnostics);
  const trace=(state:Execution,node:ts.Node,symbol:string|null,kind:Evidence['kind']='api'):Evidence[]=>[...state.trace,{kind,location:location(node),symbol}];
  const walkFunction=(node:ts.Node,state:Execution,args:readonly ts.Node[]=[]):void=>{
@@ -56,7 +57,8 @@ export function execute(graph:Graph,diagnostics:Diagnostics,hooks:ExecutionHooks
  const walk=(node:ts.Node,state:Execution):void=>{
     checkBudget();
    if(!bindingIds.has(state.bindings))bindingIds.set(state.bindings,nextBindingId++);
-   const key=`${bindingIds.get(state.bindings)}:${node.getSourceFile().fileName}:${node.pos}:${node.end}:${state.context}:${state.phase}:${state.browserGuard}`;
+   if(!nodeIds.has(node))nodeIds.set(node,nextNodeId++);
+   const key=`${bindingIds.get(state.bindings)}:${nodeIds.get(node)}:${state.context}:${state.phase}:${state.browserGuard}:${state.uncertainGuard}`;
    if(seen.has(key))return;seen.add(key);
    hooks.visit(node,state);
    checkServerDependency(graph,diagnostics,node,state);
@@ -98,7 +100,8 @@ export function execute(graph:Graph,diagnostics:Diagnostics,hooks:ExecutionHooks
    }
    if(ts.isNewExpression(node)) {
      const reference=resolveReference(graph,node.expression);
-     if(reference.node&&(ts.isClassDeclaration(reference.node)||ts.isClassExpression(reference.node))) {
+     if(reference.source?.directive==='client'&&!isClient(state.context))diagnostics.limit('unknown-phase',node,['NSG003']);
+     else if(reference.node&&(ts.isClassDeclaration(reference.node)||ts.isClassExpression(reference.node))) {
        for(const member of reference.node.members) {
          if(ts.isPropertyDeclaration(member)&&member.initializer&&!member.modifiers?.some(m=>m.kind===ts.SyntaxKind.StaticKeyword))walk(member.initializer,state);
          if(ts.isConstructorDeclaration(member)&&member.body)walkFunction(member,{...state,hops:state.hops+1},node.arguments??[]);
@@ -120,7 +123,8 @@ export function execute(graph:Graph,diagnostics:Diagnostics,hooks:ExecutionHooks
      }
      if(!api && node.expression.kind!==ts.SyntaxKind.ImportKeyword) {
        const ref=resolveReference(graph,node.expression);
-       if(ref.node&&ts.isFunctionLike(ref.node))walkFunction(node.expression,{...state,hops:state.hops+1,trace:trace(state,node,`${ref.source?.file.path??node.getSourceFile().fileName}#${ref.exported??ref.node.name?.getText()??'<anonymous>'}`,'reference')},node.arguments);
+       if(ref.source?.directive==='client'&&!isClient(state.context))diagnostics.limit('unknown-phase',node,['NSG003']);
+       else if(ref.node&&ts.isFunctionLike(ref.node))walkFunction(node.expression,{...state,hops:state.hops+1,trace:trace(state,node,`${ref.source?.file.path??node.getSourceFile().fileName}#${ref.exported??ref.node.name?.getText()??'<anonymous>'}`,'reference')},node.arguments);
      }
      return;
    }
@@ -130,7 +134,10 @@ export function execute(graph:Graph,diagnostics:Diagnostics,hooks:ExecutionHooks
      for(const attribute of opening.attributes.properties) {
        if(ts.isJsxAttribute(attribute)&&attribute.initializer&&ts.isJsxExpression(attribute.initializer)&&attribute.initializer.expression) {
          const expr=attribute.initializer.expression;
-         if(isClient(state.context)&&intrinsic&&/^on[A-Z]/.test(attribute.name.getText()))walkFunction(expr,{...state,context:'client-browser',phase:'event',trace:trace(state,expr,'client#event','phase')});
+         if(isClient(state.context)&&intrinsic&&/^on[A-Z]/.test(attribute.name.getText())) {
+           walk(expr,state);
+           walkFunction(expr,{...state,context:'client-browser',phase:'event',trace:trace(state,expr,'client#event','phase')});
+         }
          else walk(expr,state);
        } else if(ts.isJsxSpreadAttribute(attribute))walk(attribute.expression,state);
      }

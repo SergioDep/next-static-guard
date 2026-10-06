@@ -1,0 +1,61 @@
+{
+  "toolVersion": "0.1.0-beta.1",
+  "rulesetVersion": "1.1.0",
+  "implementationHash": "751e8c9eb8e6b3ca0f50be6e2afe73487fb180328d799adcc795e39539115252",
+  "artifactReady": true,
+  "targetMainApplied": false,
+  "checks": [
+    {
+      "name": "package and compiled versions agree",
+      "pass": true
+    },
+    {
+      "name": "reserved source and oracle identities match",
+      "pass": true
+    },
+    {
+      "name": "fictional oracle probe identity matches",
+      "pass": true
+    },
+    {
+      "name": "every independent framework oracle is verified",
+      "pass": true
+    },
+    {
+      "name": "quality belongs to the current compiled engine",
+      "pass": true
+    },
+    {
+      "name": "quality counts and minimum sample agree",
+      "pass": true
+    },
+    {
+      "name": "observed quality and coverage gates pass",
+      "pass": true
+    },
+    {
+      "name": "benchmark belongs to the current engine and required hardware",
+      "pass": true
+    },
+    {
+      "name": "all three performance scenarios pass",
+      "pass": true
+    },
+    {
+      "name": "complete tool comparison belongs to current engine",
+      "pass": true
+    },
+    {
+      "name": "platform/framework/benchmark/quality CI jobs passed",
+      "pass": true
+    },
+    {
+      "name": "the exact current-engine tarball passed isolated installation",
+      "pass": true
+    },
+    {
+      "name": "runtime dependency audit has no high or critical advisory",
+      "pass": true
+    }
+  ]
+}

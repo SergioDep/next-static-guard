@@ -54,3 +54,17 @@ test('Git comparison without a repository or HEAD reports an operational failure
  const project=await fixture({'app/page.tsx':'export default function Page(){return <p/>;}'});
  try {expect((await scan(project.root)).code).toBe(2);await git(project.root,'init','-b','main');expect((await scan(project.root)).code).toBe(2);}finally{await project.close();}
 });
+
+test('Git comparison canonicalizes a symlinked scan root before mapping tree paths',async()=>{
+ const {mkdtemp,symlink,rm}=await import('node:fs/promises');
+ const {tmpdir}=await import('node:os');
+ const project=await fixture({'app/page.tsx':"'use client';export default function Page(){return <p>{process.env.TOKEN}</p>;}"});
+ const aliasParent=await mkdtemp(join(tmpdir(),'nsg-git-alias-')),alias=join(aliasParent,'app');
+ try {
+  await git(project.root,'init','-b','main');await git(project.root,'add','.');
+  await git(project.root,'-c','user.name=GuardLab','-c','user.email=guardlab@example.invalid','commit','-m','Base');
+  await symlink(project.root,alias,'junction');
+  const result=await scan(alias);expect(result.stderr).toBe('');expect(result.code).toBe(0);
+  const report=JSON.parse(result.stdout);expect(report.comparison.status).toBe('complete');expect(report.findings[0].status).toBe('existing');
+ }finally{await rm(aliasParent,{recursive:true,force:true});await project.close();}
+});

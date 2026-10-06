@@ -1,0 +1,112 @@
+import { test, expect } from 'vitest';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { mkdtemp, mkdir, writeFile, readFile, readdir, rm } from 'node:fs/promises';
+import { join, dirname } from 'node:path';
+
+const exec=promisify(execFile),repo=process.cwd(),sentinel='FICTIONAL_REVIEW_TOKEN';
+async function payload(dir:string):Promise<string> {
+ let result='';for(const entry of await readdir(dir,{withFileTypes:true})) {
+  const path=join(dir,entry.name);
+  if(entry.isDirectory())result+=await payload(path);
+  else if(/\.(?:html|rsc|body)$/.test(path))result+=await readFile(path,'utf8');
+ }return result;
+}
+async function build(files:Record<string,string>,verbatim=false):Promise<{code:number;output:string;payload:string}> {
+ const root=await mkdtemp(join(repo,'tests/fixtures/.framework-'));
+ try {
+  const sources={
+   'package.json':JSON.stringify({private:true,dependencies:{next:'16.3.8',react:'19.3.0','react-dom':'19.3.0'}}),
+   'app/layout.tsx':'export default function Layout({children}:any){return <html><body>{children}</body></html>;}',
+   'tsconfig.json':JSON.stringify({compilerOptions:{verbatimModuleSyntax:verbatim,target:'ES2022',lib:['dom','dom.iterable','esnext'],allowJs:true,skipLibCheck:true,strict:true,noEmit:true,esModuleInterop:true,module:'esnext',moduleResolution:'bundler',resolveJsonModule:true,jsx:'react-jsx'},include:['**/*.ts','**/*.tsx','.next/types/**/*.ts'],exclude:['node_modules']}),
+   'next.config.mjs':`export default {turbopack:{root:${JSON.stringify(repo)}},experimental:{cpus:2}};`,
+   ...files,
+  };
+  for(const [path,text] of Object.entries(sources)){await mkdir(dirname(join(root,path)),{recursive:true});await writeFile(join(root,path),text);}
+  let code=0,output='';
+  try {const result=await exec(process.execPath,[join(repo,'node_modules/next/dist/bin/next'),'build','--turbopack'],{cwd:root,env:{...process.env,NEXT_TELEMETRY_DISABLED:'1',TOKEN:sentinel},timeout:110_000,maxBuffer:4*1024*1024});output=result.stdout+result.stderr;}
+  catch(error){const e=error as {code:number;stdout:string;stderr:string};if(typeof e.code!=='number')throw error;code=e.code;output=(e.stdout??'')+(e.stderr??'');}
+  return {code,output:output.replaceAll(sentinel,'[redacted]'),payload:code===0?await payload(join(root,'.next/server/app')):''};
+ }finally{await rm(root,{recursive:true,force:true});}
+}
+
+test.each(["export {readFile} from 'node:fs';","export * from 'node:fs';","export * as filesystem from 'node:fs';"])('Next rejects the retained filesystem reexport: %s',async declaration=>{
+ const result=await build({'app/page.tsx':"'use client';import {label} from '../lib/shared';export default function Page(){return <p>{label}</p>;}",'lib/shared.ts':declaration+"export const label='Allowed';"});
+ expect(result.code).not.toBe(0);expect(result.output).toMatch(/node:fs/);
+});
+
+test.each([false,true])('Next respects namespace import retention with verbatimModuleSyntax %s',async verbatim=>{
+ const result=await build({'app/page.tsx':"'use client';import * as filesystem from 'node:fs';export default function Page(){return <p/>;}"},verbatim);
+ if(verbatim){expect(result.code).not.toBe(0);expect(result.output).toMatch(/node:fs/);}
+ else expect(result.code,result.output).toBe(0);
+});
+
+test('Next accepts an unconsumed React hook reexport in a server module',async()=>{
+ const result=await build({'app/page.tsx':"import {Widget} from '../lib/ui';export default function Page(){return <Widget/>;}",'lib/ui.tsx':"export {useState} from 'react';export function Widget(){return <p/>;}"});
+ expect(result.code,result.output).toBe(0);
+});
+
+test.each([false,true])('Next publishes only the rendered Server Component result: secret returned %s',async leak=>{
+ const body=leak?'<span>{value}</span>':'<span>Allowed</span>';
+ const result=await build({'app/page.tsx':`import Client from './client';function Panel({value,handler}:any){return ${body};}export default function Page(){return <Client><Panel value={process.env.TOKEN} handler={()=>1}/></Client>;}`,'app/client.tsx':"'use client';export default function Client({children}:any){return <div>{children}</div>;}"});
+ expect(result.code,result.output).toBe(0);
+ if(leak)expect(result.payload).toContain(sentinel);else expect(result.payload).not.toContain(sentinel);
+});
+
+test.each(['default-literal','default-alias','barrel'])('Next confirms confidential values reach props through %s exports',async kind=>{
+ const declaration=kind==='default-literal'?`export default {email:'${sentinel}',name:'Allowed'};`:kind==='default-alias'?`const profile={email:'${sentinel}',name:'Allowed'};export default profile;`:`export const profile={email:'${sentinel}',name:'Allowed'};`;
+ const source=kind==='barrel'?'../lib/barrel':'../lib/profile',binding=kind==='barrel'?'{profile}':'profile';
+ const result=await build({'app/page.tsx':`import Client from './client';import ${binding} from '${source}';export default function Page(){return <Client email={profile.email}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",'lib/profile.ts':declaration,...(kind==='barrel'?{'lib/barrel.ts':"export {profile} from './profile';"}:{})});
+ expect(result.code,result.output).toBe(0);expect(result.payload).toContain(sentinel);
+});
+
+test('Next resolves a namespace reexport as a real Client Component boundary',async()=>{
+ const result=await build({'app/page.tsx':"import {ui} from '../lib/ui';export default function Page(){return <ui.Client handler={()=>1}/>;}",'lib/ui.ts':"export * as ui from '../app/client';",'app/client.tsx':"'use client';export function Client(props:any){return <p/>;}"});
+ expect(result.code).not.toBe(0);expect(result.output).toMatch(/function|Function/);
+});
+
+test.each([
+ {expression:'make()',declaration:'export function make(){return {token:process.env.TOKEN,handler:()=>1};}'},
+ {expression:'new make()',declaration:'export class make {value=1;}'},
+])('Next rejects executing a client implementation on the server: $expression',async item=>{
+ const result=await build({'app/page.tsx':`import Client from './client';import {make} from './client-value';export default function Page(){return <Client data={${item.expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",'app/client-value.ts':`'use client';${item.declaration}`});
+ expect(result.code).not.toBe(0);expect(result.output).toMatch(/Attempted to call.*make|cannot.*client function|call.*server.*client/i);
+});
+
+test.each([
+ 'new Date({toString(){return "2026-01-01";}} as any)',
+ 'new Uint8Array([()=>1] as any)',
+ 'new DataView(new ArrayBuffer(8),(()=>1) as any)',
+])('Next transfers builtin results without their coercion inputs: %s',async expression=>{
+ const result=await build({'app/page.tsx':`import Client from './client';export default function Page(){return <Client data={${expression}}/>;}`,'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}"});
+ expect(result.code,result.output).toBe(0);
+});
+
+test('Next transfers a nested module Server Function reference whose real return contains confidential data',async()=>{
+ const result=await build({
+  'app/page.tsx':"import Client from './client';import {load} from './actions';export default function Page(){return <Client data={{action:load}}/>;}",
+  'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",
+  'app/actions.ts':"'use server';export async function load(){return {token:process.env.TOKEN};}",
+  'app/probe/route.ts':"import {load} from '../actions';export const dynamic='force-static';export async function GET(){return Response.json(await load());}",
+ });
+ expect(result.code,result.output).toBe(0);expect(result.payload).toMatch(/"action":"\$h[0-9a-f]+"/);expect(result.payload).toContain(sentinel);
+});
+
+test('Next publishes the public Server Function result without its private helper return',async()=>{
+ const result=await build({
+  'app/page.tsx':"import Client from './client';export default function Page(){return <Client/>;}",
+  'app/client.tsx':"'use client';import {load} from './actions';export default function Client(){return <button onClick={()=>load()}>Load</button>;}",
+  'app/actions.ts':"'use server';async function credential(){return process.env.TOKEN;}export async function load(){await credential();return {ok:true};}",
+  'app/probe/route.ts':"import {load} from '../actions';export const dynamic='force-static';export async function GET(){return Response.json(await load());}",
+ });
+ expect(result.code,result.output).toBe(0);expect(result.payload).toContain('"ok":true');expect(result.payload).not.toContain(sentinel);
+});
+
+test('Next rejects an unregistered private function returned by a module Server Function as a client prop',async()=>{
+ const result=await build({
+  'app/page.tsx':"import Client from './client';import {create} from './actions';export default async function Page(){return <Client handler={await create()}/>;}",
+  'app/client.tsx':"'use client';export default function Client(props:any){return <p/>;}",
+  'app/actions.ts':"'use server';function handler(){return 1;}export async function create(){return handler;}",
+ });
+ expect(result.code).not.toBe(0);expect(result.output).toMatch(/Functions cannot be passed|functions cannot be passed/i);
+});

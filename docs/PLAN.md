@@ -6,7 +6,7 @@ Required deliverables for v0.1, in dependency order. [Product](PRODUCT.md) owns 
 
 | Artifact | Required behavior | Acceptance |
 | --- | --- | --- |
-| Development MVP: `next-static-guard-0.1.0-dev.0.tgz` | Six warning rules, local scan and PR comparison, three report formats, explicit partial coverage, no source edits or network calls. | Deliverables 1–5, install test, controlled corpus, framework checks, comparison results, and measured performance. No quality or platform result is inferred from an unexecuted check. |
+| Development MVP: `next-static-guard-0.1.0-dev.1.tgz` | Six warning rules, local scan and PR comparison, three report formats, explicit partial coverage, no source edits or network calls. | Deliverables 1–5, install test, controlled corpus, framework checks, comparison results, and measured performance. No quality or platform result is inferred from an unexecuted check. |
 | Beta: `next-static-guard-0.1.0-beta.1.tgz` | Same scope; uncertified rules retain warnings. | Development acceptance plus the independent quality sample and every CI job specified in Validation. |
 | Blocking-enabled ruleset | Only individually certified NSG001–NSG005 rules default to `error`; NSG006 remains `warn`. | Per-rule certification predicate and a ruleset version increment. |
 
@@ -16,7 +16,7 @@ The development artifact does not require registry publication. Missing beta or 
 
 Artifacts:
 
-- One ESM package named `next-static-guard`, version `0.1.0-dev.0`, and MIT LICENSE attributed to Next Static Guard contributors.
+- One ESM package named `next-static-guard`, version `0.1.0-beta.1`, and MIT LICENSE attributed to Next Static Guard contributors.
 - Exact dependencies from [Stack and layout](ARCHITECTURE.md#stack-and-layout), npm v3 lockfile, `.nvmrc`, `.npmrc`, and the specified TypeScript and Vitest configurations.
 - `schemas/config.v1.json`, `schemas/report.v1.json`, and `schemas/case.v1.json`, with closed objects and contract invariants.
 - Read-only filesystem snapshot adapter; source inventory, byte hashes, version lookup, safe symlink resolution, and bounded reads.
@@ -44,7 +44,7 @@ Artifacts:
 - All P/N/U cases, corrections, language/layout variants, and [cross-cutting controls](VALIDATION.md#cross-cutting-tests).
 - Rule documentation at `docs/rules/NSG001.md` through `NSG006.md`: condition, correction, positive case, valid control, evidence, and limitations.
 
-Checks: all 60 semantic expectations and required subvariants pass; corrections remove their findings while preserving functional behavior. The framework lab verifies SSR, serialization, and publication using fictional values. Reports and errors contain zero fictional secret sentinel values. Ruleset `1.0.0` keeps every rule uncertified at `warn`.
+Checks: all 60 semantic expectations and required subvariants pass; corrections remove their findings while preserving functional behavior. The framework lab verifies SSR, serialization, and publication using fictional values. Reports and errors contain zero fictional secret sentinel values. Ruleset `1.1.0` keeps every rule uncertified at `warn`.
 
 ## 4. PR comparison and policy
 

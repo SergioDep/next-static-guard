@@ -157,7 +157,7 @@ export function buildGraph(resolver:Resolver):Graph {
               const exports=runtimeExports(resolver,resolved.file);
               names=[...use.exports].filter(name=>name!=='default'&&exports.names.has(name));
               if(exports.unknown)limit('uncertain-runtime',statement,node.file.path);
-            } else {limit('uncertain-runtime',statement,node.file.path);names=[];}
+            } else {if(!resolved.package)limit('uncertain-runtime',statement,node.file.path);names=[];}
           }
           if(statement.exportClause&&ts.isNamedExports(statement.exportClause)&&statement.exportClause.elements.length&&statement.exportClause.elements.every(e=>e.isTypeOnly))continue;
           edgeCount++;

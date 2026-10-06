@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest';
 import { scan, fixture, manifest } from './helpers.js';
 import { normalizePolicy } from '../../src/cli/config.js';
-import { materializeSources, filesystemSnapshot } from '../../src/project/snapshot.js';
+import { materializeSources, filesystemSnapshot, inside } from '../../src/project/snapshot.js';
 import { analyze } from '../../src/analysis/analyze.js';
 import type { ProjectSnapshot, SnapshotFile } from '../../src/types.js';
 import { writeFile } from 'node:fs/promises';
@@ -41,4 +41,16 @@ test('a mismatched React DOM version disables the framework profile',async()=>{
 test('gitignore cannot hide a reached server dependency from a local scan',async()=>{
  const report=await scan({'.gitignore':'lib/\n','app/page.tsx':"'use client';import {value} from '../lib/private';export default function Page(){return <p>{value}</p>;}",'lib/private.ts':"import 'server-only';export const value=1;"});
  expect(report.findings.map(finding=>finding.ruleId)).toEqual(['NSG001']);expect(report.coverage.status).toBe('complete');
+});
+
+test('scan containment rejects parent and sibling paths',()=>{
+ expect(inside(join(process.cwd(),'app'),join(process.cwd(),'app','page.tsx'))).toBe(true);
+ expect(inside(join(process.cwd(),'app'),process.cwd())).toBe(false);
+ expect(inside(join(process.cwd(),'app'),join(process.cwd(),'application','page.tsx'))).toBe(false);
+});
+
+test.runIf(process.platform==='win32')('scan containment rejects another Windows drive or UNC share',()=>{
+ expect(inside('C:\\repo','C:\\repo\\app\\page.tsx')).toBe(true);
+ expect(inside('C:\\repo','D:\\repo\\app\\page.tsx')).toBe(false);
+ expect(inside('\\\\server\\one\\repo','\\\\server\\two\\repo')).toBe(false);
 });

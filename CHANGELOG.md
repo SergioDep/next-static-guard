@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-beta.1
+
+- Preserve shorthand-property value bindings, including aliases of function parameters.
+- Add frozen independent quality evidence, three-platform CI, exact package installation checks, and release acceptance verification.
+- Track actual Server Function references in nested client props; distinguish exported async functions from private helpers and ordinary function values.
+
+- Treat a client reference called or constructed from server execution as an unknown result, without inventing server evaluation of its client implementation or a prop disclosure.
+- Do not mistake Date and binary constructor coercion inputs for fields sent to the client; report custom coercions as unknown coverage.
+- Preserve sole-statement module checks by distinguishing AST identities, evaluate event factories during render, and retain declared namespace export sensitivity.
+
+- Fix Git comparisons through symlinked roots on macOS and Windows.
+- Preserve authored fixture line endings and use portable ESM test preloads.
+- Reject cross-drive and cross-share paths outside Windows scan roots.
+- Detect retained filesystem namespace imports, reexports, and literal dynamic imports.
+- Track confidential data in React element props, children, and rendered Server Component results.
+- Preserve declared sensitivity through default exports and reexport aliases.
+- Resolve namespace reexports and explicit exports before star reexports.
+- Add independent Next framework regressions and package repository metadata.
+
+Ruleset 1.1.0 changes analysis semantics; baselines from ruleset 1.0.0 must be regenerated after review. Rules remain uncertified warnings.
+
 ## 0.1.0-dev.0
 
 - Local App Router analysis for Next 16.3.8 and React/React DOM 19.3.0.

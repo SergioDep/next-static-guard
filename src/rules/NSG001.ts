@@ -11,6 +11,10 @@ export const FILESYSTEM=/^(?:node:)?fs(?:\/promises)?(?:#|$)/;
 export const SERVER_APIS=new Set(['next/headers#headers','next/headers#cookies','next/cache#revalidatePath']);
 export function checkServerDependency(graph:Graph,diagnostics:Diagnostics,node:ts.Node,state:Execution):void {
  if(!isClient(state.context))return;
+ if(ts.isCallExpression(node)&&node.expression.kind===ts.SyntaxKind.ImportKeyword&&node.arguments[0]&&ts.isStringLiteralLike(node.arguments[0])&&FILESYSTEM.test(node.arguments[0].text)) {
+  const module=node.arguments[0].text;
+  diagnostics.finding('NSG001',node,state.context,[...state.trace,{kind:'import',location:location(node),symbol:module}],`${module}#<module>`,'client');return;
+ }
  if(ts.isImportDeclaration(node)&&ts.isStringLiteral(node.moduleSpecifier)) {
   const clause=node.importClause;
   if(clause){if(clause.isTypeOnly)return;const names:string[]=[];if(clause.name)names.push(clause.name.text);if(clause.namedBindings){if(ts.isNamespaceImport(clause.namedBindings))names.push(clause.namedBindings.name.text);else for(const element of clause.namedBindings.elements)if(!element.isTypeOnly)names.push(element.name.text);}if(clause.namedBindings&&ts.isNamedImports(clause.namedBindings)&&clause.namedBindings.elements.length&&!names.length)return;if(!names.some(n=>retainsBinding(node.getSourceFile(),n,graph.resolver.config.verbatimModuleSyntax))&&(names.length||/\.tsx?$/.test(node.getSourceFile().fileName)&&!graph.resolver.config.verbatimModuleSyntax))return;}
@@ -25,7 +29,7 @@ export function checkServerDependency(graph:Graph,diagnostics:Diagnostics,node:t
  }
  if(!(ts.isCallExpression(node)||ts.isIdentifier(node)||ts.isPropertyAccessExpression(node)))return;
  const parent=node.parent;
- if(!ts.isCallExpression(node)&&(ts.isImportSpecifier(parent)||ts.isImportClause(parent)||ts.isNamespaceImport(parent)||(ts.isPropertyAccessExpression(parent)&&parent.name===node)||(ts.isCallExpression(parent)&&parent.expression===node)))return;
+ if(!ts.isCallExpression(node)&&(ts.isImportSpecifier(parent)||ts.isImportClause(parent)||ts.isNamespaceImport(parent)||ts.isPropertyAccessExpression(parent)||ts.isElementAccessExpression(parent)||(ts.isCallExpression(parent)&&parent.expression===node)))return;
  const api=resolveReference(graph,ts.isCallExpression(node)?node.expression:node).api;
  if(!api||(!SERVER_APIS.has(api)&&!FILESYSTEM.test(api)))return;
  const evidence:Evidence[]=[...state.trace,{kind:'api',location:location(node),symbol:api}];

@@ -3,10 +3,12 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
   check:
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -24,11 +26,20 @@ jobs:
       - run: node --version
       - run: npm --version
       - run: npm ci
+      - run: npm audit --omit=dev --audit-level=high
       - name: Verify Git version
         run: node -e "const v=require('child_process').execFileSync('git',['--version'],{encoding:'utf8'}).match(/\d+\.\d+\.\d+/)[0];if(!require('semver').gte(v,'2.47.0'))process.exit(1)"
       - run: npm run build
-      - run: npm run check
+      - run: npm run typecheck
+      - run: npm test -- --reporter=default --reporter=json --outputFile=check-results.json
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: core-results-${{ matrix.os }}
+          path: check-results.json
+          retention-days: 30
   framework:
+    timeout-minutes: 45
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -41,9 +52,38 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: npm run test:framework
+      - run: npm run test:framework -- --reporter=default --reporter=json --outputFile=framework-results/tests.json
       - run: npm run test:comparison
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: framework-results
+          path: |
+            framework-results/
+            comparison-results/
+          retention-days: 30
+  quality:
+    timeout-minutes: 45
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 24.21.0
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:quality
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: quality-results
+          path: quality-results/
+          retention-days: 30
   benchmark:
+    timeout-minutes: 30
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1

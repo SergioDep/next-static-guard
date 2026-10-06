@@ -7,4 +7,6 @@ bench-results/
 framework-results/
 tests/fixtures/.framework-*/
 comparison-results/
+quality-results/
+/check-results.json
 tests/fixtures/.comparison-*/

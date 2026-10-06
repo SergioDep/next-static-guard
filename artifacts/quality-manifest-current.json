@@ -1,0 +1,3213 @@
+{
+  "schemaVersion": 1,
+  "sample": "reserved-synthetic-v3",
+  "provenance": "154 untuned v2 cases retained; two fresh v3 cases replace shorthand cases moved to development. Independently authored synthetic variations; no production-repository or human-review claim.",
+  "versions": {
+    "node": "24.21.0",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "reactDom": "19.3.0",
+    "typescript": "6.0.3"
+  },
+  "probeValueHash": "e1ed3e271ebcdb5a3d55217d9515addf4505838a97153313dcedf8ec53d1b433",
+  "cases": [
+    {
+      "id": "V2-NSG001-P01",
+      "rule": "NSG001",
+      "description": "marker with type-only export",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "server-only"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "eb87ed88b431a64d0788af10d2c9d3ff8b51bd091f70bb265d92f27e2dbfe7b9",
+        "lib/dal.ts": "f652e0eb205d260c17d4bd08688b4f8ade72137c3105fb3252e5ca942e0ef0c4",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P02",
+      "rule": "NSG001",
+      "description": "marker through side-effect wrapper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "server-only"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a10c2451e5f9e6b93646e24a20f7eb130c2cf31b205faa43cd5f3f9622b27b50",
+        "lib/dal.ts": "3a6ca518068c1d754103aef94eea78e41defd4233051c7b2311145140f2c22f8",
+        "lib/load.ts": "90dfe4e90249dcc9123ecfc432e8948eccbde05466a9a85ab24c4c51677eb1f1",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P03",
+      "rule": "NSG001",
+      "description": "marker through default data helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "server-only"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0883804b1f15a456417f3879b876e1fb7940e59bf437d65966af611fa0d6b8df",
+        "lib/data.ts": "a1bff15945bd92d869cbf10b23b4868141f8d0a74cb3055d543b2b4e61260c8e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P04",
+      "rule": "NSG001",
+      "description": "marker through namespace data helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "server-only"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "d96c14ffb21f0fac5464ec3bcf1899460d08dc9269c4c54acee20716088ef3a3",
+        "lib/data.ts": "ccefabeefc054d4baa20d5cabf827de6537173d4797b8eb0625c46dd4ae25d9b",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P05",
+      "rule": "NSG001",
+      "description": "marker in JS helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "server-only"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "816af85148bb7cbd3e97899c9a58f58121ddd95fab417a73a7b8d08c0a5bd5fb",
+        "lib/data.js": "ccefabeefc054d4baa20d5cabf827de6537173d4797b8eb0625c46dd4ae25d9b",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P06",
+      "rule": "NSG001",
+      "description": "marker in mjs helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "server-only"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "21d7ff8cc3bd1480f9665126557f171dd157c8d585a1ff042636735e0a3ebe0b",
+        "lib/data.mjs": "5b8df9795c418478eeba340593ff3c23e013e38ca46f4cdb7114348e5803b7f7",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P07",
+      "rule": "NSG001",
+      "description": "marker in nested client entry",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "server-only"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "71ac2a7bd497c49f82c49e679ad624fb60670cabece6d178f0190f403b185e6a",
+        "app/ui/counter.tsx": "896844a70f9c7ae13140ed1a6baf2ac100b0a0fd890459d4baf23fb5da834b06",
+        "lib/dal.ts": "f652e0eb205d260c17d4bd08688b4f8ade72137c3105fb3252e5ca942e0ef0c4",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P08",
+      "rule": "NSG001",
+      "description": "marker through two value barrels",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "server-only"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a1d382174f6be6b5651a82d39f641f04200b4bb481fa5e6350ca675b1c1cae48",
+        "lib/a.ts": "7e0d489771ca1f987a5f309eb9fc8d34fa5a7878706f9a3ca29f0f8b9109815d",
+        "lib/b.ts": "f1e0f04569e4dd82d8b613321d06765e5b7bb5c899de2de237a7e56df3af32c7",
+        "lib/dal.ts": "ccefabeefc054d4baa20d5cabf827de6537173d4797b8eb0625c46dd4ae25d9b",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P09",
+      "rule": "NSG001",
+      "description": "fs API in render",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "fs"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b1e049113c8846855561638c13e7b70972cb6a00dcf8d9c86cd541b035184c66",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P10",
+      "rule": "NSG001",
+      "description": "node:fs API in render",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "node:fs"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "1d85c083a712d08cf8a1f79855dcd9e1a5555cbe567cf5b7dea3ac17bdf37a7d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P11",
+      "rule": "NSG001",
+      "description": "fs/promises API in render",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "fs/promises"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "fb08f1729c3b265cc5eb7fcbabc6bda3f3ecb2f1ee88c46fd7e4f4e559033085",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P12",
+      "rule": "NSG001",
+      "description": "node:fs/promises API in render",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "node:fs/promises"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0c099781f3080872667228e1577908ae1fc4db2991a586ea30235792a4b2c646",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P13",
+      "rule": "NSG001",
+      "description": "filesystem named import in shared event helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "node:fs"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "41d468901ddf27db754a859e8a03c34902cde5ea33016752bd0ff9f5b88d1782",
+        "lib/data.ts": "c028ee4768f7974c6c1ed3523114c47a3052a9e81cdec17d88f618be99cee39f",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P14",
+      "rule": "NSG001",
+      "description": "filesystem default promise import",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "node:fs"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b4045138760beaeee24df5c288024cab31debd8eef54e2d1e46ef075166c6bdd",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P15",
+      "rule": "NSG001",
+      "description": "filesystem promise API through default async helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "node:fs"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "70010fbe13abf7e44592a8d178ad7aca861f6fd193b6abeaf6b9111779e0e2d2",
+        "lib/data.ts": "769a457d226c393b647a078d0d2dc8d70abb02efdc677c4221913712144ac9e9",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P16",
+      "rule": "NSG001",
+      "description": "filesystem namespace reexport consumed by client",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "node:fs"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "770fa2c4e06f4afd22771ca4f6a8f76565650803e65965e145f34b4c23d1b644",
+        "lib/data.ts": "4b5322e86d4f185c5d5e609639a15314724df29bcb1a1f16009e42bec6908cc4",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P17",
+      "rule": "NSG001",
+      "description": "cookies retained in JS client entry",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "next/headers"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.jsx": "d0fcfa31d0f46ed607af659c41d7c8779466886424091774c8153154e7d36da3",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P18",
+      "rule": "NSG001",
+      "description": "headers retained in JS client entry",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "next/headers"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.jsx": "15d1731b6f44c0aad6a2d6074d657bba066008305abc06f32210a09036edfbac",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P19",
+      "rule": "NSG001",
+      "description": "revalidatePath retained in JS client entry",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "next/cache"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.jsx": "38e3f27e247469b589996b75bde8350860db9b1626eac914acb70cac839b8a71",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-P20",
+      "rule": "NSG001",
+      "description": "filesystem star reexport with consumed unrelated function",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "fs/promises"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "d6c713ba6f91cacc4da7418e9b845a7972af4b57ee4921ca6f18396a727159e7",
+        "lib/data.ts": "c1025447d63d3d9cf8b6bb437031a0e02e4f8112faace551dc716105c583571d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P01",
+      "rule": "NSG002",
+      "description": "useState through named helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useState"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "3c5c01d8dae8a618a73e294ecb7021cc4f92630de82b62d7786f50a6ff4840c5",
+        "lib/hook.ts": "7fa5bb34afd5a5bd438126de2549adb085808ebdea129fa357b727b174eacfcb",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P02",
+      "rule": "NSG002",
+      "description": "useState through default helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useState"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "5146dc5c2064b624b3bc9867083ddba75a936a3845041b5832171d9731327e4d",
+        "lib/hook.ts": "988ba383d26b821e823113f47d896c1449144db536f2ae77c38fdcd511479730",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P03",
+      "rule": "NSG002",
+      "description": "useState through namespace helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useState"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "3c5c01d8dae8a618a73e294ecb7021cc4f92630de82b62d7786f50a6ff4840c5",
+        "lib/hook.ts": "b43cc7deaf8df32231ff8b2cace67479a2feff7ff851b8eca9d1dc1c2ea222af",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P04",
+      "rule": "NSG002",
+      "description": "useState through barrel helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useState"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "783844877fce7a64fe4d48ce98fa5cb0121a279eb7a68de5c97a16230ee2b1e2",
+        "lib/hook.ts": "7fa5bb34afd5a5bd438126de2549adb085808ebdea129fa357b727b174eacfcb",
+        "lib/ui.ts": "7947e52de1f908865b29cdee71c9674fcfb780a3e645563ee0aa2608b5c62dee",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P05",
+      "rule": "NSG002",
+      "description": "useEffect through named helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useEffect"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "3c5c01d8dae8a618a73e294ecb7021cc4f92630de82b62d7786f50a6ff4840c5",
+        "lib/hook.ts": "731176e083b1779810a0d5825bded42d325b427a08720fcfd539d5efd54fca3e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P06",
+      "rule": "NSG002",
+      "description": "useEffect through default helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useEffect"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "5146dc5c2064b624b3bc9867083ddba75a936a3845041b5832171d9731327e4d",
+        "lib/hook.ts": "daf38602bef136018411489342d138b84bc0ed54d4dd604902fb014876c3a955",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P07",
+      "rule": "NSG002",
+      "description": "useEffect through namespace helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useEffect"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "3c5c01d8dae8a618a73e294ecb7021cc4f92630de82b62d7786f50a6ff4840c5",
+        "lib/hook.ts": "01f55e79143f6275948036c9642c76b4e0e2a97b8eb9d2ae2aa8d8f028664a81",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P08",
+      "rule": "NSG002",
+      "description": "useEffect through barrel helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useEffect"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "783844877fce7a64fe4d48ce98fa5cb0121a279eb7a68de5c97a16230ee2b1e2",
+        "lib/hook.ts": "731176e083b1779810a0d5825bded42d325b427a08720fcfd539d5efd54fca3e",
+        "lib/ui.ts": "7947e52de1f908865b29cdee71c9674fcfb780a3e645563ee0aa2608b5c62dee",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P09",
+      "rule": "NSG002",
+      "description": "useReducer through named helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useReducer"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "3c5c01d8dae8a618a73e294ecb7021cc4f92630de82b62d7786f50a6ff4840c5",
+        "lib/hook.ts": "e0a4d4ed605aef8fdac31e55006d08b3754019caa3546fa044127e6dc0e6ff0e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P10",
+      "rule": "NSG002",
+      "description": "useReducer through default helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useReducer"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "5146dc5c2064b624b3bc9867083ddba75a936a3845041b5832171d9731327e4d",
+        "lib/hook.ts": "6a74b2980d9977ca2be7190a8bcae0f57a68ddecafc11b20bf6e386b8caeaf26",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P11",
+      "rule": "NSG002",
+      "description": "useReducer through namespace helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useReducer"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "3c5c01d8dae8a618a73e294ecb7021cc4f92630de82b62d7786f50a6ff4840c5",
+        "lib/hook.ts": "94b6c12eded12cd84cceb8b935d7cbac8cba290f85af1f805e4c376dfa075b7d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P12",
+      "rule": "NSG002",
+      "description": "useReducer through barrel helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useReducer"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "783844877fce7a64fe4d48ce98fa5cb0121a279eb7a68de5c97a16230ee2b1e2",
+        "lib/hook.ts": "e0a4d4ed605aef8fdac31e55006d08b3754019caa3546fa044127e6dc0e6ff0e",
+        "lib/ui.ts": "7947e52de1f908865b29cdee71c9674fcfb780a3e645563ee0aa2608b5c62dee",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P13",
+      "rule": "NSG002",
+      "description": "client marker with type export",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "client-only"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "ff6ea4ed327fb0425a536b928e45358d4ee8b64b1ab274cbaa0a475864f87728",
+        "lib/browser.ts": "ba9460b9bcfa2b87d90c8505c1b17b923f6dc01b69448b7bb0888b6829be9b32",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P14",
+      "rule": "NSG002",
+      "description": "client marker in JS module",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "client-only"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0f9d959bc7873cd49113d57bd8d5f70903caffe15a1ec527e61406607f54bd2d",
+        "lib/browser.js": "c411f21ef1f76f9814979b9b4c65fc7aa9df210bcd6f154b109723227ced694b",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P15",
+      "rule": "NSG002",
+      "description": "client marker value through default helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "client-only"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "60bca2cd230e10b40819f6eed7c85b53bee65d2b781102547a17ddab21dba5bd",
+        "lib/browser.ts": "0a2d5a0996677ebe3c961488997bc2367137927fe4a61e00b10362993a124af1",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P16",
+      "rule": "NSG002",
+      "description": "client marker through two barrels",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "client-only"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "ca845473bcb1ec950d72c4bd1b35f55093412e240a7176694bdd436dc013326c",
+        "lib/a.ts": "7e0d489771ca1f987a5f309eb9fc8d34fa5a7878706f9a3ca29f0f8b9109815d",
+        "lib/b.ts": "76d534fe098b0f2fee916aac1c74a11b75bb46a5e68c8557d9e8c074add95e15",
+        "lib/browser.ts": "8b18fccf5272de938dc55fb3b28f6b932c05ea34b569d487ee6796f8e384367b",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P17",
+      "rule": "NSG002",
+      "description": "router namespace in server render",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useRouter"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "5e9e8677ed2684de7b401d6265b3d75a0fce4eb53ecffa4f124d163f343a2b35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P18",
+      "rule": "NSG002",
+      "description": "router through default helper",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useRouter"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "2eeed869194edd74225643f7d9617b117f738cae0a992892bdd3ccd66529d396",
+        "lib/nav.ts": "c4ae86f01cabb7238879595e5eda31409f3f23c6e4f0a05abb543637a4d68fb9",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P19",
+      "rule": "NSG002",
+      "description": "router through two named helpers",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useRouter"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "4b3c0d8d8d9d4dae056bf0271bd2d74e8dd3d8ba920f9ab9230eb23e6f0ca67d",
+        "lib/a.ts": "84689b1664100f08b86d6f0183cc65c0763f066a645a5a1e31e2754126fb75e1",
+        "lib/b.ts": "6f95ce9a3da1e8616094669c5c5858774ead145f17de56f515ccfa33c353a35b",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-P20",
+      "rule": "NSG002",
+      "description": "retained reducer JS import",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "useReducer"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.jsx": "a979243155788ae3fa39f716c883d65b0540e6d63b87f8c878db6dba6bfadec3",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P01",
+      "rule": "NSG003",
+      "description": "window helper-return",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "window is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8d0a6a821983741565a78626d080388bdef38eb1771af7ddc4c21078dd5ec3bc",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P02",
+      "rule": "NSG003",
+      "description": "window helper-argument",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "window is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "023f0f0a6cfb152bb0d7d51ea910ba1643aaaf13aaf8466b1be498005c6a1ae7",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P03",
+      "rule": "NSG003",
+      "description": "window state",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "window is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "098473dc442129c7b92b21d1a9c20d17b80752fa55c1b2db6919df6ecc046efa",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P04",
+      "rule": "NSG003",
+      "description": "window memo",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "window is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b7303d02841fbfda6ebf5b6a41435cdd2ac8b476d19dd83c50c1aeec9e1f744d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P05",
+      "rule": "NSG003",
+      "description": "window element-attribute",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "window is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "d651281e6ec5543bdfe605d7d5a8b6575dc0ff37dcbc348f05e1f0847f4b7131",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P06",
+      "rule": "NSG003",
+      "description": "window shared-effect-and-render",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "window is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "2ba18d91b343c16149b957c2a6918c4bd1204b8575edbd5b1b23a14ff20a438b",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P07",
+      "rule": "NSG003",
+      "description": "document helper-return",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "document is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "f8758607839ae3ffc5986d67f9264f6f84a671d899c0272ff873f72241b2b75a",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P08",
+      "rule": "NSG003",
+      "description": "document helper-argument",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "document is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "264cc3d37bc10a09403783d210440fe53eae8fac6e3d98cbd8c60f16e09d511d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P09",
+      "rule": "NSG003",
+      "description": "document state",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "document is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "605d765711bcbefcdd192c75827a476a6415244ef4457f41e9197e22193bdcba",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P10",
+      "rule": "NSG003",
+      "description": "document memo",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "document is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "5707c0c36530cdb2f9a0432de038c162e23f0b210d022a5a1678e794def0f35d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P11",
+      "rule": "NSG003",
+      "description": "document element-attribute",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "document is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "365738a1d7e93ca07e644ab25f865d0db4ee2fa0ccab661af829777f7e94ed45",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P12",
+      "rule": "NSG003",
+      "description": "document shared-effect-and-render",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "document is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "296fc0859e569639ff23cdebf7bd2c975c093aa72a9d8cadbc92aa6a2d833964",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P13",
+      "rule": "NSG003",
+      "description": "localStorage helper-return",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "localStorage is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a2e6e31a62578a276f6923fe361e8132d5eb571b20a61192e0880e3d750c0134",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P14",
+      "rule": "NSG003",
+      "description": "localStorage helper-argument",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "localStorage is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "9782a2e5d2d265f3c33ab01fc22586cf6020309269ccf9f4e1bc8b1d05312465",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P15",
+      "rule": "NSG003",
+      "description": "localStorage state",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "localStorage is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "c59f306d26162f2cbae4d2d3e1d631f0a5138645779c3ff58621ed6df6fb2ba0",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P16",
+      "rule": "NSG003",
+      "description": "localStorage memo",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "localStorage is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "165e832b146cf07533f1d68637dc9d6f6c0bb38f064667106902d9ebf8556b5f",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P17",
+      "rule": "NSG003",
+      "description": "localStorage element-attribute",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "localStorage is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "81b47f3fce5929d1f0ca48f82a6af45c75b84df8d4503d469f1cb169ee6830dd",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P18",
+      "rule": "NSG003",
+      "description": "localStorage shared-effect-and-render",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "localStorage is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "827099cb3d7e2b346ac75a683a66fa3979a3940e3bf66986f9d9c3183fa6715f",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P19",
+      "rule": "NSG003",
+      "description": "factory invoked before click callback registration",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "window is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "d68ebba306eec9a8e483aaf68f8a86fdd04574b16c22df8315cdbd97e3ec897e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-P20",
+      "rule": "NSG003",
+      "description": "factory invoked before effect callback registration",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "localStorage is not defined"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "c0f89e14988d7db69448382928a8aa8663a4630918b181bb98f544cc1183262c",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P01",
+      "rule": "NSG004",
+      "description": "arrow in field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ff]unction|Event handlers"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "68aee6f51195ad427143db9992c834b15699e6bb1fbc62c4e58f78fba6488c25",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P02",
+      "rule": "NSG004",
+      "description": "arrow in nested array",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ff]unction|Event handlers"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "820d905cccc68b950cf05c7b45fba002fd10c153cfae669ff1fbbd8d8d0bdcbc",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P03",
+      "rule": "NSG004",
+      "description": "arrow in set",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ff]unction|Event handlers"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b86cc130974298256227b4e6f38020d373acafa1bb22292f9c86137c412b0a4e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P04",
+      "rule": "NSG004",
+      "description": "arrow in promise",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ff]unction|Event handlers"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "4ddec309f52dfe4ef48955511a1bdf5d1be38e12047d8a07a82cb616868e9687",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P05",
+      "rule": "NSG004",
+      "description": "declaration in field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ff]unction|Event handlers"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8573792db0d372f514bfed9164ea871efbc9c0f24ac2ecbc56958cd6561ac30e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P06",
+      "rule": "NSG004",
+      "description": "declaration in nested array",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ff]unction|Event handlers"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "063e7044e3ac20a0f70ebe5ee5ddfd24b6a2d5a5519f4a78832096e47903ccd3",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P07",
+      "rule": "NSG004",
+      "description": "declaration in set",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ff]unction|Event handlers"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "51fa316ef7cea0ccd767c4988616e92ee527fc1a1b273775cf2cf4f8ff10c7e7",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P08",
+      "rule": "NSG004",
+      "description": "declaration in promise",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ff]unction|Event handlers"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0dae0c5f93612a7cbd97940e0e59b3b4fd68c3377a9d074875df00c9d38ad1fe",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P09",
+      "rule": "NSG004",
+      "description": "class in field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "plain objects|classes|class instances|Only plain"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "03474f5a96a22afd391108b71083834d5b2a8c782b069913e02f49bf1933862c",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P10",
+      "rule": "NSG004",
+      "description": "class in nested array",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "plain objects|classes|class instances|Only plain"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "efd9ba72d420e5f577fdb040dad5fbeebcb13f39f57a350231462a8f6608fb70",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P11",
+      "rule": "NSG004",
+      "description": "class in set",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "plain objects|classes|class instances|Only plain"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "ce201a899cec411e773007098f984ef6aedd20ce654899e6b8f70f1d3ecb2633",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P12",
+      "rule": "NSG004",
+      "description": "class in promise",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "plain objects|classes|class instances|Only plain"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "7ca05be382e6e4ffcd1d488113b5e76de0cd7c4ef00c4cd2f98be841a8b0dab5",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P13",
+      "rule": "NSG004",
+      "description": "prototype in field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "plain objects|classes|class instances|Only plain"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "73f13a7d826813d1021f8f055d8832df2305236e520dbb21315a64b4f91e8ae7",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P14",
+      "rule": "NSG004",
+      "description": "prototype in nested array",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "plain objects|classes|class instances|Only plain"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a0f107345d003b5fb4e106d0bd54291013450e13efc4d560d63cd7d8e29cf5dc",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P15",
+      "rule": "NSG004",
+      "description": "prototype in set",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "plain objects|classes|class instances|Only plain"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "62603ab9b7fe23455802504b09364ae1123fe90d7fcf9535d0c6033f57456c8c",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P16",
+      "rule": "NSG004",
+      "description": "prototype in promise",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "plain objects|classes|class instances|Only plain"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b952078354589b3d1700f93d4df2849e75938c4b5ff14aadecdedf6bc8675f64",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P17",
+      "rule": "NSG004",
+      "description": "symbol in field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ss]ymbol"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "87feb8c905e35fdd6a8316e455910ffb48ff32b8f547c986285d4ff8252f7098",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P18",
+      "rule": "NSG004",
+      "description": "symbol in nested array",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ss]ymbol"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "1715402b0fcdad486449eb1135ffa426058f651f487eb6ff338c9bea1cbe4c62",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P19",
+      "rule": "NSG004",
+      "description": "symbol in set",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ss]ymbol"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "c1a4d81e0e2479716cd0cb76bb184944f3ea7be2d0e65759f1b6009c2837d993",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-P20",
+      "rule": "NSG004",
+      "description": "symbol in promise",
+      "expected": "finding",
+      "oracle": {
+        "kind": "rejected-build",
+        "pattern": "[Ss]ymbol"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a91abf6227bba92c9b606394e09e01a27d804a16af2bdbcee6a97dfc8cdd8ef8",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P01",
+      "rule": "NSG005",
+      "description": "aliased field in DTO",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "2e35f5fc061560fc913cfab39001473f419d0728d05a00835ee399f854274520",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P02",
+      "rule": "NSG005",
+      "description": "destructured nested field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "2073677f1b19cacc0fd398090ae8686d13f95fd9aef41bf6126a65d7f1e98dcd",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P03",
+      "rule": "NSG005",
+      "description": "spread nested DTO",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "36de9dea5677abbb9548b5e34d64fc2ae911f2e49a4848dd2995a36e20c4a3ef",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P04",
+      "rule": "NSG005",
+      "description": "array in DTO",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b82ddab9caa01844ac7327e11a8a3327ae9f16ba21dbc666716175747428c264",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P05",
+      "rule": "NSG005",
+      "description": "set in DTO",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "299d624c85f1689247a887d6d59f2690264a2212ab61c6059f661f2ba7ed4387",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P06",
+      "rule": "NSG005",
+      "description": "map in DTO",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "391de133bd6e1d018fd119312dca1dc2b44dac757959750dbf6b22f5ae49d5d4",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P07",
+      "rule": "NSG005",
+      "description": "helper parameter passthrough",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "955cddc0645a605cd1507d5c949228c8570020f4b560da24822131e677b2255e",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P08",
+      "rule": "NSG005",
+      "description": "helper returns nested DTO",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "e57560899b361876f2575b9b9c61083c996e29e783de6b11646f798bda9fe3cc",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V3-NSG005-P09",
+      "rule": "NSG005",
+      "description": "fragment with confidential DOM attribute",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "16843b13aa8841a1a0ebf95ec3fba5b53796a7cd1df72710f58a6edf02ed8a8d",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P10",
+      "rule": "NSG005",
+      "description": "string conversion in object",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "2e9c3a4b07b233b4ad258e4b1e8e67df3a4be140f1f3bdbcb11e65c75657d09e",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P11",
+      "rule": "NSG005",
+      "description": "string combination in array",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "af19af4b520ecebf7587321aaa987caa5bf153f7d9f5440326a178066cf3a1e4",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P12",
+      "rule": "NSG005",
+      "description": "promise containing DTO",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "d3625303453a18998b2ee3446dd967f1000a20e2676f221ab95f8a84a3168eac",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P13",
+      "rule": "NSG005",
+      "description": "React children in attribute",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "c5633f117fef17a6c9ccf21a000f6a37b953116641238dfac676a78ed85b9ef2",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P14",
+      "rule": "NSG005",
+      "description": "React spread attributes",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b6c997854df708e1c6a37fc7367b83c1fd74984b6e355ac642beebeabc50d126",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P15",
+      "rule": "NSG005",
+      "description": "resolved server renderer result",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "88c281755d793166a23dd3ccefc0d307aa656ce654761cae7be57fee655a817d",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P16",
+      "rule": "NSG005",
+      "description": "nested private export field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [],
+        "exports": [
+          {
+            "file": "lib/account.ts",
+            "export": "account",
+            "field": [
+              "profile",
+              "email"
+            ],
+            "category": "private"
+          }
+        ]
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "7abfe36593ed4bd545e5e6a5b1b5b236110cf882f8ab97b9d98f84ac734106f3",
+        "lib/account.ts": "ae2d20aa4226b88f2d7fa224d3b3e28d9efcee513aae9c2a5344390d013d1a03",
+        "next-static-guard.json": "ac8e10190fd1d45ad53074335c2e0c5d5aeaf13f782faf5f438a409f138dc242",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P17",
+      "rule": "NSG005",
+      "description": "declared default export field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [],
+        "exports": [
+          {
+            "file": "lib/account.ts",
+            "export": "default",
+            "field": [
+              "email"
+            ],
+            "category": "private"
+          }
+        ]
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "50021475494ad04561f8d4dbf974a4dfb4bc0ec13f33309352876ca05708f152",
+        "lib/account.ts": "b24ec8821f1e277b1993c776b81d97be28698f01f463753e1400b4c34eeadbff",
+        "next-static-guard.json": "64606566c3f62c2386475023b1c799c54c6042a248e8754004eeaff6fad5dd93",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P18",
+      "rule": "NSG005",
+      "description": "public config capability in nested client component",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [
+        "TOKEN"
+      ],
+      "sources": {
+        "app/counter.tsx": "1ddc82558b1b2f05ac2fa889d7fbe1920df9f669703398549209d8fa22fd4ec0",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "fe0dfe59d132960a076c2c605b97ee3883b0c8708b4e785f98cf05fcacb7efcb",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "next.config.mjs": "201a2f232cb3fae019a91bc79a901b6546b88fcb6fbb5e78a85f85da8af1c6ad",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-P19",
+      "rule": "NSG005",
+      "description": "declared JSON export field",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [],
+        "exports": [
+          {
+            "file": "lib/account.json",
+            "export": "default",
+            "field": [
+              "auth",
+              "credential"
+            ],
+            "category": "private"
+          }
+        ]
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "761cd4d396bd302c3de814faedd473752c6a110e169c85cd8b3e939dde894bd1",
+        "lib/account.json": "97b43d6350a4d1fc0b7aed7423cdfa704f6202f1365cf97aa07af67faabe482b",
+        "next-static-guard.json": "9f4700ad8d5cfb8263ed5daf258581990b96a17abd33abc83b83cc89d9c311a2",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V3-NSG005-P20",
+      "rule": "NSG005",
+      "description": "default private DTO reaches spread client props",
+      "expected": "finding",
+      "oracle": {
+        "kind": "payload-present"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "sensitive": {
+        "env": [],
+        "exports": [
+          {
+            "file": "lib/private.ts",
+            "export": "default",
+            "field": [
+              "credential"
+            ],
+            "category": "private"
+          }
+        ]
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "3c6a2fef3a3f8ff8eb6747b5e82b159aa8335cd1580f104b70365e010378aa00",
+        "lib/private.ts": "6c6d279765ac8579656e8a438078b39d3fca01204ab3d9602199435ed7c3dde1",
+        "next-static-guard.json": "037a7e3ebafe5d08b2905e3bd36c874d6d3821e9cc9cdfe451117ee5413d4f3c",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P01",
+      "rule": "NSG006",
+      "description": "private environment local-alias dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "67038f0d277fb9e02a0abb47a6e77ec950c1d9a644b66ab0df9f69e0af1d76c2",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P02",
+      "rule": "NSG006",
+      "description": "private environment destructured-result dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0b0e69b83578159485372a6678b88bcd0a834be47908cad28a34d4757dde138e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P03",
+      "rule": "NSG006",
+      "description": "private environment object-field dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b41ca51e1191c63be98abbf63e803600d1f295b6331609e3d4f0e56a494941b3",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P04",
+      "rule": "NSG006",
+      "description": "private environment render-helper dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "c93747ff9017ccd9c2e680163859384c690295fa8d0bbf6f558485f0402c9a20",
+        "lib/env.ts": "89a49f7314dd5464ecdce1559998d2c373f0f0d9b4344e65507a2d6ec3103cf5",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P05",
+      "rule": "NSG006",
+      "description": "private environment event-helper dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a7c232095f66a3c4ac0ec88f5ce4c2c67e62d9e778ceb446f7696f8a95b81c21",
+        "lib/env.ts": "89a49f7314dd5464ecdce1559998d2c373f0f0d9b4344e65507a2d6ec3103cf5",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P06",
+      "rule": "NSG006",
+      "description": "private environment effect-helper dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0c385fa6d6c7302ba14e37cbf8e647ea6f3b552984f3899545cba1420bc31d97",
+        "lib/env.ts": "89a49f7314dd5464ecdce1559998d2c373f0f0d9b4344e65507a2d6ec3103cf5",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P07",
+      "rule": "NSG006",
+      "description": "private environment default-mjs dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "87363fef3ff5c26004d3b4f3196cb5f0864f3665558e7f2da0db362cb3db54f4",
+        "lib/env.mjs": "a3b2498f2786e364cd0d0b92b119bfe85bdb2391d948e415e41dcbcd16d1c94b",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P08",
+      "rule": "NSG006",
+      "description": "private environment namespace-mjs dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8ab546b1037891ec7ffc83aeedbd53d3330aaffb6e5663bc70fc0ee890e4d7a1",
+        "lib/env.mjs": "89a49f7314dd5464ecdce1559998d2c373f0f0d9b4344e65507a2d6ec3103cf5",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P09",
+      "rule": "NSG006",
+      "description": "private environment two-helpers dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "40da348f72c9e79e987361f946bc92aed904383efe627be1a1ac74645d3aaba8",
+        "lib/a.ts": "84689b1664100f08b86d6f0183cc65c0763f066a645a5a1e31e2754126fb75e1",
+        "lib/b.ts": "1c45b0b8c8774fcd466e86ec68679f11e84c52a35e23d2dd6066a320a8dffebd",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P10",
+      "rule": "NSG006",
+      "description": "private environment nested-client dot",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "71ac2a7bd497c49f82c49e679ad624fb60670cabece6d178f0190f403b185e6a",
+        "app/ui/counter.tsx": "1ddc82558b1b2f05ac2fa889d7fbe1920df9f669703398549209d8fa22fd4ec0",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P11",
+      "rule": "NSG006",
+      "description": "private environment local-alias bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "7331f44a00a232a325193f71490a6d3c18fd5a6608a43c3553d1232149b78301",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P12",
+      "rule": "NSG006",
+      "description": "private environment destructured-result bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "e5fdf149efc08f3b03b87da1ba0ccec5cd9ebddc41a7e9b73710c14826313f28",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P13",
+      "rule": "NSG006",
+      "description": "private environment object-field bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "ad2b95b5ceed85cb035bdd89ebedc9c5295300abba83b77a4783db00ebdc33d0",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P14",
+      "rule": "NSG006",
+      "description": "private environment render-helper bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "c93747ff9017ccd9c2e680163859384c690295fa8d0bbf6f558485f0402c9a20",
+        "lib/env.ts": "0140fb0312dcc75c54c60c16b4df6e569861ab14802883ddcfcaa59396671fbe",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P15",
+      "rule": "NSG006",
+      "description": "private environment event-helper bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a7c232095f66a3c4ac0ec88f5ce4c2c67e62d9e778ceb446f7696f8a95b81c21",
+        "lib/env.ts": "0140fb0312dcc75c54c60c16b4df6e569861ab14802883ddcfcaa59396671fbe",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P16",
+      "rule": "NSG006",
+      "description": "private environment effect-helper bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0c385fa6d6c7302ba14e37cbf8e647ea6f3b552984f3899545cba1420bc31d97",
+        "lib/env.ts": "0140fb0312dcc75c54c60c16b4df6e569861ab14802883ddcfcaa59396671fbe",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P17",
+      "rule": "NSG006",
+      "description": "private environment default-mjs bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "87363fef3ff5c26004d3b4f3196cb5f0864f3665558e7f2da0db362cb3db54f4",
+        "lib/env.mjs": "69d37dd6ca5f8855f1b9677f387028dc64034ad973d526c666f7b923b5be26ca",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P18",
+      "rule": "NSG006",
+      "description": "private environment namespace-mjs bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8ab546b1037891ec7ffc83aeedbd53d3330aaffb6e5663bc70fc0ee890e4d7a1",
+        "lib/env.mjs": "0140fb0312dcc75c54c60c16b4df6e569861ab14802883ddcfcaa59396671fbe",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P19",
+      "rule": "NSG006",
+      "description": "private environment two-helpers bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "40da348f72c9e79e987361f946bc92aed904383efe627be1a1ac74645d3aaba8",
+        "lib/a.ts": "84689b1664100f08b86d6f0183cc65c0763f066a645a5a1e31e2754126fb75e1",
+        "lib/b.ts": "526a0e6048f7f46f03ce7d4ed28527baf63b845aece24e273028b714cfbf55c1",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-P20",
+      "rule": "NSG006",
+      "description": "private environment nested-client bracket",
+      "expected": "finding",
+      "oracle": {
+        "kind": "bundle-absent-private",
+        "pattern": "TOKEN"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "71ac2a7bd497c49f82c49e679ad624fb60670cabece6d178f0190f403b185e6a",
+        "app/ui/counter.tsx": "2d8d560003e808a5dbcb8c9bceb7ad1a9337742738d6a64d64d4abda2409cb7d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-N01",
+      "rule": "NSG001",
+      "description": "explicit server marker type import",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8c3849660e24b7e1412e0fbff27e9e2f0ab3afcf82ba6c3e58c6362add25ddc1",
+        "lib/dal.ts": "f652e0eb205d260c17d4bd08688b4f8ade72137c3105fb3252e5ca942e0ef0c4",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-N02",
+      "rule": "NSG001",
+      "description": "filesystem ordinary import used only as a type",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "49d7a458ae4970dcdfc5bab146344b68f836b97007ff0bb848551df919120950",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-N03",
+      "rule": "NSG001",
+      "description": "filesystem namespace unused and elided",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a107d249ad85eea2dca200415c399e399faeac5e6372c54c48f28ff4fea95d0d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-N04",
+      "rule": "NSG001",
+      "description": "server marker behind action reference",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/actions.ts": "0a799a94f13d6afb0e3b5afd1c54729c67182b76b435872c3b4e396ef42bcc40",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0c0b825f199bb567bbabc039514c8d17f75f9768933c82bd919dd446c0b67381",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-N05",
+      "rule": "NSG001",
+      "description": "pure namespace helper in client",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "d77bd969398bf22f387142dcd39c4103e730a81b0de906563e2a5af7d01b7133",
+        "lib/data.ts": "9529f44648049049e8fe4b36ba9558b0fef755be9bbcd167fc5ce2c6f0935587",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG001-N06",
+      "rule": "NSG001",
+      "description": "server filesystem summary in server helper",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "d6d03445d3b41a2993982688898a65f4cad1e4ec8716ac36373b23e85f32f519",
+        "lib/data.ts": "c028ee4768f7974c6c1ed3523114c47a3052a9e81cdec17d88f618be99cee39f",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-N01",
+      "rule": "NSG002",
+      "description": "state in nested client component",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/counter.tsx": "a701065cc4429adb8b16e8c8b0f7beefd59bcd21dfcc9a919d1052b158b31fd0",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "fe0dfe59d132960a076c2c605b97ee3883b0c8708b4e785f98cf05fcacb7efcb",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-N02",
+      "rule": "NSG002",
+      "description": "effect in transitive JS helper",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "9bb747adfc5bd50218a2c3f48e8f2adbae991de9befa315ccd375816cfd62898",
+        "lib/ui.jsx": "34bbfd44d540d68c4402d37374ef8c4d6e9d7eacff28f639b272162006e76a15",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-N03",
+      "rule": "NSG002",
+      "description": "router behind real client directive",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8d9e59d71845ad82b6f8c7c276a1af39179aa09e41aa8c63263497d089803323",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-N04",
+      "rule": "NSG002",
+      "description": "local reducer-like function",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "b6651fb3221fab6f77968815e9e5a861757226a898f2507c7650069cd04faed2",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-N05",
+      "rule": "NSG002",
+      "description": "React hook reexport not executed",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "930c5ecda99f31295c76c4887815c97f8598f601ce5b5c7b2f19cd7eea635102",
+        "lib/ui.ts": "40d1fcfc623bc772d51726d21a6f3d20db0d982468c0768bc6fb7626fc25e14e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG002-N06",
+      "rule": "NSG002",
+      "description": "client marker within nested client subtree",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/counter.tsx": "c61a5e312a1fa9fb0b5262f206fe92ac7969b2d677b7525a25613ac7f81238a0",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "fe0dfe59d132960a076c2c605b97ee3883b0c8708b4e785f98cf05fcacb7efcb",
+        "lib/browser.ts": "ba9460b9bcfa2b87d90c8505c1b17b923f6dc01b69448b7bb0888b6829be9b32",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-N01",
+      "rule": "NSG003",
+      "description": "factory returns deferred browser read",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "238fd19e0c062a3f746bc5dd81ef5b3ef4af60fff27dcfa4ba47c7b2bab4f423",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-N02",
+      "rule": "NSG003",
+      "description": "effect contains helper browser read",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "df30c13d070786ffe087e209c919ac00c0a2235ab48cbf8255d527c3afafde7e",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-N03",
+      "rule": "NSG003",
+      "description": "event callback contains helper browser read",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8a8f433c485c9a7cbab67273fdbe1d2372d90b07e0e9389074d6c80e2d24b2e6",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-N04",
+      "rule": "NSG003",
+      "description": "early-return guard dominates document read",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "97cc7951d65e88ac2ad670f728e763e3dd812356b9d47a01e798c8fdae461378",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-N05",
+      "rule": "NSG003",
+      "description": "negated window guard",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "3647e7a14d1d4fe3065f47add59239247e8718bb91930f285f3a41fd0bd155f5",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG003-N06",
+      "rule": "NSG003",
+      "description": "parameter shadows browser global",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/api-reference/directives/use-client",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "9b16f4080a01aa39eee2ddfb785d8db2f173014f042269adb036a90475620f0a",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-N01",
+      "rule": "NSG004",
+      "description": "ArrayBuffer",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "54099fcb8a04e90bf9c7c859aa8d5ed470b38f7c9c6de1b0b0c6c4df0a9a2914",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-N02",
+      "rule": "NSG004",
+      "description": "typed array",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "824af9e708bf0c7879ec4e767bfea2ad8d51f2c02a5598ed2a0206af96733da0",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-N03",
+      "rule": "NSG004",
+      "description": "DataView",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a8e506690937e8ceda0d87d59fc55c6daaae33b723cdba0caeb14b4337db5f65",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-N04",
+      "rule": "NSG004",
+      "description": "Map with Date",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "be7aae8c0abb83623fa710cfb53de9af0a352de7cb21cc577759fae1d877ae1d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-N05",
+      "rule": "NSG004",
+      "description": "Set of global symbols",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "536c8dead8c3d6e964d69e1cc997ecd572ae91045fc2d5adda8f1d308ff006c1",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG004-N06",
+      "rule": "NSG004",
+      "description": "Server Function reference",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://react.dev/reference/rsc/use-client#serializable-types-returned-by-server-components",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/actions.ts": "07864ad190ad2f28aa18136e507874022c43811190cbade83b9ec5bdd1619f6d",
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "f928c9c644da022b35156eda3c67fcc3c9cf10f0fe1912ad17a7aac9b27b4c45",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-N01",
+      "rule": "NSG005",
+      "description": "helper DTO omits confidential field",
+      "expected": "clean",
+      "oracle": {
+        "kind": "payload-absent"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "clean": true,
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "e71395ab8e7ac7425adedce543925e7b1d655016e45db5caa4704c2a1c59c96c",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-N02",
+      "rule": "NSG005",
+      "description": "nested server renderer discards input",
+      "expected": "clean",
+      "oracle": {
+        "kind": "payload-absent"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "clean": true,
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "343f0522cfa738236cc536e2c70e818b8541efeec472337b7cf7eb919600b294",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-N03",
+      "rule": "NSG005",
+      "description": "array DTO extracts public field",
+      "expected": "clean",
+      "oracle": {
+        "kind": "payload-absent"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "clean": true,
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8a8056ad63fb4228fa49a55ff5ec19410d86d0005c10016da94c8ada48977657",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-N04",
+      "rule": "NSG005",
+      "description": "private export field is omitted",
+      "expected": "clean",
+      "oracle": {
+        "kind": "payload-absent"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "clean": true,
+      "sensitive": {
+        "env": [],
+        "exports": [
+          {
+            "file": "lib/account.ts",
+            "export": "account",
+            "field": [
+              "profile",
+              "email"
+            ],
+            "category": "private"
+          }
+        ]
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/box.tsx": "f5f3e7baea1280d66831d0f712be853c6047d656e710f9e7f9e4657a4fe768bd",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "41aa9ce1d6db324ad965ad6c51b4e288e26e133e19c9e7fd0b62122c33cdb20d",
+        "lib/account.ts": "ae2d20aa4226b88f2d7fa224d3b3e28d9efcee513aae9c2a5344390d013d1a03",
+        "next-static-guard.json": "ac8e10190fd1d45ad53074335c2e0c5d5aeaf13f782faf5f438a409f138dc242",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-N05",
+      "rule": "NSG005",
+      "description": "configuration publishes nonconfidential value",
+      "expected": "clean",
+      "oracle": {
+        "kind": "payload-absent"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "clean": true,
+      "configEnvKeys": [
+        "LABEL"
+      ],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "a009d9d74f7fc2ad6a2464c9a87532ec2a8117f5acfd7af960e2d83beb32ab50",
+        "next.config.mjs": "bd2881946a7b7995df959602cca33d8fc01df33139673288bec40b4acdbc5a6d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG005-N06",
+      "rule": "NSG005",
+      "description": "referenced action returns public nested DTO",
+      "expected": "clean",
+      "oracle": {
+        "kind": "payload-absent"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/data-security",
+      "clean": true,
+      "sensitive": {
+        "env": [
+          {
+            "name": "TOKEN",
+            "category": "secret"
+          }
+        ],
+        "exports": []
+      },
+      "configEnvKeys": [],
+      "sources": {
+        "app/actions.ts": "15e5066ff31ba64018e929dd9de649640ab9bd6a2d7599e0195c7b899e9dee0e",
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "0c0b825f199bb567bbabc039514c8d17f75f9768933c82bd919dd446c0b67381",
+        "next-static-guard.json": "bbbf3b1cf6edb9be65cb5596a3964d24b348285cc5f558d4e105361db2542f35",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-N01",
+      "rule": "NSG006",
+      "description": "private read in server helper",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "fb2de857ee4324f1ede58d138b9bca854881987c5eacd2058c723031b2a814e8",
+        "lib/env.ts": "89a49f7314dd5464ecdce1559998d2c373f0f0d9b4344e65507a2d6ec3103cf5",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-N02",
+      "rule": "NSG006",
+      "description": "public read in mjs helper",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "87363fef3ff5c26004d3b4f3196cb5f0864f3665558e7f2da0db362cb3db54f4",
+        "lib/env.mjs": "5f28c6339afb8b3d832426f17d3324e5eeab2c5b8cae3a917f6f88d12b4437ed",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-N03",
+      "rule": "NSG006",
+      "description": "public read in effect",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "7610f44d41623ff08c0579243d85e793c3ae7e3b83b71658f5551c110d8ae5cc",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-N04",
+      "rule": "NSG006",
+      "description": "public config in shared helper",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "clean": true,
+      "configEnvKeys": [
+        "LABEL"
+      ],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "c93747ff9017ccd9c2e680163859384c690295fa8d0bbf6f558485f0402c9a20",
+        "lib/env.ts": "633b2b680f7d568cd9aa4ea3b1db3337c9e00675d96521018e14edb996780969",
+        "next.config.mjs": "bd2881946a7b7995df959602cca33d8fc01df33139673288bec40b4acdbc5a6d",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-N05",
+      "rule": "NSG006",
+      "description": "NODE_ENV read in namespace helper",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "fa4e0fa98110517ef51606e0a6b1d976b207f0d8d83604407ffd40352efa44d3",
+        "lib/env.ts": "41b8069406c27a9364ecdef017539d3894bda95cee6bda05f3a3fe3e565f41e2",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    },
+    {
+      "id": "V2-NSG006-N06",
+      "rule": "NSG006",
+      "description": "pure mjs helper constant",
+      "expected": "clean",
+      "oracle": {
+        "kind": "accepted-build"
+      },
+      "reference": "https://nextjs.org/docs/app/guides/environment-variables",
+      "clean": true,
+      "configEnvKeys": [],
+      "sources": {
+        "app/layout.tsx": "0cd46c1f8b5074a0535f5d6e42ebb292209bcea2f11f74a0b1c380e01db928e7",
+        "app/page.tsx": "8b90975f58ea069937d34c6c38c28e6ced10bc33f18b159c263e2ba62c3769f7",
+        "lib/data.mjs": "9529f44648049049e8fe4b36ba9558b0fef755be9bbcd167fc5ce2c6f0935587",
+        "package.json": "2670c4af1c44cce5781a0be8ec4825054757b4697b0c75b22e4d4d1ea98fdb4e",
+        "tsconfig.json": "70d24450f0c557592e8d1e5ad85c35ef588761e14e9b8207ef606ba1b57b5deb"
+      }
+    }
+  ],
+  "corpusHash": "ada75fdbde741aa429d2cede563ac6e2a21bbceeb1c4991e5571d890165ab8b8"
+}

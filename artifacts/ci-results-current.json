@@ -1,0 +1,692 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-10-06T09:09:08Z",
+  "headSha": "f919f748cc8fa7c2b7fa89fe01fdd866b2398de3",
+  "jobs": [
+    {
+      "completedAt": "2026-10-06T09:17:29Z",
+      "conclusion": "success",
+      "databaseId": 112194402499,
+      "name": "benchmark",
+      "startedAt": "2026-10-06T09:09:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-06T09:09:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-06T09:09:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-06T09:09:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:14Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "startedAt": "2026-10-06T09:09:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:32Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "startedAt": "2026-10-06T09:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:34Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 5,
+          "startedAt": "2026-10-06T09:09:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:11:05Z",
+          "conclusion": "success",
+          "name": "Run docker build -f tests/bench/Dockerfile -t next-static-guard-bench .",
+          "number": 6,
+          "startedAt": "2026-10-06T09:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:17:26Z",
+          "conclusion": "success",
+          "name": "Run mkdir -p bench-results && docker run --rm --cpus 2 --memory 4g --user \"$(id -u):$(id -g)\" -v \"$PWD/bench-results:/work/bench-results\" next-static-guard-bench",
+          "number": 7,
+          "startedAt": "2026-10-06T09:11:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:17:27Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "number": 8,
+          "startedAt": "2026-10-06T09:17:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:17:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 15,
+          "startedAt": "2026-10-06T09:17:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:17:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-06T09:17:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:17:27Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-06T09:17:27Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/eng-aesr/next-static-guard/actions/runs/37440985683/job/112194402499"
+    },
+    {
+      "completedAt": "2026-10-06T09:10:03Z",
+      "conclusion": "success",
+      "databaseId": 112194402616,
+      "name": "check (ubuntu-24.04)",
+      "startedAt": "2026-10-06T09:09:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-06T09:09:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-06T09:09:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-06T09:09:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:14Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "startedAt": "2026-10-06T09:09:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:14Z",
+          "conclusion": "success",
+          "name": "Run node --version",
+          "number": 4,
+          "startedAt": "2026-10-06T09:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:14Z",
+          "conclusion": "success",
+          "name": "Run npm --version",
+          "number": 5,
+          "startedAt": "2026-10-06T09:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:31Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 6,
+          "startedAt": "2026-10-06T09:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:32Z",
+          "conclusion": "success",
+          "name": "Run npm audit --omit=dev --audit-level=high",
+          "number": 7,
+          "startedAt": "2026-10-06T09:09:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:32Z",
+          "conclusion": "success",
+          "name": "Verify Git version",
+          "number": 8,
+          "startedAt": "2026-10-06T09:09:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:35Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 9,
+          "startedAt": "2026-10-06T09:09:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:37Z",
+          "conclusion": "success",
+          "name": "Run npm run typecheck",
+          "number": 10,
+          "startedAt": "2026-10-06T09:09:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:59Z",
+          "conclusion": "success",
+          "name": "Run npm test -- --reporter=default --reporter=json --outputFile=check-results.json",
+          "number": 11,
+          "startedAt": "2026-10-06T09:09:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:59Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "number": 12,
+          "startedAt": "2026-10-06T09:09:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 23,
+          "startedAt": "2026-10-06T09:09:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 24,
+          "startedAt": "2026-10-06T09:10:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:02Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "startedAt": "2026-10-06T09:10:02Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/eng-aesr/next-static-guard/actions/runs/37440985683/job/112194402616"
+    },
+    {
+      "completedAt": "2026-10-06T09:24:55Z",
+      "conclusion": "success",
+      "databaseId": 112194402620,
+      "name": "quality",
+      "startedAt": "2026-10-06T09:09:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-06T09:09:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-06T09:09:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-06T09:09:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:14Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "startedAt": "2026-10-06T09:09:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:31Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "startedAt": "2026-10-06T09:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:34Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 5,
+          "startedAt": "2026-10-06T09:09:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:24:53Z",
+          "conclusion": "success",
+          "name": "Run npm run test:quality",
+          "number": 6,
+          "startedAt": "2026-10-06T09:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:24:53Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "number": 7,
+          "startedAt": "2026-10-06T09:24:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:24:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 13,
+          "startedAt": "2026-10-06T09:24:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:24:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-06T09:24:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:24:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-06T09:24:54Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/eng-aesr/next-static-guard/actions/runs/37440985683/job/112194402620"
+    },
+    {
+      "completedAt": "2026-10-06T09:11:01Z",
+      "conclusion": "success",
+      "databaseId": 112194402754,
+      "name": "check (windows-2025)",
+      "startedAt": "2026-10-06T09:09:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-06T09:09:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-06T09:09:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:23Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-06T09:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:29Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "startedAt": "2026-10-06T09:09:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:30Z",
+          "conclusion": "success",
+          "name": "Run node --version",
+          "number": 4,
+          "startedAt": "2026-10-06T09:09:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:31Z",
+          "conclusion": "success",
+          "name": "Run npm --version",
+          "number": 5,
+          "startedAt": "2026-10-06T09:09:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:09Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 6,
+          "startedAt": "2026-10-06T09:09:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:11Z",
+          "conclusion": "success",
+          "name": "Run npm audit --omit=dev --audit-level=high",
+          "number": 7,
+          "startedAt": "2026-10-06T09:10:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:11Z",
+          "conclusion": "success",
+          "name": "Verify Git version",
+          "number": 8,
+          "startedAt": "2026-10-06T09:10:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:14Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 9,
+          "startedAt": "2026-10-06T09:10:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:18Z",
+          "conclusion": "success",
+          "name": "Run npm run typecheck",
+          "number": 10,
+          "startedAt": "2026-10-06T09:10:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:54Z",
+          "conclusion": "success",
+          "name": "Run npm test -- --reporter=default --reporter=json --outputFile=check-results.json",
+          "number": 11,
+          "startedAt": "2026-10-06T09:10:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:54Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "number": 12,
+          "startedAt": "2026-10-06T09:10:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 23,
+          "startedAt": "2026-10-06T09:10:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:11:00Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 24,
+          "startedAt": "2026-10-06T09:10:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:11:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "startedAt": "2026-10-06T09:11:00Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/eng-aesr/next-static-guard/actions/runs/37440985683/job/112194402754"
+    },
+    {
+      "completedAt": "2026-10-06T09:10:34Z",
+      "conclusion": "success",
+      "databaseId": 112194402774,
+      "name": "check (macos-15)",
+      "startedAt": "2026-10-06T09:09:18Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-06T09:09:20Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-06T09:09:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:23Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-06T09:09:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:33Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "startedAt": "2026-10-06T09:09:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:33Z",
+          "conclusion": "success",
+          "name": "Run node --version",
+          "number": 4,
+          "startedAt": "2026-10-06T09:09:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:34Z",
+          "conclusion": "success",
+          "name": "Run npm --version",
+          "number": 5,
+          "startedAt": "2026-10-06T09:09:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:55Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 6,
+          "startedAt": "2026-10-06T09:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:56Z",
+          "conclusion": "success",
+          "name": "Run npm audit --omit=dev --audit-level=high",
+          "number": 7,
+          "startedAt": "2026-10-06T09:09:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:56Z",
+          "conclusion": "success",
+          "name": "Verify Git version",
+          "number": 8,
+          "startedAt": "2026-10-06T09:09:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:58Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 9,
+          "startedAt": "2026-10-06T09:09:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:01Z",
+          "conclusion": "success",
+          "name": "Run npm run typecheck",
+          "number": 10,
+          "startedAt": "2026-10-06T09:09:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:26Z",
+          "conclusion": "success",
+          "name": "Run npm test -- --reporter=default --reporter=json --outputFile=check-results.json",
+          "number": 11,
+          "startedAt": "2026-10-06T09:10:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:27Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "number": 12,
+          "startedAt": "2026-10-06T09:10:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 23,
+          "startedAt": "2026-10-06T09:10:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 24,
+          "startedAt": "2026-10-06T09:10:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:10:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "startedAt": "2026-10-06T09:10:30Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/eng-aesr/next-static-guard/actions/runs/37440985683/job/112194402774"
+    },
+    {
+      "completedAt": "2026-10-06T09:19:54Z",
+      "conclusion": "success",
+      "databaseId": 112194402813,
+      "name": "framework",
+      "startedAt": "2026-10-06T09:09:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-06T09:09:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-06T09:09:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-06T09:09:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:14Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "startedAt": "2026-10-06T09:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:24Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "startedAt": "2026-10-06T09:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:09:25Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 5,
+          "startedAt": "2026-10-06T09:09:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:18:29Z",
+          "conclusion": "success",
+          "name": "Run npm run test:framework -- --reporter=default --reporter=json --outputFile=framework-results/tests.json",
+          "number": 6,
+          "startedAt": "2026-10-06T09:09:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:19:51Z",
+          "conclusion": "success",
+          "name": "Run npm run test:comparison",
+          "number": 7,
+          "startedAt": "2026-10-06T09:18:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:19:52Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "number": 8,
+          "startedAt": "2026-10-06T09:19:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:19:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 15,
+          "startedAt": "2026-10-06T09:19:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:19:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-06T09:19:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-06T09:19:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-06T09:19:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/eng-aesr/next-static-guard/actions/runs/37440985683/job/112194402813"
+    }
+  ],
+  "status": "completed",
+  "updatedAt": "2026-10-06T09:24:56Z",
+  "url": "https://github.com/eng-aesr/next-static-guard/actions/runs/37440985683"
+}
