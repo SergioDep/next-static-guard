@@ -1,7 +1,9 @@
 # Changelog
 
-## 0.1.0-dev.1
+## 0.1.0-beta.1
 
+- Preserve shorthand-property value bindings, including aliases of function parameters.
+- Add frozen independent quality evidence, three-platform CI, exact package installation checks, and release acceptance verification.
 - Track actual Server Function references in nested client props; distinguish exported async functions from private helpers and ordinary function values.
 
 - Treat a client reference called or constructed from server execution as an unknown result, without inventing server evaluation of its client implementation or a prop disclosure.

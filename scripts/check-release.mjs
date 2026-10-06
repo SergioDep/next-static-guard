@@ -37,7 +37,7 @@ check('complete tool comparison belongs to current engine',comparison.implementa
 const ci=await read(resolve(repo,index.ci));
 check('platform/framework/benchmark/quality CI jobs passed',ci.headSha===index.testedCommit&&ci.status==='completed'&&ci.conclusion==='success'&&['check (ubuntu-24.04)','check (macos-15)','check (windows-2025)','framework','benchmark','quality'].every(name=>ci.jobs.some(j=>j.name===name&&j.conclusion==='success')));
 const tarball=await readFile(resolve(repo,index.tarball)),installation=await read(resolve(repo,index.installation));
-check('the exact tarball passed isolated installation',digest(tarball)===index.tarballSha256&&installation.tarballSha256===index.tarballSha256&&installation.toolVersion===TOOL_VERSION&&installation.rulesetVersion===RULESET_VERSION&&installation.passed===true);
+check('the exact current-engine tarball passed isolated installation',digest(tarball)===index.tarballSha256&&installation.tarballSha256===index.tarballSha256&&installation.implementationHash===implementationHash&&installation.toolVersion===TOOL_VERSION&&installation.rulesetVersion===RULESET_VERSION&&installation.passed===true);
 const runtimeAudit=await read(resolve(repo,index.runtimeAudit));
 check('runtime dependency audit has no high or critical advisory',runtimeAudit.metadata.vulnerabilities.high===0&&runtimeAudit.metadata.vulnerabilities.critical===0);
 const ready=checks.every(c=>c.pass);

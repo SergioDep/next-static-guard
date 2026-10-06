@@ -21,7 +21,7 @@ The engine runs locally without an LLM, telemetry, or application execution. It 
 
 ## Product contract
 
-The development package is `0.1.0-dev.1`, with ruleset `1.1.0`. Its six rules run as warnings. Blocking eligibility and beta acceptance are defined in [Validation](https://github.com/SergioDep/next-static-guard/blob/main/docs/VALIDATION.md).
+The warning-only beta candidate is `0.1.0-beta.1`, with ruleset `1.1.0`. Its six rules run as warnings. Blocking eligibility and beta acceptance are defined in [Validation](https://github.com/SergioDep/next-static-guard/blob/main/docs/VALIDATION.md).
 
 v0.1 is a local CLI for Next.js **16.3.8**, React/React DOM **19.3.0**, App Router, and standard Turbopack. It provides six deterministic rules and terminal, JSON, and Markdown reports. It analyzes runtime dependencies, execution phases, and declared data transfers. Other framework versions receive partial coverage. It checks code from any author; identifying AI-generated code is outside scope. Analysis does not execute the application or send its contents to external services.
 

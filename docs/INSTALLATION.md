@@ -24,7 +24,7 @@ npm pack
 Install that tarball in an application:
 
 ```sh
-npm install --save-dev /path/to/next-static-guard-0.1.0-dev.1.tgz
+npm install --save-dev /path/to/next-static-guard-0.1.0-beta.1.tgz
 npx next-static-guard scan
 ```
 
@@ -95,7 +95,7 @@ After collecting current evidence, create and verify the exact tarball:
 
 ```sh
 npm pack --pack-destination artifacts
-npm run verify:package -- artifacts/next-static-guard-0.1.0-dev.1.tgz
+npm run verify:package -- artifacts/next-static-guard-0.1.0-beta.1.tgz
 npm run release:check -- artifacts/release-candidate.json
 ```
 

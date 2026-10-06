@@ -14,7 +14,7 @@ import { dataHooks } from './sensitivity.js';
 import { orderedLimits, preferEvidence } from '../report/order.js';
 import { canonical, policyHash } from '../report/fingerprint.js';
 import { INTERNAL_EXCLUSIONS } from '../project/snapshot.js';
-export const TOOL_VERSION='0.1.0-dev.1';
+export const TOOL_VERSION='0.1.0-beta.1';
 export const RULESET_VERSION='1.1.0';
 export { SHIPPED_CERTIFICATION as CERTIFICATION } from '../rules/certification.js';
 export function summarize(report:Report):void {

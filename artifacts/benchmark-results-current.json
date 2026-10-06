@@ -1,0 +1,647 @@
+{
+  "system": {
+    "implementationHash": "cdf9d0530d046c4103a9126f54a8332b1ed8f7d4a2129b813bf590b64ab36515",
+    "kernel": "6.17.0-1022-azure",
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v24.21.0",
+    "npm": "11.19.0",
+    "git": "git version 2.47.0",
+    "seed": 42,
+    "runs": 20,
+    "limits": {
+      "cpu": 2,
+      "memoryBytes": 4294967296
+    },
+    "measurementEligible": true
+  },
+  "results": [
+    {
+      "mode": "local",
+      "count": 1000,
+      "p95Ms": 1821.485436,
+      "peakRssBytes": 252096512,
+      "samples": [
+        {
+          "wallMs": 1821.0251740000003,
+          "peakRssBytes": 251908096,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1406.2720129999998,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1779.060539,
+          "peakRssBytes": 250933248,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1361.77138,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1821.485436,
+          "peakRssBytes": 247410688,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1407.6199510000001,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1796.506128,
+          "peakRssBytes": 249057280,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1385.491434,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1792.7521750000014,
+          "peakRssBytes": 248745984,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1374.6409939999999,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1790.2988650000007,
+          "peakRssBytes": 252096512,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1374.071653,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1815.4253709999994,
+          "peakRssBytes": 249851904,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1394.562958,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1829.973120999999,
+          "peakRssBytes": 249966592,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1405.337488,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1771.6051630000002,
+          "peakRssBytes": 248995840,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1359.326575,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1763.3775700000006,
+          "peakRssBytes": 251428864,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1354.0306409999998,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1760.7006829999991,
+          "peakRssBytes": 251879424,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1357.580719,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1763.9470770000007,
+          "peakRssBytes": 249151488,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1360.3897120000001,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1710.8022390000006,
+          "peakRssBytes": 250241024,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1314.204323,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1734.7331550000017,
+          "peakRssBytes": 251445248,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1327.66063,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1775.6031440000006,
+          "peakRssBytes": 252051456,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1372.498696,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1780.4455620000008,
+          "peakRssBytes": 249724928,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1359.646353,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1792.5502850000012,
+          "peakRssBytes": 247209984,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1382.122103,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1735.8580139999976,
+          "peakRssBytes": 246677504,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1330.7845519999998,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1728.795597999997,
+          "peakRssBytes": 249696256,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1330.803078,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 1713.2849329999954,
+          "peakRssBytes": 251727872,
+          "sourceCount": 1000,
+          "sourceBytes": 4096000,
+          "edgeCount": 4893,
+          "analysisMs": 1318.721582,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        }
+      ],
+      "gate": true
+    },
+    {
+      "mode": "local",
+      "count": 5000,
+      "p95Ms": 6138.2879949999915,
+      "peakRssBytes": 432730112,
+      "samples": [
+        {
+          "wallMs": 5939.129229999999,
+          "peakRssBytes": 428584960,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5526.485742,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5880.035971000005,
+          "peakRssBytes": 431874048,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5481.164869,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5984.842423000002,
+          "peakRssBytes": 428036096,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5582.696141,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6161.662510000002,
+          "peakRssBytes": 427008000,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5755.639252999999,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5922.873313999997,
+          "peakRssBytes": 424943616,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5516.850375999999,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5880.859446000002,
+          "peakRssBytes": 423829504,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5475.440631,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5989.966549999997,
+          "peakRssBytes": 429346816,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5587.381284,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6138.2879949999915,
+          "peakRssBytes": 428941312,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5731.545408,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6048.716333000004,
+          "peakRssBytes": 427335680,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5631.54713,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6112.458501000001,
+          "peakRssBytes": 424787968,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5706.367854,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6001.45515400001,
+          "peakRssBytes": 430309376,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5580.465617,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6062.33636500001,
+          "peakRssBytes": 428498944,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5657.781863,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5921.495093999998,
+          "peakRssBytes": 426672128,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5504.274759999999,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5942.617885,
+          "peakRssBytes": 427356160,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5533.41466,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6099.236392999999,
+          "peakRssBytes": 432730112,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5685.742192000001,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6005.934100999992,
+          "peakRssBytes": 423772160,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5601.422552999999,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6065.065165999986,
+          "peakRssBytes": 425308160,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5660.189159,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5923.982473999989,
+          "peakRssBytes": 426672128,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5504.561993,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 6047.2880000000005,
+          "peakRssBytes": 430862336,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5645.36899,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 5878.8709230000095,
+          "peakRssBytes": 424472576,
+          "sourceCount": 5000,
+          "sourceBytes": 20480000,
+          "edgeCount": 24692,
+          "analysisMs": 5474.898765999999,
+          "gitIoMs": 0,
+          "exitStatus": 0
+        }
+      ],
+      "gate": true
+    },
+    {
+      "mode": "git",
+      "count": 5000,
+      "p95Ms": 9855.491313000035,
+      "peakRssBytes": 590135296,
+      "samples": [
+        {
+          "wallMs": 9541.317849000014,
+          "peakRssBytes": 572284928,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9126.265031,
+          "gitIoMs": 931.0869249999955,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9516.015413999994,
+          "peakRssBytes": 584306688,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9090.106414,
+          "gitIoMs": 968.06030900002,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9438.48769899999,
+          "peakRssBytes": 584941568,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9001.529439,
+          "gitIoMs": 973.6143189999838,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9689.705242000025,
+          "peakRssBytes": 573235200,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9265.533681,
+          "gitIoMs": 1077.4114170000398,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9402.654979999992,
+          "peakRssBytes": 586088448,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 8968.918891,
+          "gitIoMs": 971.5339710000087,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9443.459697999991,
+          "peakRssBytes": 586907648,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9000.267532,
+          "gitIoMs": 978.4437769999795,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9705.784898999991,
+          "peakRssBytes": 581640192,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9254.403841,
+          "gitIoMs": 975.323299000012,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9837.525089000002,
+          "peakRssBytes": 584556544,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9383.241913,
+          "gitIoMs": 1022.0198489999768,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9530.873644000007,
+          "peakRssBytes": 585650176,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9089.790732,
+          "gitIoMs": 968.9212180000188,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9586.779375999991,
+          "peakRssBytes": 583372800,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9160.636649999999,
+          "gitIoMs": 1001.9679430000306,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9437.939140000031,
+          "peakRssBytes": 579112960,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9005.110841000002,
+          "gitIoMs": 963.9378860000393,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9556.977695000009,
+          "peakRssBytes": 581513216,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9125.121609999998,
+          "gitIoMs": 944.6819100000223,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9611.520760999992,
+          "peakRssBytes": 581926912,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9173.109468,
+          "gitIoMs": 988.5817769999759,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9789.411504000018,
+          "peakRssBytes": 584142848,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9351.183455,
+          "gitIoMs": 1033.7801619999668,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9855.491313000035,
+          "peakRssBytes": 590135296,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9407.518404,
+          "gitIoMs": 1086.6779749999912,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9584.219987999997,
+          "peakRssBytes": 589520896,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9150.541609,
+          "gitIoMs": 1062.3425530000436,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9669.325566000014,
+          "peakRssBytes": 572559360,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9233.411879000001,
+          "gitIoMs": 978.3121799999838,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9681.95474700001,
+          "peakRssBytes": 581984256,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9253.849306,
+          "gitIoMs": 1035.5758999999784,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9519.969077000045,
+          "peakRssBytes": 583671808,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9085.040926,
+          "gitIoMs": 984.6475140000169,
+          "exitStatus": 0
+        },
+        {
+          "wallMs": 9863.41493800003,
+          "peakRssBytes": 580947968,
+          "sourceCount": 9997,
+          "sourceBytes": 40947715,
+          "edgeCount": 49375,
+          "analysisMs": 9431.956377,
+          "gitIoMs": 1058.0954070000157,
+          "exitStatus": 0
+        }
+      ],
+      "gate": true
+    }
+  ]
+}

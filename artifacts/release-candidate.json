@@ -1,0 +1,16 @@
+{
+  "toolVersion": "0.1.0-dev.1",
+  "rulesetVersion": "1.1.0",
+  "quality": "artifacts/quality-results-current.json",
+  "manifest": "artifacts/quality-manifest-current.json",
+  "oracles": "artifacts/quality-oracles-current.json",
+  "benchmark": "artifacts/benchmark-results-current.json",
+  "comparison": "artifacts/comparison-results-current.json",
+  "ci": "artifacts/ci-results-current.json",
+  "testedCommit": "1917fa9bf8965cc5a0b8577453cf89db406ccf41",
+  "tarball": "artifacts/next-static-guard-0.1.0-dev.1.tgz",
+  "tarballSha256": "de223d821a1aa059a719d0eaa241ba66d0ce4125556d911c14183383509f7eec",
+  "installation": "artifacts/package-validation-current.json",
+  "runtimeAudit": "artifacts/runtime-audit-current.json",
+  "targetMainApplied": false
+}

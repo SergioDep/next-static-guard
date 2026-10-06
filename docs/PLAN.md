@@ -16,7 +16,7 @@ The development artifact does not require registry publication. Missing beta or 
 
 Artifacts:
 
-- One ESM package named `next-static-guard`, version `0.1.0-dev.1`, and MIT LICENSE attributed to Next Static Guard contributors.
+- One ESM package named `next-static-guard`, version `0.1.0-beta.1`, and MIT LICENSE attributed to Next Static Guard contributors.
 - Exact dependencies from [Stack and layout](ARCHITECTURE.md#stack-and-layout), npm v3 lockfile, `.nvmrc`, `.npmrc`, and the specified TypeScript and Vitest configurations.
 - `schemas/config.v1.json`, `schemas/report.v1.json`, and `schemas/case.v1.json`, with closed objects and contract invariants.
 - Read-only filesystem snapshot adapter; source inventory, byte hashes, version lookup, safe symlink resolution, and bounded reads.

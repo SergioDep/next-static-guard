@@ -1,6 +1,6 @@
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
-import { mkdtemp, mkdir, writeFile, readFile, rm, realpath } from 'node:fs/promises';
+import { mkdtemp, mkdir, writeFile, readFile, readdir, rm, realpath } from 'node:fs/promises';
 import { join, dirname, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
@@ -23,6 +23,10 @@ try {
  await writeFile(join(root,'package.json'),JSON.stringify({name:'artifact-install',private:true}));
  await exec(process.execPath,[npm,'install',artifact,'--ignore-scripts','--no-audit','--no-fund','--cache',join(tmpdir(),'nsg-release-package-cache')],{cwd:root,timeout:120_000,maxBuffer:4*1024*1024});
  const installed=JSON.parse(await readFile(join(root,'node_modules/next-static-guard/package.json'),'utf8')),cli=join(root,'node_modules/next-static-guard/dist/cli/main.js');
+ const implementation=createHash('sha256'),packageRoot=join(root,'node_modules/next-static-guard');
+ async function hash(dir,prefix){for(const entry of (await readdir(dir,{withFileTypes:true})).sort((a,b)=>a.name.localeCompare(b.name,'en'))){if(entry.isDirectory())await hash(join(dir,entry.name),prefix+entry.name+'/');else if(/\.(js|json)$/.test(entry.name)){implementation.update(prefix+entry.name);implementation.update(await readFile(join(dir,entry.name)));}}}
+ await hash(join(packageRoot,'dist'),'dist/');await hash(join(packageRoot,'schemas'),'schemas/');
+ const implementationHash=implementation.digest('hex');
  const version=(await exec(process.execPath,[cli,'--version'])).stdout.trim();
  if(version!==installed.version)throw new Error('Installed CLI and package versions disagree.');
  for(const [rule,files] of cases) {
@@ -35,6 +39,6 @@ try {
   results.push({rule,exitStatus:0,coverage:report.coverage.status,toolVersion:report.toolVersion,rulesetVersion:report.rulesetVersion});
  }
  const audit=JSON.parse((await exec(process.execPath,[npm,'audit','--omit=dev','--json','--cache',join(tmpdir(),'nsg-release-package-cache')],{cwd:root,timeout:120_000,maxBuffer:4*1024*1024})).stdout);
- const record={tarballSha256,bytes:bytes.length,toolVersion:version,rulesetVersion:results[0].rulesetVersion,node:process.version,passed:true,runtimeAudit:audit.metadata.vulnerabilities,cases:results};
+ const record={tarballSha256,implementationHash,bytes:bytes.length,toolVersion:version,rulesetVersion:results[0].rulesetVersion,node:process.version,passed:true,runtimeAudit:audit.metadata.vulnerabilities,cases:results};
  await mkdir('artifacts',{recursive:true});await writeFile('artifacts/package-validation-current.json',JSON.stringify(record,null,2)+'\n');console.log(JSON.stringify(record,null,2));
 }finally{await rm(root,{recursive:true,force:true});}
