@@ -3,7 +3,7 @@ import type { Graph } from '../graph/build.js';
 import { retainsBinding } from '../graph/build.js';
 import type { Context, Finding, Policy, Severity, SourceNode } from '../types.js';
 
-/** Protocol identifier for the code metrics M-01 to M-13 (Anexo H, Tabla H2). */
+/** Protocol identifier for the code metrics M-01 to M-13 (Anexo H, Tabla H1). */
 export const METRICS_PROTOCOL = 'nsg-metrics-1';
 /** Minimum duplicated block: 50 tokens spanning at least five lines. */
 export const DUPLICATION_TOKENS = 50;
