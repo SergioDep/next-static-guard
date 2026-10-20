@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "toolVersion": "0.1.1-beta.1",
+  "rulesetVersion": "1.1.0",
+  "fingerprintVersion": 1,
+  "policyHash": "2e3d204d695c40c432341c0668b5bfd8626af2db9a294ab3d4e5527e81687cae",
+  "policy": {
+    "source": "current",
+    "currentPolicyHash": "2e3d204d695c40c432341c0668b5bfd8626af2db9a294ab3d4e5527e81687cae",
+    "changedFields": [],
+    "ignoredCurrentConfig": false,
+    "effectiveRules": {
+      "NSG001": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG002": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG003": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG004": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG005": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG006": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      }
+    }
+  },
+  "projects": [
+    {
+      "root": ".",
+      "nextVersion": "16.3.8",
+      "reactVersion": "19.3.0",
+      "reactDomVersion": "19.3.0",
+      "typescriptVersion": "6.0.3"
+    }
+  ],
+  "scope": {
+    "roots": [
+      "."
+    ],
+    "exclusions": [
+      ".git",
+      ".next",
+      "build",
+      "coverage",
+      "dist",
+      "node_modules"
+    ],
+    "unsupported": []
+  },
+  "sensitivityConfigured": true,
+  "coverage": {
+    "status": "complete",
+    "limits": []
+  },
+  "comparison": {
+    "mode": "none",
+    "baseCommit": null,
+    "status": "not-applicable"
+  },
+  "findings": [],
+  "summary": {
+    "total": 0,
+    "new": 0,
+    "existing": 0,
+    "aggravated": 0,
+    "unverified": 0,
+    "suppressed": 0,
+    "blocking": 0,
+    "resolved": []
+  },
+  "metrics": {
+    "durationMs": 238.1205530000001,
+    "sourceCount": 4,
+    "sourceBytes": 1102,
+    "edgeCount": 3
+  },
+  "codeMetrics": {
+    "protocol": "nsg-metrics-1",
+    "scope": {
+      "files": 4,
+      "functions": 5
+    },
+    "loc": 41,
+    "cyclomatic": {
+      "total": 5,
+      "maxFunction": 1,
+      "meanFunction": 1
+    },
+    "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+    },
+    "nesting": {
+      "max": 0
+    },
+    "halsteadVolume": {
+      "total": 1293.617
+    },
+    "maintainability": {
+      "mean": 60.464,
+      "min": 57.211
+    },
+    "coupling": {
+      "total": 3,
+      "maxFile": 2
+    },
+    "independentCycles": 0,
+    "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+    },
+    "boundaryCrossings": 1,
+    "clientSurface": {
+      "ratio": 0.317,
+      "clientLoc": 13
+    },
+    "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 2
+    },
+    "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+    },
+    "files": [
+      {
+        "file": "app/layout.tsx",
+        "loc": 8,
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 227.549,
+        "maintainability": 63.661,
+        "coupling": 0,
+        "contexts": [
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "Layout",
+            "line": 3,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "app/page.tsx",
+        "loc": 11,
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 271.029,
+        "maintainability": 60.113,
+        "coupling": 2,
+        "contexts": [
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "Inicio",
+            "line": 4,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "components/ListaProductos.tsx",
+        "loc": 13,
+        "cyclomatic": 2,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 400.084,
+        "maintainability": 57.211,
+        "coupling": 0,
+        "contexts": [
+          "client-browser",
+          "client-ssr"
+        ],
+        "functions": [
+          {
+            "name": "ListaProductos",
+            "line": 5,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          },
+          {
+            "name": "<anonymous>",
+            "line": 8,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "lib/db.ts",
+        "loc": 9,
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 394.955,
+        "maintainability": 60.869,
+        "coupling": 1,
+        "contexts": [
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "obtenerProductos",
+            "line": 10,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      }
+    ]
+  }
+}

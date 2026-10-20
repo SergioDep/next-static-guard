@@ -1,0 +1,5136 @@
+{
+ "cases": [
+  {
+   "id": "N01",
+   "ruleId": "NSG001",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 422.721
+     },
+     "maintainability": {
+      "mean": 75.1,
+      "min": 73.279
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N02",
+   "ruleId": "NSG001",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 4
+     },
+     "loc": 10,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 490.771
+     },
+     "maintainability": {
+      "mean": 77.539,
+      "min": 73.753
+     },
+     "coupling": {
+      "total": 3,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.3,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N03",
+   "ruleId": "NSG001",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 5,
+      "functions": 5
+     },
+     "loc": 13,
+     "cyclomatic": {
+      "total": 5,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 700.884
+     },
+     "maintainability": {
+      "mean": 76.24,
+      "min": 73.569
+     },
+     "coupling": {
+      "total": 5,
+      "maxFile": 2
+     },
+     "independentCycles": 1,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.615,
+      "clientLoc": 8
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N04",
+   "ruleId": "NSG001",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 4
+     },
+     "loc": 9,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 529.855
+     },
+     "maintainability": {
+      "mean": 77.696,
+      "min": 74.617
+     },
+     "coupling": {
+      "total": 3,
+      "maxFile": 2
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.222,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N05",
+   "ruleId": "NSG002",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 4
+     },
+     "loc": 9,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 486.764
+     },
+     "maintainability": {
+      "mean": 78.036,
+      "min": 75.037
+     },
+     "coupling": {
+      "total": 3,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.556,
+      "clientLoc": 5
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N06",
+   "ruleId": "NSG002",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 392.49
+     },
+     "maintainability": {
+      "mean": 73.913,
+      "min": 70.905
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 2
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.667,
+      "clientLoc": 4
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N07",
+   "ruleId": "NSG002",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 356.503
+     },
+     "maintainability": {
+      "mean": 77.616,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N08",
+   "ruleId": "NSG002",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 342.261
+     },
+     "maintainability": {
+      "mean": 77.714,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N09",
+   "ruleId": "NSG003",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 413.211
+     },
+     "maintainability": {
+      "mean": 75.105,
+      "min": 73.289
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N10",
+   "ruleId": "NSG003",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 352.044
+     },
+     "maintainability": {
+      "mean": 77.598,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.5,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N11",
+   "ruleId": "NSG003",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 2,
+      "meanFunction": 1.5
+     },
+     "cognitive": {
+      "total": 1,
+      "maxFunction": 1
+     },
+     "nesting": {
+      "max": 1
+     },
+     "halsteadVolume": {
+      "total": 358.491
+     },
+     "maintainability": {
+      "mean": 77.527,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.5,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N12",
+   "ruleId": "NSG003",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 365.422
+     },
+     "maintainability": {
+      "mean": 77.521,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.5,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N13",
+   "ruleId": "NSG004",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 4
+     },
+     "loc": 9,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 494.754
+     },
+     "maintainability": {
+      "mean": 78.131,
+      "min": 74.564
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 2
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.222,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N14",
+   "ruleId": "NSG004",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 4
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 474.709
+     },
+     "maintainability": {
+      "mean": 78.021,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N15",
+   "ruleId": "NSG004",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 586.65
+     },
+     "maintainability": {
+      "mean": 77.53,
+      "min": 76.247
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N16",
+   "ruleId": "NSG004",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 564.42
+     },
+     "maintainability": {
+      "mean": 77.616,
+      "min": 76.505
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N17",
+   "ruleId": "NSG005",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 3,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 2,
+      "meanFunction": 1.5
+     },
+     "cognitive": {
+      "total": 1,
+      "maxFunction": 1
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 343.125
+     },
+     "maintainability": {
+      "mean": 80.987,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N18",
+   "ruleId": "NSG005",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 3
+     },
+     "loc": 8,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 535.619
+     },
+     "maintainability": {
+      "mean": 79.513,
+      "min": 73.846
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 2
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.25,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N19",
+   "ruleId": "NSG005",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 328.707
+     },
+     "maintainability": {
+      "mean": 77.957,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.5,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N20",
+   "ruleId": "NSG005",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 4
+     },
+     "loc": 9,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 545.857
+     },
+     "maintainability": {
+      "mean": 78.436,
+      "min": 73.753
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N21",
+   "ruleId": "NSG006",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 3,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 2,
+      "meanFunction": 1.5
+     },
+     "cognitive": {
+      "total": 1,
+      "maxFunction": 1
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 343.125
+     },
+     "maintainability": {
+      "mean": 80.987,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N22",
+   "ruleId": "NSG006",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 328.707
+     },
+     "maintainability": {
+      "mean": 77.957,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.5,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N23",
+   "ruleId": "NSG006",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 328.707
+     },
+     "maintainability": {
+      "mean": 77.957,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.5,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "N24",
+   "ruleId": "NSG006",
+   "expected": "clean",
+   "original": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 356.961
+     },
+     "maintainability": {
+      "mean": 81.09,
+      "min": 74.819
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.667,
+      "clientLoc": 4
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P01",
+   "ruleId": "NSG001",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG001"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 368.451
+     },
+     "maintainability": {
+      "mean": 78.339,
+      "min": 74.819
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.714,
+      "clientLoc": 5
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 142.857,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 357.849
+     },
+     "maintainability": {
+      "mean": 79.71,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P02",
+   "ruleId": "NSG001",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG001"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 2
+     },
+     "loc": 8,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 388.102
+     },
+     "maintainability": {
+      "mean": 81.456,
+      "min": 74.819
+     },
+     "coupling": {
+      "total": 3,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.75,
+      "clientLoc": 6
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 125,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 2
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 377.5
+     },
+     "maintainability": {
+      "mean": 82.485,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 3,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P03",
+   "ruleId": "NSG001",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG001"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 415
+     },
+     "maintainability": {
+      "mean": 77.285,
+      "min": 75.037
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.714,
+      "clientLoc": 5
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 142.857,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 436.468
+     },
+     "maintainability": {
+      "mean": 78.391,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P04",
+   "ruleId": "NSG001",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG001"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 395.862
+     },
+     "maintainability": {
+      "mean": 77.554,
+      "min": 75.037
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.714,
+      "clientLoc": 5
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 142.857,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 404.358
+     },
+     "maintainability": {
+      "mean": 78.762,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P05",
+   "ruleId": "NSG002",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG002"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 328.707
+     },
+     "maintainability": {
+      "mean": 77.957,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 250,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 485.788
+     },
+     "maintainability": {
+      "mean": 74.624,
+      "min": 72.327
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P06",
+   "ruleId": "NSG002",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG002"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 4
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 426.509
+     },
+     "maintainability": {
+      "mean": 78.377,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 166.667,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 4
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 456.241
+     },
+     "maintainability": {
+      "mean": 76.842,
+      "min": 74.564
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.714,
+      "clientLoc": 5
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P07",
+   "ruleId": "NSG002",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG002"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 357.849
+     },
+     "maintainability": {
+      "mean": 79.71,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 166.667,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 368.451
+     },
+     "maintainability": {
+      "mean": 78.339,
+      "min": 74.819
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.714,
+      "clientLoc": 5
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P08",
+   "ruleId": "NSG002",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG002"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 354.604
+     },
+     "maintainability": {
+      "mean": 82.185,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 200,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 385.073
+     },
+     "maintainability": {
+      "mean": 80.67,
+      "min": 74.279
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.667,
+      "clientLoc": 4
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P09",
+   "ruleId": "NSG003",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG003"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 354.423
+     },
+     "maintainability": {
+      "mean": 75.718,
+      "min": 74.515
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 200,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 538.261
+     },
+     "maintainability": {
+      "mean": 74.352,
+      "min": 71.782
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P10",
+   "ruleId": "NSG003",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG003"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 318.339
+     },
+     "maintainability": {
+      "mean": 78.107,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.5,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 250,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 525.421
+     },
+     "maintainability": {
+      "mean": 74.414,
+      "min": 71.907
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P11",
+   "ruleId": "NSG003",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG003"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 446.586
+     },
+     "maintainability": {
+      "mean": 74.865,
+      "min": 72.808
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 200,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 2,
+      "meanFunction": 1.333
+     },
+     "cognitive": {
+      "total": 1,
+      "maxFunction": 1
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 559.121
+     },
+     "maintainability": {
+      "mean": 74.188,
+      "min": 71.455
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P12",
+   "ruleId": "NSG003",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG003"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 448.885
+     },
+     "maintainability": {
+      "mean": 74.85,
+      "min": 72.778
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 200,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 541.102
+     },
+     "maintainability": {
+      "mean": 74.338,
+      "min": 71.755
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P13",
+   "ruleId": "NSG004",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG004"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 4
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 432.762
+     },
+     "maintainability": {
+      "mean": 78.328,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 166.667,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 4
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 474.709
+     },
+     "maintainability": {
+      "mean": 78.021,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P14",
+   "ruleId": "NSG004",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG004"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 497.486
+     },
+     "maintainability": {
+      "mean": 76.651,
+      "min": 73.611
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.286,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 142.857,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 458.923
+     },
+     "maintainability": {
+      "mean": 78.171,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P15",
+   "ruleId": "NSG004",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG004"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 445.352
+     },
+     "maintainability": {
+      "mean": 78.271,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 166.667,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 420.367
+     },
+     "maintainability": {
+      "mean": 78.485,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P16",
+   "ruleId": "NSG004",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG004"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 445.352
+     },
+     "maintainability": {
+      "mean": 78.271,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 166.667,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 458.129
+     },
+     "maintainability": {
+      "mean": 78.177,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P17",
+   "ruleId": "NSG005",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG005"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 467.416
+     },
+     "maintainability": {
+      "mean": 78.113,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": 1,
+      "exposed": 1,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 166.667,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 439.033
+     },
+     "maintainability": {
+      "mean": 78.321,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P18",
+   "ruleId": "NSG005",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG005"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 4
+     },
+     "loc": 9,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 545.857
+     },
+     "maintainability": {
+      "mean": 78.436,
+      "min": 73.753
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.333,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": 1,
+      "exposed": 1,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 111.111,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 4
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 450.358
+     },
+     "maintainability": {
+      "mean": 77.097,
+      "min": 73.753
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.429,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P19",
+   "ruleId": "NSG005",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG005"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 3,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 271.564
+     },
+     "maintainability": {
+      "mean": 82.348,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": 1,
+      "exposed": 1,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 333.333,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 3,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 271.564
+     },
+     "maintainability": {
+      "mean": 82.348,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P20",
+   "ruleId": "NSG005",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG005"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 2
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 425.88
+     },
+     "maintainability": {
+      "mean": 82.527,
+      "min": 74.515
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.714,
+      "clientLoc": 5
+     },
+     "exposure": {
+      "ratio": 1,
+      "exposed": 1,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 142.857,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 2
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 415.054
+     },
+     "maintainability": {
+      "mean": 83.55,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P21",
+   "ruleId": "NSG006",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG006"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 328.707
+     },
+     "maintainability": {
+      "mean": 77.957,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.5,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 250,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 3,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 2,
+      "meanFunction": 1.5
+     },
+     "cognitive": {
+      "total": 1,
+      "maxFunction": 1
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 343.125
+     },
+     "maintainability": {
+      "mean": 80.987,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P22",
+   "ruleId": "NSG006",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG006"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 401.753
+     },
+     "maintainability": {
+      "mean": 79.8,
+      "min": 74.617
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.667,
+      "clientLoc": 4
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 166.667,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 2,
+      "meanFunction": 1.333
+     },
+     "cognitive": {
+      "total": 1,
+      "maxFunction": 1
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 417.228
+     },
+     "maintainability": {
+      "mean": 80.922,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P23",
+   "ruleId": "NSG006",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG006"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 4
+     },
+     "loc": 9,
+     "cyclomatic": {
+      "total": 4,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 587.596
+     },
+     "maintainability": {
+      "mean": 78.242,
+      "min": 73.569
+     },
+     "coupling": {
+      "total": 3,
+      "maxFile": 2
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.444,
+      "clientLoc": 4
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 111.111,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 4,
+      "functions": 4
+     },
+     "loc": 8,
+     "cyclomatic": {
+      "total": 5,
+      "maxFunction": 2,
+      "meanFunction": 1.25
+     },
+     "cognitive": {
+      "total": 1,
+      "maxFunction": 1
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 670.364
+     },
+     "maintainability": {
+      "mean": 78.896,
+      "min": 72.287
+     },
+     "coupling": {
+      "total": 2,
+      "maxFile": 2
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.25,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "P24",
+   "ruleId": "NSG006",
+   "expected": "finding",
+   "original": {
+    "findings": [
+     "NSG006"
+    ],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 6,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 373.15
+     },
+     "maintainability": {
+      "mean": 80.365,
+      "min": 74.819
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.667,
+      "clientLoc": 4
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 166.667,
+      "info": 0
+     }
+    }
+   },
+   "corrected": {
+    "findings": [],
+    "coverage": "complete",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 2
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 2,
+      "meanFunction": 1.5
+     },
+     "cognitive": {
+      "total": 1,
+      "maxFunction": 1
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 388.202
+     },
+     "maintainability": {
+      "mean": 81.484,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U01",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 3,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 320.211
+     },
+     "maintainability": {
+      "mean": 81.362,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U02",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 3,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 271.564
+     },
+     "maintainability": {
+      "mean": 82.348,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U03",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 330.849
+     },
+     "maintainability": {
+      "mean": 77.928,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U04",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 330.849
+     },
+     "maintainability": {
+      "mean": 77.928,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U05",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 0,
+      "functions": 0
+     },
+     "loc": 0,
+     "cyclomatic": {
+      "total": 0,
+      "maxFunction": 0,
+      "meanFunction": 0
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 0
+     },
+     "maintainability": {
+      "mean": null,
+      "min": null
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": null,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": null,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": null
+    }
+   }
+  },
+  {
+   "id": "U06",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 445.352
+     },
+     "maintainability": {
+      "mean": 76.99,
+      "min": 74.628
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.286,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U07",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 3
+     },
+     "loc": 7,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 516.078
+     },
+     "maintainability": {
+      "mean": 76.553,
+      "min": 73.317
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.286,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": 0,
+      "exposed": 0,
+      "declared": 1
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U08",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 3
+     },
+     "loc": 5,
+     "cyclomatic": {
+      "total": 3,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 415.679
+     },
+     "maintainability": {
+      "mean": 75.086,
+      "min": 73.251
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0.6,
+      "clientLoc": 3
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U09",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 330.849
+     },
+     "maintainability": {
+      "mean": 77.928,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U10",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 3,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 271.564
+     },
+     "maintainability": {
+      "mean": 82.348,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 0,
+      "maxFile": 0
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U11",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 2,
+      "functions": 2
+     },
+     "loc": 4,
+     "cyclomatic": {
+      "total": 2,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 330.849
+     },
+     "maintainability": {
+      "mean": 77.928,
+      "min": 76.921
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 0,
+     "clientSurface": {
+      "ratio": 0,
+      "clientLoc": 0
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "U12",
+   "ruleId": null,
+   "expected": "partial",
+   "original": {
+    "findings": [],
+    "coverage": "partial",
+    "metrics": {
+     "protocol": "nsg-metrics-1",
+     "scope": {
+      "files": 3,
+      "functions": 7
+     },
+     "loc": 10,
+     "cyclomatic": {
+      "total": 7,
+      "maxFunction": 1,
+      "meanFunction": 1
+     },
+     "cognitive": {
+      "total": 0,
+      "maxFunction": 0
+     },
+     "nesting": {
+      "max": 0
+     },
+     "halsteadVolume": {
+      "total": 625.946
+     },
+     "maintainability": {
+      "mean": 73.745,
+      "min": 64.891
+     },
+     "coupling": {
+      "total": 1,
+      "maxFile": 1
+     },
+     "independentCycles": 0,
+     "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+     },
+     "boundaryCrossings": 1,
+     "clientSurface": {
+      "ratio": 0.2,
+      "clientLoc": 2
+     },
+     "exposure": {
+      "ratio": null,
+      "exposed": 0,
+      "declared": 0
+     },
+     "findingsPerKloc": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "info": 0
+     }
+    }
+   }
+  }
+ ],
+ "extra": []
+}
