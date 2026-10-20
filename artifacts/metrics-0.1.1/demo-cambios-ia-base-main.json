@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 1,
+  "toolVersion": "0.1.1-beta.1",
+  "rulesetVersion": "1.1.0",
+  "fingerprintVersion": 1,
+  "policyHash": "2e3d204d695c40c432341c0668b5bfd8626af2db9a294ab3d4e5527e81687cae",
+  "policy": {
+    "source": "base",
+    "currentPolicyHash": "2e3d204d695c40c432341c0668b5bfd8626af2db9a294ab3d4e5527e81687cae",
+    "changedFields": [],
+    "ignoredCurrentConfig": false,
+    "effectiveRules": {
+      "NSG001": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG002": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG003": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG004": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG005": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      },
+      "NSG006": {
+        "requested": "warn",
+        "effective": "warn",
+        "certified": false
+      }
+    }
+  },
+  "projects": [
+    {
+      "root": ".",
+      "nextVersion": "16.3.8",
+      "reactVersion": "19.3.0",
+      "reactDomVersion": "19.3.0",
+      "typescriptVersion": "6.0.3"
+    }
+  ],
+  "scope": {
+    "roots": [
+      "."
+    ],
+    "exclusions": [
+      ".git",
+      ".next",
+      "build",
+      "coverage",
+      "dist",
+      "node_modules"
+    ],
+    "unsupported": []
+  },
+  "sensitivityConfigured": true,
+  "coverage": {
+    "status": "complete",
+    "limits": []
+  },
+  "comparison": {
+    "mode": "git",
+    "baseCommit": "0eb6863fb4df5fdeba361ce6074bedb1e5ecf987",
+    "status": "complete"
+  },
+  "findings": [
+    {
+      "ruleId": "NSG002",
+      "message": "Server Component execution reaches a client-only dependency or hook.",
+      "recommendation": "Move the interactive behavior into a small Client Component.",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "app/buscar/page.tsx",
+        "start": {
+          "line": 4,
+          "column": 29,
+          "offset": 98
+        },
+        "end": {
+          "line": 4,
+          "column": 41,
+          "offset": 110
+        }
+      },
+      "contexts": [
+        "rsc"
+      ],
+      "evidence": [
+        {
+          "kind": "api",
+          "location": {
+            "file": "app/buscar/page.tsx",
+            "start": {
+              "line": 4,
+              "column": 29,
+              "offset": 98
+            },
+            "end": {
+              "line": 4,
+              "column": 41,
+              "offset": 110
+            }
+          },
+          "symbol": "react#useState"
+        }
+      ],
+      "fingerprint": "e2a0b9757304ccbeeb65fd41fb1a738e2b0ec3d41d1312bf52e0649a94d3a154",
+      "status": "new",
+      "suppressed": false,
+      "suppressionStatus": null,
+      "blocking": false
+    },
+    {
+      "ruleId": "NSG001",
+      "message": "Client code reaches a server-only dependency or API.",
+      "recommendation": "Keep server access in a server module and pass a DTO or a valid Server Function reference to the client.",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "app/carrito/page.tsx",
+        "start": {
+          "line": 4,
+          "column": 1,
+          "offset": 60
+        },
+        "end": {
+          "line": 4,
+          "column": 64,
+          "offset": 123
+        }
+      },
+      "contexts": [
+        "client-browser",
+        "client-ssr"
+      ],
+      "evidence": [
+        {
+          "kind": "import",
+          "location": {
+            "file": "app/carrito/page.tsx",
+            "start": {
+              "line": 4,
+              "column": 1,
+              "offset": 60
+            },
+            "end": {
+              "line": 4,
+              "column": 64,
+              "offset": 123
+            }
+          },
+          "symbol": "../../lib/db"
+        },
+        {
+          "kind": "import",
+          "location": {
+            "file": "lib/db.ts",
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 22,
+              "offset": 21
+            }
+          },
+          "symbol": "server-only"
+        }
+      ],
+      "fingerprint": "05d0c9dcdc0b0c05f1abf664fb835623c35afb7eb1d2fc4298a0aac67f034db7",
+      "status": "new",
+      "suppressed": false,
+      "suppressionStatus": null,
+      "blocking": false
+    },
+    {
+      "ruleId": "NSG004",
+      "message": "A server-created value is unsupported as a Client Component prop.",
+      "recommendation": "Pass React-supported data, create the handler on the client, or pass a valid Server Function reference.",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "app/page.tsx",
+        "start": {
+          "line": 12,
+          "column": 56,
+          "offset": 431
+        },
+        "end": {
+          "line": 12,
+          "column": 63,
+          "offset": 438
+        }
+      },
+      "contexts": [
+        "rsc"
+      ],
+      "evidence": [
+        {
+          "kind": "value",
+          "location": null,
+          "symbol": "app/page.tsx#<function>"
+        },
+        {
+          "kind": "sink",
+          "location": {
+            "file": "app/page.tsx",
+            "start": {
+              "line": 12,
+              "column": 56,
+              "offset": 431
+            },
+            "end": {
+              "line": 12,
+              "column": 63,
+              "offset": 438
+            }
+          },
+          "symbol": "components/ListaProductos.tsx#default.onComprar"
+        }
+      ],
+      "fingerprint": "ceb293409c332ec655118a8c85dfc19f870b3b3a462ef578dcf632cc4b148fd2",
+      "status": "new",
+      "suppressed": false,
+      "suppressionStatus": null,
+      "blocking": false
+    },
+    {
+      "ruleId": "NSG005",
+      "message": "Declared confidential data reaches a client publication sink.",
+      "recommendation": "Remove the confidential field from the DTO and keep its use on the server; review any previous exposure.",
+      "severity": "critical",
+      "confidence": "high",
+      "location": {
+        "file": "app/perfil/page.tsx",
+        "start": {
+          "line": 5,
+          "column": 42,
+          "offset": 168
+        },
+        "end": {
+          "line": 5,
+          "column": 47,
+          "offset": 173
+        }
+      },
+      "contexts": [
+        "rsc"
+      ],
+      "evidence": [
+        {
+          "kind": "source",
+          "location": null,
+          "symbol": "env#API_TOKEN"
+        },
+        {
+          "kind": "sink",
+          "location": {
+            "file": "app/perfil/page.tsx",
+            "start": {
+              "line": 5,
+              "column": 42,
+              "offset": 168
+            },
+            "end": {
+              "line": 5,
+              "column": 47,
+              "offset": 173
+            }
+          },
+          "symbol": "components/Perfil.tsx#default.token"
+        }
+      ],
+      "fingerprint": "d01da602196ef7a0bfb2e77b01d1d67085b0256d4f991510d21f9ee301eddc39",
+      "status": "new",
+      "suppressed": false,
+      "suppressionStatus": null,
+      "blocking": false
+    },
+    {
+      "ruleId": "NSG003",
+      "message": "A browser global is read during confirmed server execution.",
+      "recommendation": "Move the read into a client effect or event, or protect it with a dominating typeof window guard.",
+      "severity": "high",
+      "confidence": "high",
+      "location": {
+        "file": "components/Bienvenida.tsx",
+        "start": {
+          "line": 4,
+          "column": 18,
+          "offset": 71
+        },
+        "end": {
+          "line": 4,
+          "column": 30,
+          "offset": 83
+        }
+      },
+      "contexts": [
+        "client-ssr"
+      ],
+      "evidence": [
+        {
+          "kind": "reference",
+          "location": {
+            "file": "app/page.tsx",
+            "start": {
+              "line": 11,
+              "column": 8,
+              "offset": 362
+            },
+            "end": {
+              "line": 11,
+              "column": 18,
+              "offset": 372
+            }
+          },
+          "symbol": "Bienvenida"
+        },
+        {
+          "kind": "phase",
+          "location": {
+            "file": "components/Bienvenida.tsx",
+            "start": {
+              "line": 4,
+              "column": 18,
+              "offset": 71
+            },
+            "end": {
+              "line": 4,
+              "column": 30,
+              "offset": 83
+            }
+          },
+          "symbol": "global#localStorage"
+        }
+      ],
+      "fingerprint": "969a9391fedaca3e9b2f3e1bb6b23b0098d186d21043dac790765c67a79d9b80",
+      "status": "new",
+      "suppressed": false,
+      "suppressionStatus": null,
+      "blocking": false
+    },
+    {
+      "ruleId": "NSG006",
+      "message": "Client code reads an environment key without recognized public substitution.",
+      "recommendation": "Read the key on the server and pass only appropriate public data to the client.",
+      "severity": "medium",
+      "confidence": "high",
+      "location": {
+        "file": "components/BotonPago.tsx",
+        "start": {
+          "line": 4,
+          "column": 17,
+          "offset": 69
+        },
+        "end": {
+          "line": 4,
+          "column": 46,
+          "offset": 98
+        }
+      },
+      "contexts": [
+        "client-ssr"
+      ],
+      "evidence": [
+        {
+          "kind": "reference",
+          "location": {
+            "file": "app/pago/page.tsx",
+            "start": {
+              "line": 4,
+              "column": 11,
+              "offset": 96
+            },
+            "end": {
+              "line": 4,
+              "column": 20,
+              "offset": 105
+            }
+          },
+          "symbol": "BotonPago"
+        },
+        {
+          "kind": "source",
+          "location": {
+            "file": "components/BotonPago.tsx",
+            "start": {
+              "line": 4,
+              "column": 17,
+              "offset": 69
+            },
+            "end": {
+              "line": 4,
+              "column": 46,
+              "offset": 98
+            }
+          },
+          "symbol": "env#STRIPE_SECRET_KEY"
+        }
+      ],
+      "fingerprint": "571862a7bb9f6a28cdf2a5b9db0c5d130f7d2c049a6717bf38f7d3134716b66e",
+      "status": "new",
+      "suppressed": false,
+      "suppressionStatus": null,
+      "blocking": false
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "new": 6,
+    "existing": 0,
+    "aggravated": 0,
+    "unverified": 0,
+    "suppressed": 0,
+    "blocking": 0,
+    "resolved": []
+  },
+  "metrics": {
+    "durationMs": 570.8865589999999,
+    "sourceCount": 15,
+    "sourceBytes": 3811,
+    "edgeCount": 16
+  },
+  "codeMetrics": {
+    "protocol": "nsg-metrics-1",
+    "scope": {
+      "files": 11,
+      "functions": 16
+    },
+    "loc": 88,
+    "cyclomatic": {
+      "total": 18,
+      "maxFunction": 2,
+      "meanFunction": 1.125
+    },
+    "cognitive": {
+      "total": 2,
+      "maxFunction": 1
+    },
+    "nesting": {
+      "max": 0
+    },
+    "halsteadVolume": {
+      "total": 3225.936
+    },
+    "maintainability": {
+      "mean": 64.566,
+      "min": 52.202
+    },
+    "coupling": {
+      "total": 9,
+      "maxFile": 3
+    },
+    "independentCycles": 0,
+    "duplication": {
+      "ratio": 0,
+      "duplicatedLoc": 0,
+      "partial": false
+    },
+    "boundaryCrossings": 4,
+    "clientSurface": {
+      "ratio": 0.591,
+      "clientLoc": 52
+    },
+    "exposure": {
+      "ratio": 0.5,
+      "exposed": 1,
+      "declared": 2
+    },
+    "findingsPerKloc": {
+      "critical": 11.364,
+      "high": 45.455,
+      "medium": 11.364,
+      "info": 0
+    },
+    "files": [
+      {
+        "file": "app/buscar/page.tsx",
+        "loc": 5,
+        "cyclomatic": 2,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 289.985,
+        "maintainability": 67.242,
+        "coupling": 1,
+        "contexts": [
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "Buscar",
+            "line": 3,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          },
+          {
+            "name": "onChange handler",
+            "line": 5,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "app/carrito/page.tsx",
+        "loc": 10,
+        "cyclomatic": 2,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 437.594,
+        "maintainability": 59.424,
+        "coupling": 2,
+        "contexts": [
+          "client-browser",
+          "client-ssr"
+        ],
+        "functions": [
+          {
+            "name": "Carrito",
+            "line": 6,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          },
+          {
+            "name": "<anonymous>",
+            "line": 8,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "app/layout.tsx",
+        "loc": 8,
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 227.549,
+        "maintainability": 63.661,
+        "coupling": 0,
+        "contexts": [
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "Layout",
+            "line": 3,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "app/page.tsx",
+        "loc": 14,
+        "cyclomatic": 2,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 473.652,
+        "maintainability": 55.996,
+        "coupling": 3,
+        "contexts": [
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "Inicio",
+            "line": 5,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          },
+          {
+            "name": "comprar",
+            "line": 7,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "app/pago/page.tsx",
+        "loc": 4,
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 77.662,
+        "maintainability": 73.497,
+        "coupling": 1,
+        "contexts": [
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "Pago",
+            "line": 3,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "app/perfil/page.tsx",
+        "loc": 5,
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 169.216,
+        "maintainability": 69.015,
+        "coupling": 1,
+        "contexts": [
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "PaginaPerfil",
+            "line": 3,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "components/Bienvenida.tsx",
+        "loc": 5,
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "maxNesting": 0,
+        "halsteadVolume": 162.535,
+        "maintainability": 69.003,
+        "coupling": 0,
+        "contexts": [
+          "client-browser",
+          "client-ssr"
+        ],
+        "functions": [
+          {
+            "name": "Bienvenida",
+            "line": 3,
+            "cyclomatic": 2,
+            "cognitive": 1,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "components/BotonPago.tsx",
+        "loc": 5,
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 162.535,
+        "maintainability": 69.137,
+        "coupling": 0,
+        "contexts": [
+          "client-browser",
+          "client-ssr"
+        ],
+        "functions": [
+          {
+            "name": "BotonPago",
+            "line": 3,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "components/ListaProductos.tsx",
+        "loc": 19,
+        "cyclomatic": 3,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 609.332,
+        "maintainability": 52.202,
+        "coupling": 0,
+        "contexts": [
+          "client-browser",
+          "client-ssr"
+        ],
+        "functions": [
+          {
+            "name": "ListaProductos",
+            "line": 5,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          },
+          {
+            "name": "<anonymous>",
+            "line": 14,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          },
+          {
+            "name": "onClick handler",
+            "line": 16,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "components/Perfil.tsx",
+        "loc": 4,
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "maxNesting": 0,
+        "halsteadVolume": 220.921,
+        "maintainability": 70.183,
+        "coupling": 0,
+        "contexts": [
+          "client-browser",
+          "client-ssr"
+        ],
+        "functions": [
+          {
+            "name": "Perfil",
+            "line": 3,
+            "cyclomatic": 2,
+            "cognitive": 1,
+            "nesting": 0
+          }
+        ]
+      },
+      {
+        "file": "lib/db.ts",
+        "loc": 9,
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "maxNesting": 0,
+        "halsteadVolume": 394.955,
+        "maintainability": 60.869,
+        "coupling": 1,
+        "contexts": [
+          "client-browser",
+          "client-ssr",
+          "rsc"
+        ],
+        "functions": [
+          {
+            "name": "obtenerProductos",
+            "line": 10,
+            "cyclomatic": 1,
+            "cognitive": 0,
+            "nesting": 0
+          }
+        ]
+      }
+    ]
+  }
+}

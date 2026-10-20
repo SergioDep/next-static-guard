@@ -36,6 +36,7 @@ v0.1 is a local CLI for Next.js **16.3.8**, React/React DOM **19.3.0**, App Rout
 | [Development plan](https://github.com/SergioDep/next-static-guard/blob/main/docs/PLAN.md) | Implementation deliverables and required checks. |
 | [Research](https://github.com/SergioDep/next-static-guard/blob/main/docs/RESEARCH.md) | Technical sources supporting the specification. |
 | [Validation results](https://github.com/SergioDep/next-static-guard/blob/main/docs/RESULTS.md) | Executed checks, corpus measurements, performance, and release eligibility. |
+| [Code metrics](https://github.com/SergioDep/next-static-guard/blob/main/docs/METRICS.md) | Definitions of the 13 code metrics included in every report. |
 
 Read Product, Architecture, Validation, then the implementation deliverables. Research is the source catalog.
 

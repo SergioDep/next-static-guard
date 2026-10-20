@@ -20,7 +20,7 @@ v0.1 detects three classes of boundary errors:
 
 The v0.1 matrix is **Next.js 16.3.8, React and React DOM 19.3.0, App Router, and standard Turbopack**. Supported sources are `.js`, `.jsx`, `.ts`, `.tsx`, and ESM `.mjs` helpers; `app`/`src/app`, tsconfig/jsconfig aliases, reexports, and npm workspaces with accessible sources. Supported conditions are listed in [Architecture](ARCHITECTURE.md#resolution-and-context). Any different, prerelease, or unknown version produces `unsupported-version` and partial coverage; the entire 16.x branch is not automatically treated as equivalent. [S8](RESEARCH.md#s8), [S20](RESEARCH.md#s20)
 
-Pages Router, MDX, CommonJS, custom resolution, complete analysis of external packages, Edge rules, general authorization, complexity, duplication, CVEs, autofix, IDE integration, and a hosted service are outside v0.1. A mixed project has its App Router analyzed and its exclusions listed. Coverage is complete only within the supported scope.
+Pages Router, MDX, CommonJS, custom resolution, complete analysis of external packages, Edge rules, general authorization, rules based on complexity or duplication (0.1.1 only reports them as descriptive metrics), CVEs, autofix, IDE integration, and a hosted service are outside v0.1. A mixed project has its App Router analyzed and its exclusions listed. Coverage is complete only within the supported scope.
 
 ## Context model
 

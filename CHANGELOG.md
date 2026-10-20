@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1-beta.1
+
+- Add code metrics `nsg-metrics-1` (M-01 to M-13) to JSON, terminal, and Markdown reports: lines of code, cyclomatic and cognitive complexity, nesting, Halstead volume, maintainability index, efferent coupling, independent dependency cycles, duplication, boundary crossings, client surface, sensitive exposure, and findings density. See [Code metrics](docs/METRICS.md).
+- Metrics do not change findings, coverage, or exit codes. Ruleset 1.1.0 is unchanged.
+
 ## 0.1.0-beta.1
 
 - Preserve shorthand-property value bindings, including aliases of function parameters.

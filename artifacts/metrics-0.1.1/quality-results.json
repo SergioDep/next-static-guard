@@ -1,0 +1,4441 @@
+{
+  "schemaVersion": 1,
+  "corpusHash": "ada75fdbde741aa429d2cede563ac6e2a21bbceeb1c4991e5571d890165ab8b8",
+  "implementationHash": "f6bc75e7add7dc29578909e56794c68326353ce38fc09a9b2dbadb7443a5e129",
+  "versions": {
+    "node": "24.21.0",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "reactDom": "19.3.0",
+    "typescript": "6.0.3"
+  },
+  "provenance": "154 untuned v2 cases retained; two fresh v3 cases replace shorthand cases moved to development. Independently authored synthetic variations; no production-repository or human-review claim.",
+  "perRule": {
+    "NSG001": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "precisionWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "recallWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "knownPositives": 20,
+      "reviewedFindings": 20,
+      "coverageFailures": 0
+    },
+    "NSG002": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "precisionWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "recallWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "knownPositives": 20,
+      "reviewedFindings": 20,
+      "coverageFailures": 0
+    },
+    "NSG003": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "precisionWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "recallWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "knownPositives": 20,
+      "reviewedFindings": 20,
+      "coverageFailures": 0
+    },
+    "NSG004": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "precisionWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "recallWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "knownPositives": 20,
+      "reviewedFindings": 20,
+      "coverageFailures": 0
+    },
+    "NSG005": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "precisionWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "recallWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "knownPositives": 20,
+      "reviewedFindings": 20,
+      "coverageFailures": 0
+    },
+    "NSG006": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "precisionWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "recallWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "knownPositives": 20,
+      "reviewedFindings": 20,
+      "coverageFailures": 0
+    }
+  },
+  "overall": {
+    "tp": 120,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "precisionWilson95": [
+      0.9689797289440706,
+      1
+    ],
+    "recallWilson95": [
+      0.9689797289440706,
+      1
+    ],
+    "knownPositives": 120,
+    "reviewedFindings": 120,
+    "coverageFailures": 0
+  },
+  "qualityGate": true,
+  "certificationEligible": false,
+  "limitations": [
+    "Synthetic supported-pattern sample; correlated families and no production-repository prevalence estimate.",
+    "Every rule has fewer than 50 independent reviewed findings and remains uncertified."
+  ],
+  "cases": [
+    {
+      "id": "V2-NSG001-P01",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1080.2339559999998
+    },
+    {
+      "id": "V2-NSG001-P02",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1042.6136649999999
+    },
+    {
+      "id": "V2-NSG001-P03",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1386.551868
+    },
+    {
+      "id": "V2-NSG001-P04",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1173.5099030000001
+    },
+    {
+      "id": "V2-NSG001-P05",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1120.0949069999997
+    },
+    {
+      "id": "V2-NSG001-P06",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 970.9136440000002
+    },
+    {
+      "id": "V2-NSG001-P07",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1047.5684200000005
+    },
+    {
+      "id": "V2-NSG001-P08",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1435.7824180000007
+    },
+    {
+      "id": "V2-NSG001-P09",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1391.4459499999994
+    },
+    {
+      "id": "V2-NSG001-P10",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1636.3311200000007
+    },
+    {
+      "id": "V2-NSG001-P11",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1370.9786320000003
+    },
+    {
+      "id": "V2-NSG001-P12",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1298.4384760000012
+    },
+    {
+      "id": "V2-NSG001-P13",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 1,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "lib/data.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        },
+        {
+          "rule": "NSG001",
+          "file": "lib/data.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1088.6820200000002
+    },
+    {
+      "id": "V2-NSG001-P14",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 1,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        },
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1222.083430999999
+    },
+    {
+      "id": "V2-NSG001-P15",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 1,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "lib/data.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        },
+        {
+          "rule": "NSG001",
+          "file": "lib/data.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1081.136980000003
+    },
+    {
+      "id": "V2-NSG001-P16",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 1,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        },
+        {
+          "rule": "NSG001",
+          "file": "lib/data.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 951.5244080000011
+    },
+    {
+      "id": "V2-NSG001-P17",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 1,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.jsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        },
+        {
+          "rule": "NSG001",
+          "file": "app/page.jsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 893.9671080000007
+    },
+    {
+      "id": "V2-NSG001-P18",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 1,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.jsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        },
+        {
+          "rule": "NSG001",
+          "file": "app/page.jsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 927.7247310000021
+    },
+    {
+      "id": "V2-NSG001-P19",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 1,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "app/page.jsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        },
+        {
+          "rule": "NSG001",
+          "file": "app/page.jsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1098.1676110000008
+    },
+    {
+      "id": "V2-NSG001-P20",
+      "rule": "NSG001",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG001",
+          "file": "lib/data.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1026.6536000000015
+    },
+    {
+      "id": "V2-NSG002-P01",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 959.9715239999969
+    },
+    {
+      "id": "V2-NSG002-P02",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1113.3105189999987
+    },
+    {
+      "id": "V2-NSG002-P03",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1313.1179660000016
+    },
+    {
+      "id": "V2-NSG002-P04",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1123.7000060000028
+    },
+    {
+      "id": "V2-NSG002-P05",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 997.0129960000013
+    },
+    {
+      "id": "V2-NSG002-P06",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 962.8701180000025
+    },
+    {
+      "id": "V2-NSG002-P07",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1000.2267659999998
+    },
+    {
+      "id": "V2-NSG002-P08",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1091.6869369999986
+    },
+    {
+      "id": "V2-NSG002-P09",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 915.7750470000028
+    },
+    {
+      "id": "V2-NSG002-P10",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1065.7112609999967
+    },
+    {
+      "id": "V2-NSG002-P11",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1205.4347130000024
+    },
+    {
+      "id": "V2-NSG002-P12",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/hook.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1228.800178999998
+    },
+    {
+      "id": "V2-NSG002-P13",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 895.8321279999946
+    },
+    {
+      "id": "V2-NSG002-P14",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1006.811026000003
+    },
+    {
+      "id": "V2-NSG002-P15",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1010.4610499999981
+    },
+    {
+      "id": "V2-NSG002-P16",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1418.7634800000014
+    },
+    {
+      "id": "V2-NSG002-P17",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1300.5871370000023
+    },
+    {
+      "id": "V2-NSG002-P18",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/nav.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1016.5325850000008
+    },
+    {
+      "id": "V2-NSG002-P19",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "lib/b.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 996.6886900000027
+    },
+    {
+      "id": "V2-NSG002-P20",
+      "rule": "NSG002",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG002",
+          "file": "app/page.jsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1100.228458999998
+    },
+    {
+      "id": "V2-NSG003-P01",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1102.007273999996
+    },
+    {
+      "id": "V2-NSG003-P02",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 893.7457930000019
+    },
+    {
+      "id": "V2-NSG003-P03",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1033.337231000005
+    },
+    {
+      "id": "V2-NSG003-P04",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 905.8190860000032
+    },
+    {
+      "id": "V2-NSG003-P05",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 816.1143989999982
+    },
+    {
+      "id": "V2-NSG003-P06",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 875.5032970000029
+    },
+    {
+      "id": "V2-NSG003-P07",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1042.117628
+    },
+    {
+      "id": "V2-NSG003-P08",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1026.0672210000048
+    },
+    {
+      "id": "V2-NSG003-P09",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1142.0605880000003
+    },
+    {
+      "id": "V2-NSG003-P10",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1274.336804000006
+    },
+    {
+      "id": "V2-NSG003-P11",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1070.4591419999997
+    },
+    {
+      "id": "V2-NSG003-P12",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1096.4984120000008
+    },
+    {
+      "id": "V2-NSG003-P13",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 929.7067559999996
+    },
+    {
+      "id": "V2-NSG003-P14",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 948.8840190000046
+    },
+    {
+      "id": "V2-NSG003-P15",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 950.0617079999938
+    },
+    {
+      "id": "V2-NSG003-P16",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1138.2313819999981
+    },
+    {
+      "id": "V2-NSG003-P17",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1015.9525119999962
+    },
+    {
+      "id": "V2-NSG003-P18",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 999.2350860000006
+    },
+    {
+      "id": "V2-NSG003-P19",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1040.2817050000012
+    },
+    {
+      "id": "V2-NSG003-P20",
+      "rule": "NSG003",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG003",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1025.9375260000015
+    },
+    {
+      "id": "V2-NSG004-P01",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1028.670999000009
+    },
+    {
+      "id": "V2-NSG004-P02",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 979.2457239999931
+    },
+    {
+      "id": "V2-NSG004-P03",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1045.301621000006
+    },
+    {
+      "id": "V2-NSG004-P04",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1217.6679469999945
+    },
+    {
+      "id": "V2-NSG004-P05",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1124.6462160000083
+    },
+    {
+      "id": "V2-NSG004-P06",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1008.9948510000104
+    },
+    {
+      "id": "V2-NSG004-P07",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1056.3621779999958
+    },
+    {
+      "id": "V2-NSG004-P08",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 927.9229599999962
+    },
+    {
+      "id": "V2-NSG004-P09",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1119.734467999995
+    },
+    {
+      "id": "V2-NSG004-P10",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1209.7983950000053
+    },
+    {
+      "id": "V2-NSG004-P11",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 993.5044570000027
+    },
+    {
+      "id": "V2-NSG004-P12",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 998.1764109999931
+    },
+    {
+      "id": "V2-NSG004-P13",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1047.5826510000043
+    },
+    {
+      "id": "V2-NSG004-P14",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 966.0331119999901
+    },
+    {
+      "id": "V2-NSG004-P15",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1107.437684000004
+    },
+    {
+      "id": "V2-NSG004-P16",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1120.23634399999
+    },
+    {
+      "id": "V2-NSG004-P17",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1043.8840259999997
+    },
+    {
+      "id": "V2-NSG004-P18",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 963.7766499999998
+    },
+    {
+      "id": "V2-NSG004-P19",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 887.5018339999951
+    },
+    {
+      "id": "V2-NSG004-P20",
+      "rule": "NSG004",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG004",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 908.8639840000105
+    },
+    {
+      "id": "V2-NSG005-P01",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1001.1050309999991
+    },
+    {
+      "id": "V2-NSG005-P02",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1038.5102859999897
+    },
+    {
+      "id": "V2-NSG005-P03",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 929.052496999997
+    },
+    {
+      "id": "V2-NSG005-P04",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 952.1467489999923
+    },
+    {
+      "id": "V2-NSG005-P05",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 969.9138539999985
+    },
+    {
+      "id": "V2-NSG005-P06",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 970.2653969999956
+    },
+    {
+      "id": "V2-NSG005-P07",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1171.511916000003
+    },
+    {
+      "id": "V2-NSG005-P08",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 989.3947140000091
+    },
+    {
+      "id": "V3-NSG005-P09",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 974.8736170000047
+    },
+    {
+      "id": "V2-NSG005-P10",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1063.8463489999995
+    },
+    {
+      "id": "V2-NSG005-P11",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 940.2538090000016
+    },
+    {
+      "id": "V2-NSG005-P12",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1077.468670000002
+    },
+    {
+      "id": "V2-NSG005-P13",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1312.1379359999992
+    },
+    {
+      "id": "V2-NSG005-P14",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1253.5000710000022
+    },
+    {
+      "id": "V2-NSG005-P15",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1305.6135800000047
+    },
+    {
+      "id": "V2-NSG005-P16",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1103.4027050000004
+    },
+    {
+      "id": "V2-NSG005-P17",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1135.7485499999893
+    },
+    {
+      "id": "V2-NSG005-P18",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 1,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/counter.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        },
+        {
+          "rule": "NSG005",
+          "file": "next.config.mjs",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1276.5471640000032
+    },
+    {
+      "id": "V2-NSG005-P19",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1090.8247370000026
+    },
+    {
+      "id": "V3-NSG005-P20",
+      "rule": "NSG005",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG005",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 925.9600070000015
+    },
+    {
+      "id": "V2-NSG006-P01",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 964.1559200000047
+    },
+    {
+      "id": "V2-NSG006-P02",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 992.6201769999898
+    },
+    {
+      "id": "V2-NSG006-P03",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1141.4215240000049
+    },
+    {
+      "id": "V2-NSG006-P04",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1040.5468519999995
+    },
+    {
+      "id": "V2-NSG006-P05",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1057.3910800000012
+    },
+    {
+      "id": "V2-NSG006-P06",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1109.4429810000001
+    },
+    {
+      "id": "V2-NSG006-P07",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.mjs",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1157.4217869999993
+    },
+    {
+      "id": "V2-NSG006-P08",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.mjs",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1095.0728459999955
+    },
+    {
+      "id": "V2-NSG006-P09",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/b.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1039.2412970000005
+    },
+    {
+      "id": "V2-NSG006-P10",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "app/ui/counter.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1003.8957660000015
+    },
+    {
+      "id": "V2-NSG006-P11",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 944.9635759999946
+    },
+    {
+      "id": "V2-NSG006-P12",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 969.7746389999957
+    },
+    {
+      "id": "V2-NSG006-P13",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "app/page.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1076.5389649999997
+    },
+    {
+      "id": "V2-NSG006-P14",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1075.7694970000011
+    },
+    {
+      "id": "V2-NSG006-P15",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1288.0172639999946
+    },
+    {
+      "id": "V2-NSG006-P16",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1310.329516999991
+    },
+    {
+      "id": "V2-NSG006-P17",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.mjs",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1097.5347460000048
+    },
+    {
+      "id": "V2-NSG006-P18",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/env.mjs",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 1017.3244199999899
+    },
+    {
+      "id": "V2-NSG006-P19",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "lib/b.ts",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 968.2959370000026
+    },
+    {
+      "id": "V2-NSG006-P20",
+      "rule": "NSG006",
+      "expected": "finding",
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [
+        {
+          "rule": "NSG006",
+          "file": "app/ui/counter.tsx",
+          "line": 1,
+          "trace": true,
+          "recommendation": true
+        }
+      ],
+      "wallMs": 954.5086819999997
+    },
+    {
+      "id": "V2-NSG001-N01",
+      "rule": "NSG001",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1165.7109880000062
+    },
+    {
+      "id": "V2-NSG001-N02",
+      "rule": "NSG001",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1079.9021779999894
+    },
+    {
+      "id": "V2-NSG001-N03",
+      "rule": "NSG001",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1165.4510759999976
+    },
+    {
+      "id": "V2-NSG001-N04",
+      "rule": "NSG001",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1368.162222999992
+    },
+    {
+      "id": "V2-NSG001-N05",
+      "rule": "NSG001",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 955.0964490000042
+    },
+    {
+      "id": "V2-NSG001-N06",
+      "rule": "NSG001",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1023.1732860000047
+    },
+    {
+      "id": "V2-NSG002-N01",
+      "rule": "NSG002",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 984.7403540000087
+    },
+    {
+      "id": "V2-NSG002-N02",
+      "rule": "NSG002",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 882.8140380000114
+    },
+    {
+      "id": "V2-NSG002-N03",
+      "rule": "NSG002",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 999.4824059999955
+    },
+    {
+      "id": "V2-NSG002-N04",
+      "rule": "NSG002",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1014.7268069999991
+    },
+    {
+      "id": "V2-NSG002-N05",
+      "rule": "NSG002",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1112.453211999993
+    },
+    {
+      "id": "V2-NSG002-N06",
+      "rule": "NSG002",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 898.4309390000126
+    },
+    {
+      "id": "V2-NSG003-N01",
+      "rule": "NSG003",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1065.9172220000182
+    },
+    {
+      "id": "V2-NSG003-N02",
+      "rule": "NSG003",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1096.0385240000032
+    },
+    {
+      "id": "V2-NSG003-N03",
+      "rule": "NSG003",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1028.294110000017
+    },
+    {
+      "id": "V2-NSG003-N04",
+      "rule": "NSG003",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 933.0420070000109
+    },
+    {
+      "id": "V2-NSG003-N05",
+      "rule": "NSG003",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1054.5557530000224
+    },
+    {
+      "id": "V2-NSG003-N06",
+      "rule": "NSG003",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 946.6955080000043
+    },
+    {
+      "id": "V2-NSG004-N01",
+      "rule": "NSG004",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1017.5397919999959
+    },
+    {
+      "id": "V2-NSG004-N02",
+      "rule": "NSG004",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1027.4865960000025
+    },
+    {
+      "id": "V2-NSG004-N03",
+      "rule": "NSG004",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 932.1215519999969
+    },
+    {
+      "id": "V2-NSG004-N04",
+      "rule": "NSG004",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1074.1281930000114
+    },
+    {
+      "id": "V2-NSG004-N05",
+      "rule": "NSG004",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1130.6130830000038
+    },
+    {
+      "id": "V2-NSG004-N06",
+      "rule": "NSG004",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1281.6942299999937
+    },
+    {
+      "id": "V2-NSG005-N01",
+      "rule": "NSG005",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1169.5511049999914
+    },
+    {
+      "id": "V2-NSG005-N02",
+      "rule": "NSG005",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 989.8037130000012
+    },
+    {
+      "id": "V2-NSG005-N03",
+      "rule": "NSG005",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1127.6527669999923
+    },
+    {
+      "id": "V2-NSG005-N04",
+      "rule": "NSG005",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1048.0533189999987
+    },
+    {
+      "id": "V2-NSG005-N05",
+      "rule": "NSG005",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1366.6658310000203
+    },
+    {
+      "id": "V2-NSG005-N06",
+      "rule": "NSG005",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1036.5713019999966
+    },
+    {
+      "id": "V2-NSG006-N01",
+      "rule": "NSG006",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1046.7723340000084
+    },
+    {
+      "id": "V2-NSG006-N02",
+      "rule": "NSG006",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 1075.2213019999908
+    },
+    {
+      "id": "V2-NSG006-N03",
+      "rule": "NSG006",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 993.7530609999958
+    },
+    {
+      "id": "V2-NSG006-N04",
+      "rule": "NSG006",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 937.818609000009
+    },
+    {
+      "id": "V2-NSG006-N05",
+      "rule": "NSG006",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 853.7561590000114
+    },
+    {
+      "id": "V2-NSG006-N06",
+      "rule": "NSG006",
+      "expected": "clean",
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "fpByRule": {
+        "NSG001": 0,
+        "NSG002": 0,
+        "NSG003": 0,
+        "NSG004": 0,
+        "NSG005": 0,
+        "NSG006": 0
+      },
+      "duplicateEvidence": 0,
+      "coverage": "complete",
+      "limits": [],
+      "findings": [],
+      "wallMs": 911.5600859999831
+    }
+  ]
+}
