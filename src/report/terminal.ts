@@ -15,5 +15,23 @@ export function terminalReport(report:Report):string {
  lines.push('',`Findings: ${report.summary.total}; new ${report.summary.new}; existing ${report.summary.existing}; aggravated ${report.summary.aggravated}; unverified ${report.summary.unverified}; suppressed ${report.summary.suppressed}; blocking ${report.summary.blocking}; resolved ${report.summary.resolved.length}`);
  for(const f of report.summary.resolved)lines.push(`Resolved: ${f}`);
  lines.push(`Sources: ${report.metrics.sourceCount}; bytes: ${report.metrics.sourceBytes}; edges: ${report.metrics.edgeCount}`);
+ const m=report.codeMetrics;
+ if(m) {
+  const pct=(v:number|null)=>v===null?'not applicable':`${(v*100).toFixed(1)}%`;
+  const fix=(v:number|null)=>v===null?'not applicable':v.toFixed(1);
+  lines.push(`Code metrics ${m.protocol}: files ${m.scope.files}; functions ${m.scope.functions}; LOC ${m.loc}`,
+   `  M-02 cyclomatic: total ${m.cyclomatic.total}; max per function ${m.cyclomatic.maxFunction}; mean per function ${m.cyclomatic.meanFunction}`,
+   `  M-03 cognitive (AST adaptation): total ${m.cognitive.total}; max per function ${m.cognitive.maxFunction}`,
+   `  M-04 nesting: max ${m.nesting.max}`,
+   `  M-05 Halstead volume: total ${m.halsteadVolume.total.toFixed(1)}`,
+   `  M-06 maintainability index: mean ${fix(m.maintainability.mean)}; min ${fix(m.maintainability.min)}`,
+   `  M-07 efferent coupling: total ${m.coupling.total}; max per file ${m.coupling.maxFile}`,
+   `  M-08 import cycles: ${m.independentCycles}`,
+   `  M-09 duplication: ${pct(m.duplication.ratio)} (${m.duplication.duplicatedLoc} lines)${m.duplication.partial?'; partial':''}`,
+   `  M-10 boundary crossings: ${m.boundaryCrossings}`,
+   `  M-11 client surface: ${pct(m.clientSurface.ratio)} (${m.clientSurface.clientLoc} lines)`,
+   `  M-12 sensitive exposure: ${m.exposure.ratio===null?'not applicable (no declared sources)':`${pct(m.exposure.ratio)} (${m.exposure.exposed} of ${m.exposure.declared})`}`,
+   `  M-13 findings per KLOC: ${m.findingsPerKloc?`critical ${m.findingsPerKloc.critical}; high ${m.findingsPerKloc.high}; medium ${m.findingsPerKloc.medium}; info ${m.findingsPerKloc.info}`:'not applicable'}`);
+ }
  return lines.join('\n')+'\n';
 }

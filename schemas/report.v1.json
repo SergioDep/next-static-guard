@@ -921,6 +921,410 @@
         "sourceBytes"
       ],
       "additionalProperties": false
+    },
+    "codeMetrics": {
+      "type": "object",
+      "properties": {
+        "protocol": {
+          "const": "nsg-metrics-1"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "files": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "functions": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "files",
+            "functions"
+          ],
+          "additionalProperties": false
+        },
+        "loc": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cyclomatic": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "maxFunction": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "meanFunction": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "total",
+            "maxFunction",
+            "meanFunction"
+          ],
+          "additionalProperties": false
+        },
+        "cognitive": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "maxFunction": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "total",
+            "maxFunction"
+          ],
+          "additionalProperties": false
+        },
+        "nesting": {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "max"
+          ],
+          "additionalProperties": false
+        },
+        "halsteadVolume": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "total"
+          ],
+          "additionalProperties": false
+        },
+        "maintainability": {
+          "type": "object",
+          "properties": {
+            "mean": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "min": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "mean",
+            "min"
+          ],
+          "additionalProperties": false
+        },
+        "coupling": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "maxFile": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "total",
+            "maxFile"
+          ],
+          "additionalProperties": false
+        },
+        "independentCycles": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "duplication": {
+          "type": "object",
+          "properties": {
+            "ratio": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "duplicatedLoc": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "partial": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "ratio",
+            "duplicatedLoc",
+            "partial"
+          ],
+          "additionalProperties": false
+        },
+        "boundaryCrossings": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clientSurface": {
+          "type": "object",
+          "properties": {
+            "ratio": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "clientLoc": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "ratio",
+            "clientLoc"
+          ],
+          "additionalProperties": false
+        },
+        "exposure": {
+          "type": "object",
+          "properties": {
+            "ratio": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "exposed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "declared": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "ratio",
+            "exposed",
+            "declared"
+          ],
+          "additionalProperties": false
+        },
+        "findingsPerKloc": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "critical": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "high": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "medium": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "info": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "critical",
+                "high",
+                "medium",
+                "info"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "file": {
+                "type": "string",
+                "minLength": 1
+              },
+              "loc": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "cyclomatic": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "cognitive": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "maxNesting": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "halsteadVolume": {
+                "type": "number",
+                "minimum": 0
+              },
+              "maintainability": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "coupling": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "contexts": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "rsc",
+                    "client-ssr",
+                    "client-browser",
+                    "server-function",
+                    "server-handler",
+                    "unreachable",
+                    "unknown"
+                  ]
+                }
+              },
+              "functions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "line": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "cyclomatic": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "cognitive": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "nesting": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "line",
+                    "cyclomatic",
+                    "cognitive",
+                    "nesting"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "file",
+              "loc",
+              "cyclomatic",
+              "cognitive",
+              "maxNesting",
+              "halsteadVolume",
+              "maintainability",
+              "coupling",
+              "contexts",
+              "functions"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "protocol",
+        "scope",
+        "loc",
+        "cyclomatic",
+        "cognitive",
+        "nesting",
+        "halsteadVolume",
+        "maintainability",
+        "coupling",
+        "independentCycles",
+        "duplication",
+        "boundaryCrossings",
+        "clientSurface",
+        "exposure",
+        "findingsPerKloc",
+        "files"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [
