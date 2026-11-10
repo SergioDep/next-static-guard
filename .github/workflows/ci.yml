@@ -26,7 +26,7 @@ jobs:
       - run: node --version
       - run: npm --version
       - run: npm ci
-      - run: npm audit --omit=dev --audit-level=high
+      - run: npm audit --omit=dev --audit-level=high --workspaces=false
       - name: Verify Git version
         run: node -e "const v=require('child_process').execFileSync('git',['--version'],{encoding:'utf8'}).match(/\d+\.\d+\.\d+/)[0];if(!require('semver').gte(v,'2.47.0'))process.exit(1)"
       - run: npm run build
